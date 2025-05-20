@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>contact</title>
+  <link href="https://fonts.cdnfonts.com/css/pragmatica-extralight" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="../css/common.css">
+  <script defer src="../js/common.js"></script>
+  <style>
+  body{
+    overflow: visible;
+  }
+
+  header{
+    position: unset;
+    height: 70px;
+  }
+
+  header .logo a{
+    position: relative;
+    top: 5px;
+  }
+
+  .container {
+      /* font-family:'Times New Roman', sans-serif; */
+      height: 100vh;
+      display: flex;
+      /* justify-content: center; */
+      flex-direction: column;
+      align-items: center;
+      padding: 80px 20px;
+    }
+
+    .container .title{
+      margin-bottom: 100px;
+      font-size: 30px;
+      color:#000;
+      text-align: center;
+    }
+
+    .info-wrap{display: flex;}
+
+    .column {
+      width: 600px;
+    }
+    .column:first-child {
+      border-right: 1px solid #000;
+      padding-right: 60px;
+    }
+    .column:last-child {
+      padding-left: 100px;
+
+    }
+    .title {
+      font-size: 1.2rem;
+      margin-bottom: 20px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+    .info {
+      margin-bottom: 15px;
+    }
+    .info label {
+      display: block;
+      font-weight: bold;
+      margin-bottom: 5px;
+    }
+    .info p {
+      margin: 0;
+      line-height: 1.6;
+    }
+    .insta {
+      margin-top: 40px;
+      font-size: 1.2rem;
+    }
+  </style>
+</head>
+<body>
+  <!-- header -->
+  <header class="border-b-g" id="sub-header">
+    <h1 class="logo"><a href="../index.html" style="padding:0;">ICONIC CREATIVE STUDIO</a></h1>
+    <button class="hamburger" onclick="toggleMenu()">
+      <span></span>
+      <span></span>
+      <!-- <span></span> -->
+    </button>
+    <nav id="navMenu" class="accordion-menu">
+      <a href="../artist/artist.html">ARTISTS</a>
+      <a href="../models/models.html">MODELS</a>
+      <a href="../about/about.html">ABOUT</a>
+      <a href="./contact.html" class="active">CONTACT</a>
+    </nav>
+  </header>
+  <!-- //header -->
+
+  
+  <!-- contact -->
+  <div class="container">
+    <h2 class="title">CONTACT</h2>
+    <div class="info-wrap">
+      <div class="column">
+        <div class="title">CREATIVES</div>
+        <div class="info">
+          <label>E-mail</label>
+          <p>creatives@iconicseoul.com</p>
+        </div>
+        <div class="info">
+          <label>Call</label>
+          <p>+82 10.7935.8410</p>
+        </div>
+        <div class="info">
+          <label>Address</label>
+          <p>2F, 142-4, Gwangnaru-ro, Seongdong-gu, Seoul, Republic of Korea</p>
+        </div>
+      </div>
+      <div class="column">
+        <div class="title">MODELS</div>
+        <div class="info">
+          <label>E-mail</label>
+          <p>models@iconicseoul.com</p>
+        </div>
+        <div class="info">
+          <label>Call</label>
+          <p>+82 10.2813.0305</p>
+        </div>
+        <div class="info">
+          <label>Business Registration</label>
+          <p>892.427139.323</p>
+        </div>
+        <div class="insta">
+          <p><i class="fa-brands fa-instagram"></i></p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- //contact -->
+
+  <script>
+  
+  </script>
+</body>
+</html>

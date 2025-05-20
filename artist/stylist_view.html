@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>STYLIST - VIEW</title>
+  <link href="https://fonts.cdnfonts.com/css/pragmatica-extralight" rel="stylesheet">
+  <link rel="stylesheet" href="../css/common.css">
+  <script defer src="../js/common.js"></script>
+  <style>
+  body{ overflow: visible; }
+
+  video{
+    width: 100%;
+    min-height: 180px;
+    object-fit: cover;
+  }
+
+  /* main-content */
+  .main-content {
+    display: flex;
+    justify-content: center;
+    margin-top: 130px;
+    margin-bottom: 118px;
+  }
+
+  .magazine-cover {
+    width: 575px;
+    height: 868px;
+  }
+
+  .magazine-cover img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+
+  /* Bottom text */
+  .bottom-info {
+    margin: 27px 0 0 20px;
+    font-size: 43px;
+    font-weight: 500;
+    text-align: center;
+    font-family:'Times New Roman', sans-serif;
+  }
+
+  .bottom-info small {
+    display: block;
+    font-size: 11px;
+    margin-top: 14px;
+    font-family: "Roboto", sans-serif;
+    /* font-weight: 900; */
+  }
+
+  .gallery-container {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr); 
+      gap: 60px; /*줄이면 전체 세로 공간도 줄어듦 */
+      padding: 30px 40px 40px;
+      /* max-width: 1440px; */
+      margin: auto;
+    }
+
+  .title{
+    /* font-family: "Roboto", sans-serif; */
+    /* font-family: 'EngraversGothic'; */
+    font-family: 'Helvetica Neue', sans-serif;
+    /* font-weight: 900; */
+    font-size: 16px;
+    padding: 0 40px;
+    text-transform: uppercase;
+  }
+
+  .gallery-item img {
+    width: 100%;
+    height: 340px;
+    cursor: pointer;
+    aspect-ratio: 2 / 2;
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+  }
+
+
+  .gallery-item span{
+    display: block;
+    padding: 5px 0;
+    font-size: 15px;
+    font-weight: 700;
+    text-align: center;
+    text-transform: uppercase;
+  }
+
+  .view-more-btn{
+    padding:30px 0;
+    margin-bottom:100px;
+    text-align: center;
+    text-decoration: underline;
+    font-size:20px;
+    font-family: 'Times New Roman', sans-serif;
+  }
+
+  .view-more-btn a{
+    color:#000;
+
+  }
+  
+  @media (max-width: 1024px) {
+  .gallery-container {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+    padding: 20px;
+  }
+
+  .bottom-info {
+    font-size: 30px;
+  }
+
+  .bottom-info small {
+    font-size: 10px;
+  }
+
+  .modal .desc {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 767px) {
+  .main-content {
+    flex-direction: column;
+    align-items: center;
+    margin-top: 120px;
+  }
+
+  .magazine-cover {
+    width: 90%;
+    height: auto;
+  }
+
+  .bottom-info {
+    font-size: 24px;
+    margin-left: 0;
+    text-align: center;
+  }
+
+  .bottom-info small {
+    font-size: 9px;
+  }
+
+  .gallery-container {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    padding: 10px;
+  }
+
+  .item01 h2 {
+    font-size: 14px;
+    padding: 0 20px;
+  }
+
+  .modal .slider-wrapper {
+    width: 95%;
+  }
+
+  .modal .bottom {
+    /* flex-direction: column; */
+    gap: 8px;
+    padding: 0 20px;
+  }
+
+  .modal .desc {
+    font-size: 13px;
+    text-align: left;
+  }
+
+  .modal .indegator {
+    font-size: 11px;
+  }
+
+  .modal .nav {
+    padding: 0 15px;
+  }
+
+  .modal .prev,
+  .modal .next {
+    font-size: 36px;
+  }
+
+  .modal .close {
+    top: 15px;
+    right: 20px;
+    font-size: 32px;
+  }
+}
+</style>
+</head>
+<body>
+  <!-- header -->
+  <header class="border-b-g" id="sub-header">
+    <h1 class="logo"><a href="../index.html">ICONIC CREATIVE STUDIO</a></h1>
+    <button class="hamburger" onclick="toggleMenu()">
+      <span></span>
+      <span></span>
+      <!-- <span></span> -->
+    </button>
+    <nav id="navMenu" class="accordion-menu">
+      <a href="./artist.html">ARTISTS</a>
+      <a href="../models/models.html">MODELS</a>
+      <a href="../about/about.html">ABOUT</a>
+      <a href="../contact/contact.html">CONTACT</a>
+    </nav>
+  </header>
+  <!-- //header -->
+
+  <!-- artist -->
+  <div class="main-content">
+    <div class="magazine-cover">
+      <img src="../images/artist/stylist/view/stylist_thum.jpg" alt="">
+      <div class="bottom-info">KEVIN KIM<small>STYLIST , DIRECTOR</small></div>
+    </div>
+  </div>
+  <!-- //artist -->
+  
+  <!-- item01 -->
+  <div class="item01">
+    <h2 class="title">FASHION</h2>
+    <div class="gallery-container">
+      <!-- 썸네일 이미지 -->
+      <div class="gallery-item"><img src="../images/artist/stylist/view/1.jpg"/><span>BEAUTY +</span></div>
+      <div class="gallery-item"><img src="../images/artist/stylist/view/2.jpg"/><span>STUDIO TOMBOY</span></div>
+      <div class="gallery-item"><img src="../images/artist/stylist/view/3.jpg"/><span>WWD</span></div>
+      <div class="gallery-item"><img src="../images/artist/stylist/view/4.jpg"/><span>STUDIO TOMBOY</span></div>
+      <div class="gallery-item"><img src="../images/artist/stylist/view/5.jpg"/><span>STUDIO TOMBOY</span></div>
+      <div class="gallery-item"><img src="../images/artist/stylist/view/6.jpg"/><span>TIME</span></div>
+      <div class="gallery-item"><img src="../images/artist/stylist/view/7.jpg"/><span>ROCKPORT</span></div>
+      <div class="gallery-item"><img src="../images/artist/stylist/view/8.jpg"/><span>ROCKPORT</span></div>
+      <div class="gallery-item"><img src="../images/artist/stylist/view/9.jpg"/><span>MO&CO_8</span></div>
+      <div class="gallery-item"><img src="../images/artist/stylist/view/10.jpg"/><span>Projekt</span></div>
+      <div class="gallery-item"><img src="../images/artist/stylist/view/11.jpg"/><span>MCM</span></div>
+      <div class="gallery-item"><img src="../images/artist/stylist/view/12.jpg"/><span>LE Coq Sport</span></div>
+      <div class="gallery-item"><img src="../images/artist/stylist/view/13.jpg"/><span>NEWBALANCE</span></div>
+      <div class="gallery-item"><img src="../images/artist/stylist/view/16.jpg"/><span>STUDIO TOMBOY SCOUT</span></div>
+      <div class="gallery-item"><img src="../images/artist/stylist/view/15.jpg"/><span>MINDBRIDGE</span></div>
+      <!--<div class="gallery-item"><img src="../images/artist/stylist/view/14.jpg"/><span>STUDIO TOMBOY</span></div>
+      <div class="gallery-item"><img src="../images/artist/stylist/view/17.jpg"/><span>Projekt Produkt</span></div>
+      <div class="gallery-item"><img src="../images/artist/stylist/view/18.jpg"/><span>STUDIOTOMBOY SPORT</span></div>
+      <div class="gallery-item"><img src="../images/artist/stylist/view/19.jpg"/><span>STUDIO TOMBOY_HOMEBOY</span></div>
+      <div class="gallery-item"><img src="../images/artist/stylist/view/20.jpg"/><span>STUDIOTOMBOY Atelier</span></div> -->
+    </div>
+    <div class="view-more-btn"><a href="./stylist_advertising_detail.html">View All</a></div>
+  </div>
+  <!-- item01 -->
+
+  <!-- item02 -->
+  <div class="item01">
+    <h2 class="title">BEAUTY</h2>
+    <div class="gallery-container">
+      <!-- 썸네일 이미지 -->
+      <div class="gallery-item"><img src="../images/artist/stylist/view/45.jpg"/><span>LANEIGE</span></div>
+      <div class="gallery-item"><img src="../images/artist/stylist/view/46.jpg"/><span>TIR TIR</span></div>
+      <div class="gallery-item"><img src="../images/artist/stylist/view/47.jpg"/><span>ETAPE</span></div>
+      <div class="gallery-item"><img src="../images/artist/stylist/view/48.jpg"/><span>Rosanna</span></div>
+      <div class="gallery-item"><img src="../images/artist/stylist/view/49.jpg"/><span>BEAUTY +</span></div>
+    </div>
+  </div>
+  <!-- item02 -->
+
+  <!-- item03 -->
+  <div class="item01">
+    <h2 class="title">FILM</h2>
+    <div class="gallery-container">
+      <!-- 썸네일 이미지 -->
+      <div class="gallery-item"><video src="../videos/stylist/video01.mp4" autoplay muted loop playsinline></video><span>LANEIGE</span></div>
+      <div class="gallery-item"><video src="../videos/stylist/video02.mov" autoplay muted loop playsinline></video><span>STUDIO TOMBOY</span></div>
+      <div class="gallery-item"><video src="../videos/stylist/video03.MP4" autoplay muted loop playsinline></video><span>PROJEKT PRODUKT</span></div>
+      <div class="gallery-item"><video src="../videos/stylist/video06.MP4" autoplay muted loop playsinline></video><span>MIND BRIDGE</span></div>
+      <div class="gallery-item"><video src="../videos/stylist/video05.mp4" autoplay muted loop playsinline></video><span>WWD</span></div>
+    </div>
+  </div>
+  <!-- item03 -->
+
+
+</body>
+</html>
