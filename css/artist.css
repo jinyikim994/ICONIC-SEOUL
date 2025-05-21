@@ -292,6 +292,33 @@
   }
 }
 
+/* 노트북 */
+@media screen and (min-width: 1728px) {
+
+  #sub-header{height: 70px;}
+
+  #photographer-view .main-content{
+    margin-top: 30px;
+  }
+
+  #photographer-view .main-content .bottom-info {
+    margin: 10px 0 0 0px;
+  }
+
+  #photographer-view .main-content .magazine-cover{
+    width: 531px;
+  }
+
+  #photographer-view .main-content .bottom-info small{
+    margin-top: 6px;
+  }
+
+  #photographer-view .main-content .bottom-info{
+    font-size:37px;
+  }
+  
+}
+
 /* PHOTOGRAPHER - ADVERTISING DETAIL */
 #photographer-ad-detail{ overflow: unset; }
 
