@@ -6,155 +6,8 @@
   <title>ICONIC CREATIVE STUDIO</title>
   <!-- common css -->
 	<link rel="stylesheet" href="./css/common.css">
+  <link rel="stylesheet" href="./css/main.css">
   <script defer src="./js/common.js"></script>
-  <style>
-    /* gallery */
-    .gallery {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      width: 100vw;
-      height: 100vh;
-      margin-top: 80px; 
-    }
-
-    .gallery .column {
-      overflow: hidden;
-      position: relative;
-    }
-
-    .gallery .scroller {
-      display: flex;
-      flex-direction: column;
-      animation: scrollLoop 20s linear infinite;
-    }
-
-    .gallery .column-2 .scroller {
-      animation: scrollLoopReverse 30s linear infinite;
-    }
-
-    .gallery .column-3 .scroller {
-      animation: scrollLoop 20s linear infinite;
-    }
-
-    .gallery .masonry-item {
-      line-height: 0;
-      position: relative;
-      overflow: hidden;
-    }
-
-    .gallery .masonry-item img,
-    .gallery .masonry-item video {
-      width: 100%;
-      height: auto;
-      display: block;
-      margin: 0;
-      padding: 0;
-      border: none;
-    }
-
-    .gallery .masonry-item video {
-      height: 350px;
-      max-height: 350px; /* 영상 높이 제한 */
-      border: none;
-      object-fit: cover;
-    }
-
-    /* 이미지 호버 시 정보 보여주기 */
-    .gallery .masonry-item .info {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 100%;
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      right: 0;
-      background: #fff;
-      color: #000;
-      padding: 10px;
-      opacity: 0.9;
-      transform: translateY(100%);
-      /* transition: opacity 0.3s ease, transform 0.3s ease; */
-      /* font-family: 'Pragmatica ExtraLight', sans-serif;  */
-      font-family: 'Cormorant', serif;
-      font-size: 18px;
-      font-weight: 600;
-      text-transform: uppercase;
-    }
-
-    .gallery .masonry-item:hover .info {
-      /* opacity: 1; */
-      transform: translateY(0);
-    }
-
-   .gallery .scroller > * {
-      flex-shrink: 0;
-    }
-
-    @keyframes scrollLoop {
-      0% {
-        transform: translateY(0);
-      }
-      100% {
-        transform: translateY(-50%);
-      }
-    }
-
-    @keyframes scrollLoopReverse {
-      0% {
-        transform: translateY(-50%);
-      }
-      100% {
-        transform: translateY(0);
-      } 
-    }
-
-    /* 아이패드(1024px 이하) */
-    @media (max-width: 1024px) { 
-
-      .gallery .masonry-item .info {
-        display: none !important;
-        font-size: 12px;
-      }
-
-      .gallery {
-            height: 100vh;
-            overflow: hidden;
-        }
-
-        .about{
-          width: 90%;
-        }
-
-        .about .image-container{
-          width: 40%;
-        }
-      
-    }
-    /* 모바일 */
-    @media (max-width: 768px) {
-        .gallery {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            height: 100vh;
-            overflow: hidden;
-        }
-        .gallery .column {
-            all: unset;
-          
-        }
-        .gallery .masonry-item .info{
-          font-size: 10px;
-        }
-
-        .gallery .masonry-item video{
-          height: 175px;
-        }
-        .gallery .masonry-item .info{
-          display: none !important;
-        }
-      }
-  </style>
 </head>
 <body id="main">
   <!-- header -->
@@ -173,9 +26,8 @@
     </nav>
   </header>
   <!-- //header -->
-
   <!-- gallery -->
-  <div class="gallery">
+  <div class="gallery"> 
     <!-- 첫번째 열 -->
     <div class="column column-1">
       <div class="scroller">
@@ -201,16 +53,16 @@
             <span>Production, Studio</span>
           </div>
         </div>git pull origin main
-        <!-- 네번째 이미지 -->
+        <!-- 네번째 비디오 -->
         <div class="masonry-item border-r border-r border-b">
-          <video src="https://res.cloudinary.com/dlsvukxi1/video/upload/v1747755957/p6m7ntygir53nvyi3csp.mp4" autoplay muted loop playsinline></video>
+          <video src="https://res.cloudinary.com/dlsvukxi1/video/upload/v1747755957/p6m7ntygir53nvyi3csp.mp4" autoplay muted loop playsinline alt="video04"></video>
           <div class="info">Dazed Magazine<br>
             <span>Production, Studio</span>
           </div>
         </div>
         <!-- 다섯번째 이미지 -->
         <div class="masonry-item border-r border-r border-b">
-          <img src="https://images.squarespace-cdn.com/content/v1/661cb73c808401180cc94eb2/88e1acc4-5ac7-4879-b49a-f7db045f4a5b/Rosanna_6.jpg?format=750w" alt="img04"/>
+          <img src="https://images.squarespace-cdn.com/content/v1/661cb73c808401180cc94eb2/88e1acc4-5ac7-4879-b49a-f7db045f4a5b/Rosanna_6.jpg?format=750w" alt="img05"/>
           <div class="info">
             Dazed Magazine<br>
             <span>Production, Studio</span>
@@ -221,9 +73,9 @@
     <!-- 두번째 열 -->
     <div class="column column-2">
       <div class="scroller">
-        <!-- 첫번째 이미지 -->
+        <!-- 첫번째 비디오 -->
         <div class="masonry-item border-r border-b">
-          <video src="https://res.cloudinary.com/dlsvukxi1/video/upload/v1747755970/xb7czq8inudkj1mjumji.mp4" autoplay muted loop playsinline></video>
+          <video src="https://res.cloudinary.com/dlsvukxi1/video/upload/v1747755970/xb7czq8inudkj1mjumji.mp4" autoplay muted loop playsinline alt="video06"></video>
           <div class="info">Dazed Magazine<br><span>Production, Studio</span>
           </div>
         </div>
@@ -236,19 +88,19 @@
         </div>
         <!-- 세번째 이미지 -->
         <div class="masonry-item border-r border-b">
-          <img src="https://res.cloudinary.com/dlsvukxi1/image/upload/v1747756812/img05_vnubak.png" alt="01"/>
+          <img src="https://res.cloudinary.com/dlsvukxi1/image/upload/v1747756812/img05_vnubak.png" alt="img08"/>
           <div class="info">Dazed Magazine<br><span>Production, Studio</span>
           </div>
         </div>
-        <!-- 네번째 이미지 -->
+        <!-- 네번째 비디오 -->
         <div class="masonry-item border-r border-b">
-          <video src="https://res.cloudinary.com/dlsvukxi1/video/upload/v1747755960/lqcbjwmcbcz1ceft5it2.mp4" autoplay muted loop playsinline></video>
-          <div class="info">Dazed Magazine<br><span>Production, Studio</span>
+          <video src="https://res.cloudinary.com/dlsvukxi1/video/upload/v1747755960/lqcbjwmcbcz1ceft5it2.mp4" autoplay muted loop playsinline alt="video09"></video>
+          <div class="info">Dazed Magazine<br><span>Production, Studio</span> 
           </div>
         </div>
         <!-- 다섯번째 이미지 -->
         <div class="masonry-item border-r border-b">
-          <img src="https://images.squarespace-cdn.com/content/v1/661cb73c808401180cc94eb2/847749cf-c0e2-4273-8df8-48eaf1f6c53f/SUZI_10.jpg?format=750w" alt="03"/>
+          <img src="https://images.squarespace-cdn.com/content/v1/661cb73c808401180cc94eb2/847749cf-c0e2-4273-8df8-48eaf1f6c53f/SUZI_10.jpg?format=750w" alt="img10"/>
           <div class="info">
             Dazed Magazine<br><span>Production, Studio</span>
           </div>
@@ -260,35 +112,35 @@
       <div class="scroller">
         <!-- 첫번째 이미지 -->
         <div class="masonry-item border-b">
-          <img src="https://res.cloudinary.com/dlsvukxi1/image/upload/v1747756814/img06_ylvmbu.png" alt="img08"/>
+          <img src="https://res.cloudinary.com/dlsvukxi1/image/upload/v1747756814/img06_ylvmbu.png" alt="img11"/>
           <div class="info">Dazed Magazine<br>
             <span>Production, Studio</span>
           </div>
         </div>
         <!-- 두번째 이미지 -->
         <div class="masonry-item border-b">
-          <img src="https://images.squarespace-cdn.com/content/v1/661cb73c808401180cc94eb2/404b9c2f-9c9e-4271-91e2-3c9045dfaead/MO%26CO_13.jpg?format=750w" alt="img10"/>
+          <img src="https://images.squarespace-cdn.com/content/v1/661cb73c808401180cc94eb2/404b9c2f-9c9e-4271-91e2-3c9045dfaead/MO%26CO_13.jpg?format=750w" alt="img12"/>
           <div class="info">Dazed Magazine<br>
             <span>Production, Studio</span>
           </div>
         </div>
         <!-- 세번째 이미지 -->
         <div class="masonry-item border-b">
-          <video src="https://res.cloudinary.com/dlsvukxi1/video/upload/v1747755970/xb7czq8inudkj1mjumji.mp4" autoplay muted loop></video>
+          <video src="https://res.cloudinary.com/dlsvukxi1/video/upload/v1747755970/xb7czq8inudkj1mjumji.mp4" autoplay muted loop alt="video13"></video>
           <div class="info">Dazed Magazine<br>
             <span>Production, Studio</span>
           </div>
         </div>
         <!-- 네번째 이미지 -->
         <div class="masonry-item border-b">
-          <img src="https://res.cloudinary.com/dlsvukxi1/image/upload/v1747756812/img04_hedu8g.png" alt="img09"/>
+          <img src="https://res.cloudinary.com/dlsvukxi1/image/upload/v1747756812/img04_hedu8g.png" alt="img14"/>
           <div class="info">Dazed Magazine<br>
             <span>Production, Studio</span>
           </div>
         </div>
         <!-- 다섯번째 이미지 -->
         <div class="masonry-item border-b">
-          <img src="https://images.squarespace-cdn.com/content/v1/661cb73c808401180cc94eb2/3b81d7a7-486a-4aec-9bfb-9609e99efa93/Rosanna_11.jpg?format=750w" alt="img011"/>
+          <img src="https://images.squarespace-cdn.com/content/v1/661cb73c808401180cc94eb2/3b81d7a7-486a-4aec-9bfb-9609e99efa93/Rosanna_11.jpg?format=750w" alt="img15"/>
           <div class="info">Dazed Magazine<br>
             <span>Production, Studio</span>
           </div>

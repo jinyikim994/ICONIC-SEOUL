@@ -6,191 +6,10 @@
   <title>BEAUTY - VIEW</title>
   <link href="https://fonts.cdnfonts.com/css/pragmatica-extralight" rel="stylesheet">
   <link rel="stylesheet" href="../css/common.css">
+   <link rel="stylesheet" href="../css/artist.css">
   <script defer src="../js/common.js"></script>
-  <style>
-  body{ overflow: visible; }
-
-  video{
-    width: 100%;
-    min-height: 180px;
-    object-fit: cover;
-  }
-
-  /* main-content */
-  .main-content {
-    display: flex;
-    justify-content: center;
-    margin-top: 130px;
-    margin-bottom: 118px;
-  }
-
-
-  .magazine-cover img {
-    width: 100%;
-    height: auto;
-    display: block;
-  }
-
-  /* Bottom text */
-  .bottom-info {
-    margin: 27px 0 0 20px;
-    font-size: 43px;
-    font-weight: 500;
-    text-align: center;
-    font-family:'Times New Roman', sans-serif;
-  }
-
-  .bottom-info small {
-    display: block;
-    font-size: 11px;
-    margin-top: 14px;
-    font-family: "Roboto", sans-serif;
-    /* font-weight: 900; */
-  }
-
-  .gallery-container {
-      display: grid;
-      grid-template-columns: repeat(5, 1fr); 
-      gap: 60px; /*줄이면 전체 세로 공간도 줄어듦 */
-      padding: 30px 40px 40px;
-      /* max-width: 1440px; */
-      margin: auto;
-    }
-
-  .title{
-    /* font-family: "Roboto", sans-serif; */
-    /* font-family: 'EngraversGothic'; */
-    font-family: 'Helvetica Neue', sans-serif;
-    /* font-weight: 900; */
-    font-size: 16px;
-    padding: 0 40px;
-    text-transform: uppercase;
-  }
-
-  .gallery-item img {
-    width: 100%;
-    height: 340px;
-    cursor: pointer;
-    aspect-ratio: 2 / 2;
-    width: 100%;
-    height: auto;
-    object-fit: contain;
-  }
-
-
-  .gallery-item span{
-    display: block;
-    padding: 5px 0;
-    font-size: 15px;
-    font-weight: 700;
-    text-align: center;
-    text-transform: uppercase;
-  }
-
-  .view-more-btn{
-    padding:30px 0;
-    margin-bottom:100px;
-    text-align: center;
-    text-decoration: underline;
-    font-size:20px;
-    font-family: 'Times New Roman', sans-serif;
-  }
-
-  .view-more-btn a{
-    color:#000;
-
-  }
-  
-  @media (max-width: 1024px) {
-  .gallery-container {
-    grid-template-columns: repeat(3, 1fr);
-    gap: 15px;
-    padding: 20px;
-  }
-
-  .bottom-info {
-    font-size: 30px;
-  }
-
-  .bottom-info small {
-    font-size: 10px;
-  }
-
-  .modal .desc {
-    font-size: 14px;
-  }
-}
-
-@media (max-width: 767px) {
-  .main-content {
-    flex-direction: column;
-    align-items: center;
-    margin-top: 120px;
-  }
-
-  .magazine-cover {
-    width: 90%;
-    height: auto;
-  }
-
-  .bottom-info {
-    font-size: 24px;
-    margin-left: 0;
-    text-align: center;
-  }
-
-  .bottom-info small {
-    font-size: 9px;
-  }
-
-  .gallery-container {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 10px;
-    padding: 10px;
-  }
-
-  .item01 h2 {
-    font-size: 14px;
-    padding: 0 20px;
-  }
-
-  .modal .slider-wrapper {
-    width: 95%;
-  }
-
-  .modal .bottom {
-    /* flex-direction: column; */
-    gap: 8px;
-    padding: 0 20px;
-  }
-
-  .modal .desc {
-    font-size: 13px;
-    text-align: left;
-  }
-
-  .modal .indegator {
-    font-size: 11px;
-  }
-
-  .modal .nav {
-    padding: 0 15px;
-  }
-
-  .modal .prev,
-  .modal .next {
-    font-size: 36px;
-  }
-
-  .modal .close {
-    top: 15px;
-    right: 20px;
-    font-size: 32px;
-  }
-}
-</style>
 </head>
-<body>
+<body id="beauty-view">
   <!-- header -->
   <header class="border-b-g" id="sub-header">
     <h1 class="logo"><a href="../index.html">ICONIC CREATIVE STUDIO</a></h1>
@@ -211,7 +30,7 @@
   <!-- artist -->
   <div class="main-content">
     <div class="magazine-cover">
-      <img src="../images/artist/beauty/0.jpg" alt="">
+      <img src="https://res.cloudinary.com/dlsvukxi1/image/upload/v1747805277/0_cgyf8k.jpg" alt="뷰티 뷰페이지 썸네일 이미지">
       <div class="bottom-info">MEE KYUNG KIM POTER<small>HAIR STYLIST</small></div>
     </div>
   </div>
@@ -222,11 +41,11 @@
     <h2 class="title">HAIR STYLIST</h2>
     <div class="gallery-container">
       <!-- 썸네일 이미지 -->
-      <div class="gallery-item"><img src="../images/artist/beauty/1.jpg"/><span>BOF MAGAZINE</span></div>
-      <div class="gallery-item"><img src="../images/artist/beauty/2.jpg"/><span>Stella McCartney </span></div>
-      <div class="gallery-item"><img src="../images/artist/beauty/3.jpg"/><span>PERSONAL WORK</span></div>
-      <div class="gallery-item"><img src="../images/artist/beauty/4.jpg"/><span>PORTRAIT</span></div>
-      <div class="gallery-item"><img src="../images/artist/beauty/5.jpg"/><span>PROJEKT PRODUKT</span></div>
+      <div class="gallery-item"><img src="https://res.cloudinary.com/dlsvukxi1/image/upload/v1747805279/1_adfetp.jpg"/><span>BOF MAGAZINE</span></div>
+      <div class="gallery-item"><img src="https://res.cloudinary.com/dlsvukxi1/image/upload/v1747805280/2_e8gr0b.jpg"/><span>Stella McCartney </span></div>
+      <div class="gallery-item"><img src="https://res.cloudinary.com/dlsvukxi1/image/upload/v1747805287/3_rzekoz.jpg"/><span>PERSONAL WORK</span></div>
+      <div class="gallery-item"><img src="https://res.cloudinary.com/dlsvukxi1/image/upload/v1747805277/4_p1t7xs.jpg"/><span>PORTRAIT</span></div>
+      <div class="gallery-item"><img src="https://res.cloudinary.com/dlsvukxi1/image/upload/v1747805282/5_r2qvhz.jpg"/><span>PROJEKT PRODUKT</span></div>
     </div>   
   </div>
   <!-- item01 -->

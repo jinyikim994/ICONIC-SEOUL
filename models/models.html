@@ -3,13 +3,12 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>artist - models</title>
-  <link href="https://fonts.cdnfonts.com/css/pragmatica-extralight" rel="stylesheet">
+  <title>ARTIST - MODELS</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   <link rel="stylesheet" href="../css/common.css">
-  
   <script defer src="../js/common.js"></script>
   <style>
+
   body{ overflow: visible; }
   
   .slider-images {
@@ -47,7 +46,6 @@
     object-fit: cover;
   }
 
-  /* 좌우 호버 감지 zone */
   .hover-zone {
     position: absolute;
     top: 0;
@@ -55,7 +53,6 @@
     height: 100%;
     z-index: 20;
     cursor: none;
-    /* cursor: pointer; */
   }
 
   .hover-zone.left-zone {
@@ -73,7 +70,7 @@
 
   .floating-arrow {
     position: absolute;
-    pointer-events: none; /* 마우스 이벤트 무시 */
+    pointer-events: none; 
     width: 40px;
     height: 40px;
     display: none;
@@ -81,14 +78,11 @@
   }
 
   .slider-container {
-    position: relative; /* 좌표 기준점 설정 */
+    position: relative;
   }
-
-
 
   .name{
     font-family: "Libre Baskerville", serif;
-    /* font-family: 'LayGrotesk'; */
     text-transform: uppercase;
     font-weight: 400;
     font-size:66px;
@@ -98,7 +92,6 @@
   .name span{
     font-family: 'Feature Display';
   }
-
 
   .bottom-text{
     display: flex;
@@ -112,8 +105,9 @@
     flex-direction: column;
     text-align: center;
   }
+
   .bottom-text .info p{
-    padding-bottom: 10px;
+      padding-bottom: 10px;
   }
 
   .download-btn {
@@ -129,20 +123,19 @@
       font-family: Lay Grotesk;
     }
 
-    .download-btn:hover {
-      text-decoration: underline;
-    }
+  .download-btn:hover {
+    text-decoration: underline;
+  }
 
-    .download-icon {
-      margin-left: 6px;
-      font-size: 16px;
-    }
+  .download-icon {
+    margin-left: 6px;
+    font-size: 16px;
+  }
 
-    .pdf-down-btn{
-      width: 14px;
-      height:14px;
-    }
-  
+  .pdf-down-btn{
+    width: 14px;
+    height:14px;
+  }
 </style>
 </head>
 <body>
@@ -156,19 +149,18 @@
     </button>
     <nav id="navMenu" class="accordion-menu">
       <a href="../artist/artist.html">ARTISTS</a>
-      <a href="./models.html">MODELS</a>
+      <a href="./models.html" class="active">MODELS</a>
       <a href="../about/about.html">ABOUT</a>
       <a href="../contact/contact.html">CONTACT</a>
     </nav>
   </header>
   <!-- //header -->
-
   <!-- artist -->
   <div class="slider-container">
     <div class="slider-images">
-      <img src="../images/models/test/3.jpg" class="slide active"/>
-      <img src="../images/models/test/2.jpg" class="slide"/>
-      <img src="../images/models/test/1.jpg" class="slide"/>
+      <img src="https://res.cloudinary.com/dlsvukxi1/image/upload/v1747806923/3_birgz4.jpg" class="slide active"/>
+      <img src="https://res.cloudinary.com/dlsvukxi1/image/upload/v1747806929/2_lbv2vf.jpg" class="slide"/>
+      <img src="https://res.cloudinary.com/dlsvukxi1/image/upload/v1747806926/1_n0bpkv.jpg" class="slide"/>
     </div>
     <div class="hover-zone left-zone"></div>
     <div class="hover-zone right-zone"></div>
@@ -183,13 +175,11 @@
       </svg>
     </div>
   </div>
-  <!-- models info -->
-
+  <!-- //artist -->
   <!-- info -->
   <div class="bottom-text">
     <div class="name">
       <span>JACK</span><i> STEWART</i>
-      
     </div>
     <div class="info">
       <p class="sns">199 <i class="fa-brands fa-instagram"></i></p>
@@ -205,13 +195,8 @@
       </a>
       <!-- pdf -->
     </div>
-    
   </div>
   <!-- //info -->
-
-  
-  <!-- //artist -->
-  
   <script>
     const slides = document.querySelectorAll('.slide');
       let currentSlide = 0;
