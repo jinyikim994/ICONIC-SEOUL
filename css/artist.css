@@ -295,7 +295,7 @@
 /* 노트북 */
 @media screen and (min-width: 1728px) {
 
-  #sub-header{height: 70px;}
+  #sub-header{height: 80px;}
 
   #photographer-view .main-content{
     margin-top: 30px;
