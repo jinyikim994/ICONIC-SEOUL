@@ -125,13 +125,19 @@ header .active{
     top: 0;
     left: 0;
     width: 100%;
-    height: 80px;
+    height: 75px;
     background-color: white;
     display: flex;
     align-items: center;
     justify-content: space-between;
     padding: 0 101px 0 57px;
     z-index: 10;
+}
+
+#main-header .logo{
+    position: relative;
+    top: 3px;
+
 }
 
 #sub-header{
@@ -263,11 +269,11 @@ header .active{
 /* 16인치 MacBook Pro 스타일 */
 @media screen and (min-width: 1728px) {
     #sub-header{
-        height: 40px;
+        height: 55px;
         padding: 0 101px 0 18px;
     }
 
-    header .logo a{
+    #sub-header .logo a{
         font-size:25px;
     }
 
