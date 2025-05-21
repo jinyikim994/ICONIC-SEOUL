@@ -1,0 +1,7 @@
+/* 16인치 MacBook Pro 스타일 */
+
+@media screen and (min-width: 1728px) {
+    .slider-container, .slider-images{
+        margin: 26px auto;
+    }
+}

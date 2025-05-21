@@ -260,3 +260,19 @@ header .active{
     }
 }
 
+/* 16인치 MacBook Pro 스타일 */
+@media screen and (min-width: 1728px) {
+    #sub-header{
+        height: 40px;
+        padding: 0 101px 0 18px;
+    }
+
+    header .logo a{
+        font-size:25px;
+    }
+
+    #sub-header .logo a{
+        position: relative;
+        top: 0;
+    }
+}

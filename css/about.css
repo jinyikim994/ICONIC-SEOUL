@@ -1,10 +1,6 @@
 /* about */
 #about{overflow: visible;}
 
-#about header{
-    height: 70px;
-}
-
 #about .container{
     max-width: 1430px;
     margin: 50px auto;
