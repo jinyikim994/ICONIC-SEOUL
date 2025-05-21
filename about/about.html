@@ -6,163 +6,10 @@
   <title>ABOUT</title>
   <link href="https://fonts.cdnfonts.com/css/pragmatica-extralight" rel="stylesheet">
   <link rel="stylesheet" href="../css/common.css">
+  <link rel="stylesheet" href="../css/about.css">
   <script defer src="../js/common.js"></script>
-  <style>
-    body{overflow: visible;}
-
-    header{
-      height: 70px;
-    }
-    
-    .about{
-      max-width: 1430px;
-      margin: 50px auto;
-      /* height: 100vh; */
-    }
-
-    .about .wrap{
-      margin-top: 30px;
-    }
-
-    .about .title{
-      position: relative;
-      left: 500px;
-      font-size: 24px;
-      /* text-align: center; */
-      font-weight: 700;
-      font-family: 'Helvetica Neue';
-    }
-
-    .slide {
-      width: 450px;
-      position: relative;
-      top:50px;
-      display: flex;
-      flex-direction: column;
-      align-items: flex-start;
-    }
-
-    .slide > div {
-      width: 100%;
-      background-size: cover;
-      background-position: center;
-      position: absolute;
-      opacity: 0;
-      /* transition: opacity 1s cubic-bezier(0.645, 0.045, 0.355, 1); */
-    }
-
-    .small {
-      width: 400px !important;
-      height: 500px;
-      aspect-ratio: 4 / 3;
-    }
-
-    .cover {
-      width: 470px !important;
-      height: 320px;
-      aspect-ratio: 3 / 4;
-      position: relative;
-      top: 50px;
-    }
-
-    .about .wrap{
-      display: flex;
-      justify-content: space-between;
-      gap: 15px;
-    }
-
-    .about .desc {
-      width: 63%;
-    }
-
-    .about .desc p{
-      font-size: 15px;
-      font-weight: 400;
-      margin-bottom: 27px;
-      line-height: 26px;
-    }
-
-    .about .kor{
-      font-family: 'appleNeo';
-    }
-
-    .about .eng{
-      font-family: 'Helvetica Neue';
-      font-size:14px;
-      line-height:24px;
-    }
-
-  
-  @media (max-width: 1024px) {
-    .about {
-      width: 90%;
-      margin: 100px auto;
-    }
-
-    .about .wrap {
-      flex-direction: column;
-      align-items: center;
-    }
-
-    .about .image-container {
-      width: 100%;
-      margin-bottom: 20px;
-    }
-
-    .about .desc {
-      width: 100%;
-    }
-
-    .about .desc p {
-      font-size: 14px;
-      line-height: 1.6;
-    }
-
-    .slideshow {
-      width: 100% !important;
-      aspect-ratio: 4 / 3;
-      height: auto !important;
-      background-size: cover;
-      background-position: center;
-      transition: opacity 0.4s ease;
-    }
-  }
-
-  @media (max-width: 1024px) and (min-width: 769px) {
-    .about {
-      width: 90%;
-      margin: 120px auto;
-    }
-
-    .about .wrap {
-      gap: 25px;
-    }
-
-    .about .image-container {
-      width: 100%;
-    }
-
-    .about .desc {
-      width: 100%;
-    }
-
-    .about .desc p {
-      font-size: 15px;
-      line-height: 1.7;
-    }
-
-    .slideshow {
-      width: 100% !important;
-      height: auto !important;
-      aspect-ratio: 3 / 2;
-      background-size: cover;
-      background-position: center;
-    }
-  }
-
-  </style>
 </head>
-<body>
+<body id="about">
   <!-- header -->
   <header class="border-b-g" id="sub-header">
     <h1 class="logo"><a href="../index.html">ICONIC CREATIVE STUDIO</a></h1>
@@ -181,7 +28,7 @@
   <!-- //header -->
 
   <!-- About -->
-  <div class="about">
+  <div class="container">
     <h1 class="title">About</h1>
     <div class="wrap">
       <div class="slide">
@@ -198,7 +45,7 @@
         <div style="background-image:url(https://res.cloudinary.com/dlsvukxi1/image/upload/v1747805563/10_x4jebb.jpg)" class="small"></div>
         <div style="background-image:url(11번이미지)" class="small"></div>
         <div style="background-image:url(https://res.cloudinary.com/dlsvukxi1/image/upload/v1747805583/13_vrh6kz.jpg)" class="cover"></div>
-         <div style="background-image:url(https://res.cloudinary.com/dlsvukxi1/image/upload/v1747805578/14_hordxu.jpg)" class="small"></div>
+        <div style="background-image:url(https://res.cloudinary.com/dlsvukxi1/image/upload/v1747805578/14_hordxu.jpg)" class="small"></div>
       </div>
       <div class="desc kor">
         <p class="kor">

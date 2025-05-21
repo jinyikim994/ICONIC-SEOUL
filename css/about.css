@@ -1,0 +1,137 @@
+/* about */
+#about{overflow: visible;}
+
+#about header{
+    height: 70px;
+}
+
+#about .container{
+    max-width: 1430px;
+    margin: 50px auto;
+    /* height: 100vh; */
+}
+
+#about .container .wrap{
+    margin-top: 30px;
+}
+
+#about .container .title{
+    position: relative;
+    left: 500px;
+    font-size: 24px;
+    /* text-align: center; */
+    font-weight: 700;
+    font-family: 'Helvetica Neue';
+}
+
+#about .slide {
+    width: 450px;
+    position: relative;
+    top:50px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+#about .slide > div {
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+    position: absolute;
+    opacity: 0;
+    /* transition: opacity 1s cubic-bezier(0.645, 0.045, 0.355, 1); */
+}
+
+#about .small {
+    width: 400px !important;
+    height: 500px;
+    aspect-ratio: 4 / 3;
+}
+
+#about .cover {
+    width: 470px !important;
+    height: 320px;
+    aspect-ratio: 3 / 4;
+    position: relative;
+    top: 50px;
+}
+
+#about .container .wrap{
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+}
+
+#about .container .desc {
+    width: 63%;
+}
+
+#about .container .desc p{
+    font-size: 15px;
+    font-weight: 400;
+    margin-bottom: 27px;
+    line-height: 26px;
+}
+
+#about .container .kor{
+    font-family: 'appleNeo';
+}
+
+#about .container .eng{
+    font-family: 'Helvetica Neue';
+    font-size:14px;
+    line-height:24px;
+}
+
+
+@media (max-width: 1024px) {
+
+    #about .container {
+        width: 90%;
+        margin: 100px auto;
+    }
+
+    #about .container .wrap {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #about .container .image-container {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    #about .container .desc {
+        width: 100%;
+    }
+
+    #about .container .desc p {
+        font-size: 14px;
+        line-height: 1.6;
+    }
+
+}
+
+@media (max-width: 1024px) and (min-width: 769px) {
+    #about .container {
+        width: 90%;
+        margin: 120px auto;
+    }
+
+    #about .container .wrap {
+        gap: 25px;
+    }
+
+    #about .container .image-container {
+        width: 100%;
+    }
+
+    #about .container .desc {
+        width: 100%;
+    }
+
+    #about .container .desc p {
+        font-size: 15px;
+        line-height: 1.7;
+    }
+}
