@@ -808,7 +808,7 @@
 
 @media screen and (min-width: 1728px) {
 
-    #photographer-personal-detail .container, #photographer-ad-detail .container{
+    #photographer-personal-detail .container, #photographer-ad-detail .container, #stylist-fashion-view-all .container{
         margin: 30px 100px;
     }
 
