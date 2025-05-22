@@ -113,14 +113,13 @@
 @media screen and (min-width: 1728px) {
   #artist-list {
     margin: 0;
-    padding: 10px;
   }
 
   #artist-list .gallery-container {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 10px;
-    padding: 0;
+    padding: 10px;
     height: calc(100vh - 80px); /* header 제외한 영역 */
     box-sizing: border-box;
   }
@@ -377,7 +376,7 @@
 
 #photographer-personal-detail header .logo a{
     position: relative;
-    top: 5px;
+    /* top: 5px; */
 }
 
 #photographer-personal-detail .container{margin:100px;}
@@ -806,3 +805,11 @@
       padding: 0 20px;
     }
   }
+
+@media screen and (min-width: 1728px) {
+
+    #photographer-personal-detail .container, #photographer-ad-detail .container{
+        margin: 30px 100px;
+    }
+
+}
