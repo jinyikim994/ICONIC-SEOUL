@@ -1,0 +1,815 @@
+/* ARTIST - LIST */
+#artist-list {overflow: initial;}
+
+#artist-list .gallery-container {
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    align-items: center;
+    gap: 10px;
+    padding: 0 10px;
+    height: 100vh;
+    overflow: hidden;
+}
+
+#artist-list .gallery-item {
+    position: relative;
+    aspect-ratio: 1 / 1; /* 모든 아이템 동일 비율로 맞추기 */
+}
+
+#artist-list .gallery-item a {
+    display: block;
+    position: relative;
+    text-decoration: none;
+    color: inherit; 
+}
+
+#artist-list .gallery-item .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    z-index: 1;
+}
+
+#artist-list .gallery-item:hover .overlay {
+    opacity: 0.8;
+    background: #fff;
+    border:2px solid #000;
+}
+
+#artist-list .gallery-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+#artist-list .gallery-item:hover .job{ 
+    color:#111;
+}
+
+#artist-list .gallery-item .job{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 35px;
+    color: #fff;
+    text-transform: uppercase;
+    z-index: 99;
+    font-weight: 700;
+    font-family: "Roboto Condensed", sans-serif;
+    letter-spacing: 5px;
+}
+
+#artist-list .gallery-item .name{
+    font-family: 'Times New Roman', sans-serif;
+    font-weight: 400;
+    display: inline-block;
+    padding: 13px 0;
+    font-size: 19px;
+    color:#000;
+}
+
+/* 아이패드  */
+@media (max-width: 1024px) {
+    #artist-list .gallery-container {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 12px;
+    }
+
+    #artist-list .gallery-item .job {
+        font-size: 24px;
+        letter-spacing: 3px;
+    }
+
+    #artist-list .gallery-item .name {
+        font-size: 17px;
+    }
+}
+
+/* 모바일 */
+@media (max-width: 767px) {
+    #artist-list .gallery-container {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+
+    #artist-list .gallery-item .job {
+        font-size: 20px;
+        letter-spacing: 2px;
+    }
+
+    #artist-list .gallery-item .name {
+        font-size: 16px;
+    }
+}
+
+/* 16인치 MacBook Pro 스타일 */
+@media screen and (min-width: 1728px) {
+  #artist-list {
+    margin: 0;
+  }
+
+  #artist-list .gallery-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    padding: 10px;
+    height: calc(100vh - 80px); /* header 제외한 영역 */
+    box-sizing: border-box;
+  }
+
+  #artist-list .gallery-item {
+    aspect-ratio: auto; /* aspect-ratio 제거 */
+    /* overflow: hidden; */
+  }
+
+  #artist-list .gallery-item a {
+    height: 100%;
+    display: block;
+  }
+
+  #artist-list .gallery-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+
+/* PHOTOGRAPHER - VIEW */
+#photographer-view{ overflow: visible; }
+
+/* main-content */
+#photographer-view .main-content {
+    display: flex;
+    justify-content: center;
+    margin-top: 130px;
+    margin-bottom: 118px;
+}
+
+#photographer-view .main-content .magazine-cover {
+    width: 575px;
+    height: 868px;
+}
+
+#photographer-view .main-content .magazine-cover img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* info */
+#photographer-view .main-content .bottom-info {
+    margin: 27px 0 0 20px;
+    font-size: 43px;
+    font-weight: 500;
+    text-align: center;
+    font-family:'Times New Roman', sans-serif;
+}
+
+#photographer-view .main-content .bottom-info small {
+    display: block;
+    font-size: 11px;
+    margin-top: 14px;
+    font-family: "Roboto", sans-serif;
+}
+
+#photographer-view .gallery-container {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr); 
+    gap: 60px; /*줄이면 전체 세로 공간도 줄어듦 */
+    padding: 30px 40px 40px;
+    margin: auto;
+}
+
+#photographer-view .title{
+    padding: 0 40px;
+    font-family: 'Helvetica Neue', sans-serif;
+    font-size: 16px;
+    text-transform: uppercase;
+}
+
+#photographer-view .gallery-item img {
+    width: 100%;
+    height: 340px;
+    cursor: pointer;
+    aspect-ratio: 2 / 2;
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+}
+
+#photographer-view .gallery-item span{
+    display: block;
+    padding: 5px 0;
+    font-size: 15px;
+    font-weight: 700;
+    text-align: center;
+}
+
+#photographer-view .view-more-btn{
+    padding:30px 0;
+    margin-bottom:100px;
+    text-align: center;
+    text-decoration: underline;
+    font-size:20px;
+    font-family: 'Times New Roman', sans-serif;
+}
+
+#photographer-view .view-more-btn a{
+    color:#000;
+}
+ 
+/* 아이패드(1024px 이하) */
+@media (max-width: 1024px) {
+  #photographer-view .gallery-container {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+    padding: 20px;
+  }
+
+  #photographer-view .bottom-info {
+    font-size: 30px;
+  }
+
+  #photographer-view .bottom-info small {
+    font-size: 10px;
+  }
+
+  #photographer-view .modal .desc {
+    font-size: 14px;
+  }
+}
+
+/* 모바일 */
+@media (max-width: 768px) {
+  #photographer-view .main-content {
+    flex-direction: column;
+    align-items: center;
+    margin-top: 120px;
+  }
+
+  #photographer-view .magazine-cover {
+    width: 90%;
+    height: auto;
+  }
+
+  #photographer-view .bottom-info {
+    font-size: 24px;
+    margin-left: 0;
+    text-align: center;
+  }
+
+  #photographer-view .bottom-info small {
+    font-size: 9px;
+  }
+
+  #photographer-view .gallery-container {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    padding: 10px;
+  }
+
+  #photographer-view .ad .title {
+    font-size: 14px;
+    padding: 0 20px;
+  }
+}
+
+/* 노트북 */
+@media screen and (min-width: 1728px) {
+
+  #photographer-view .main-content{
+    margin-top: 30px;
+  }
+
+  #photographer-view .main-content .bottom-info {
+    margin: 10px 0 0 0px;
+  }
+
+  #photographer-view .main-content .magazine-cover{
+    width: 531px;
+  }
+
+  #photographer-view .main-content .bottom-info small{
+    margin-top: 6px;
+  }
+
+  #photographer-view .main-content .bottom-info{
+    font-size:37px;
+  }
+  
+}
+
+/* PHOTOGRAPHER - ADVERTISING DETAIL */
+#photographer-ad-detail{ overflow: unset; }
+
+#photographer-ad-detail header{
+    height: 70px;
+}
+
+#photographer-ad-detail header .logo a{
+    position: relative;
+    top: 5px;
+}
+
+#photographer-ad-detail .container{margin:100px;}
+
+#photographer-ad-detail .grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 12px;
+    margin-top: 20px;
+    margin-bottom:77px;
+    grid-column-gap: 5vw;
+    grid-row-gap: 1vw;
+}
+
+#photographer-ad-detail .grid img {
+    width: 100%;
+    height: 308px;
+    /* width: 370px; */
+    /* height: 483px; */
+    max-height: 370px;
+    display: block;
+    /* aspect-ratio: 2 / 2; */
+    object-fit: cover;
+}
+
+#photographer-ad-detail .grid span{
+    font-family: 'Helvetica Neue', sans-serif;
+    display: block;
+    font-size:14px;
+    padding:15px 0;
+    text-align: center; 
+}
+
+#photographer-ad-detail .row-span-2 {
+    grid-row: span 2;
+}
+
+#photographer-ad-detail .col-span-2 {
+    grid-column: span 1;
+}
+
+#photographer-ad-detail .cover {
+    grid-column: span 2;
+    grid-row: span 1;
+    height: 100%;
+    max-height: 230px;
+    /* aspect-ratio: 2 / 1.22; */
+}
+
+/* PHOTOGRAPHER - PERSONAL DETAIL */
+#photographer-personal-detail{
+    overflow: unset;
+}
+
+#photographer-personal-detail header{
+    height: 70px;
+}
+
+#photographer-personal-detail header .logo a{
+    position: relative;
+    /* top: 5px; */
+}
+
+#photographer-personal-detail .container{margin:100px;}
+
+#photographer-personal-detail .grid {
+    display: grid;
+    grid-template-columns: repeat(9, 1fr);
+    gap: 12px;
+    margin-top: 20px;
+    margin-bottom:77px;
+}
+
+#photographer-personal-detail .grid img {
+    width: 100%;
+    height: 100%;
+    max-height: 230px;
+    display: block;
+    /* aspect-ratio: 2 / 2; */
+    object-fit: cover;
+}
+
+#photographer-personal-detail .row-span-2 {
+    grid-row: span 2;
+}
+
+#photographer-personal-detail .col-span-2 {
+    grid-column: span 1;
+}
+
+#photographer-personal-detail .cover {
+    grid-column: span 2;
+    grid-row: span 1;
+    height: 100%;
+    max-height: 230px;
+    /* aspect-ratio: 2 / 1.22; */
+}
+
+/* STYLIST - VIEW */
+#stylist-view{ overflow: visible; }
+
+  #stylist-view video{
+    width: 100%;
+    min-height: 180px;
+    object-fit: cover;
+  }
+
+  /* main-content */
+  #stylist-view .main-content {
+    display: flex;
+    justify-content: center;
+    margin-top: 130px;
+    margin-bottom: 118px;
+  }
+
+  #stylist-view .magazine-cover {
+    width: 575px;
+    height: 868px;
+  }
+
+  #stylist-view .magazine-cover img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+
+  /* Bottom text */
+  #stylist-view .bottom-info {
+    margin: 27px 0 0 20px;
+    font-size: 43px;
+    font-weight: 500;
+    text-align: center;
+    font-family:'Times New Roman', sans-serif;
+  }
+
+  #stylist-view .bottom-info small {
+    display: block;
+    font-size: 11px;
+    margin-top: 14px;
+    font-family: "Roboto", sans-serif;
+    /* font-weight: 900; */
+  }
+
+  #stylist-view .gallery-container {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr); 
+      gap: 60px; /*줄이면 전체 세로 공간도 줄어듦 */
+      padding: 30px 40px 40px;
+      /* max-width: 1440px; */
+      margin: auto;
+    }
+
+  #stylist-view .title{
+    /* font-family: "Roboto", sans-serif; */
+    /* font-family: 'EngraversGothic'; */
+    font-family: 'Helvetica Neue', sans-serif;
+    /* font-weight: 900; */
+    font-size: 16px;
+    padding: 0 40px;
+    text-transform: uppercase;
+  }
+
+  #stylist-view .gallery-item img {
+    width: 100%;
+    height: 340px;
+    cursor: pointer;
+    aspect-ratio: 2 / 2;
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+  }
+
+
+  #stylist-view .gallery-item span{
+    display: block;
+    padding: 5px 0;
+    font-size: 15px;
+    font-weight: 700;
+    text-align: center;
+    text-transform: uppercase;
+  }
+
+  #stylist-view .view-more-btn{
+    padding:30px 0;
+    margin-bottom:100px;
+    text-align: center;
+    text-decoration: underline;
+    font-size:20px;
+    font-family: 'Times New Roman', sans-serif;
+  }
+
+  #stylist-view .view-more-btn a{
+    color:#000;
+  }
+
+  /* 노트북 */
+  @media screen and (min-width: 1728px) {
+
+    #stylist-view .main-content{
+      margin-top: 30px;
+    }
+
+    #stylist-view .main-content .bottom-info {
+      margin: 10px 0 0 0px;
+    }
+
+    #stylist-view .main-content .magazine-cover{
+      width: 531px;
+    }
+
+    #stylist-view .main-content .bottom-info small{
+      margin-top: 6px;
+    }
+
+    #stylist-view .main-content .bottom-info{
+      font-size:37px;
+    }
+  }
+
+  /* 아이패드(1024px 이하) */
+@media (max-width: 1024px) {
+    #stylist-view .gallery-container {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 15px;
+        padding: 20px;
+    }
+
+    #stylist-view .bottom-info {
+        font-size: 30px;
+    }
+
+    #stylist-view .bottom-info small {
+        font-size: 10px;
+    }
+}
+
+/* 모바일 */
+@media (max-width: 768px) {
+  #stylist-view .main-content {
+    flex-direction: column;
+    align-items: center;
+    margin-top: 120px;
+  }
+
+  #stylist-view .magazine-cover {
+    width: 90%;
+    height: auto;
+  }
+
+  #stylist-view .bottom-info {
+    font-size: 24px;
+    margin-left: 0;
+    text-align: center;
+  }
+
+  #stylist-view .bottom-info small {
+    font-size: 9px;
+  }
+
+  #stylist-view .gallery-container {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    padding: 10px;
+  }
+}
+
+/* STYLIST - FASHION - VIEW ALL */
+#stylist-fashion-view-all{
+    overflow: unset;
+}
+
+#stylist-fashion-view-all .container{margin:100px;}
+
+#stylist-fashion-view-all .grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 12px;
+    margin-top: 20px;
+    margin-bottom:77px;
+    grid-column-gap: 5vw;
+    grid-row-gap: 1vw;
+}
+
+#stylist-fashion-view-all .grid img {
+    width: 100%;
+    height: 308px;
+    /* width: 370px; */
+    /* height: 483px; */
+    max-height: 370px;
+    display: block;
+    /* aspect-ratio: 2 / 2; */
+    object-fit: cover;
+}
+
+#stylist-fashion-view-all .grid span{
+    font-family: 'Helvetica Neue', sans-serif;
+    display: block;
+    font-size:14px;
+    padding:15px 0;
+    text-align: center; 
+    text-transform: uppercase;
+}
+
+#stylist-fashion-view-all .row-span-2 {
+    grid-row: span 2;
+}
+
+#stylist-fashion-view-all .col-span-2 {
+    grid-column: span 1;
+}
+
+#stylist-fashion-view-all .cover {
+    grid-column: span 2;
+    grid-row: span 1;
+    height: 100%;
+    max-height: 230px;
+    /* aspect-ratio: 2 / 1.22; */
+}
+
+
+/* BEAUTY - VIEW */
+#beauty-view{ overflow: visible; }
+
+  #beauty-view video{
+    width: 100%;
+    min-height: 180px;
+    object-fit: cover;
+  }
+
+  /* main-content */
+  #beauty-view .main-content {
+    display: flex;
+    justify-content: center;
+    margin-top: 130px;
+    margin-bottom: 118px;
+  }
+
+  #beauty-view .magazine-cover img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+
+  /* Bottom text */
+  #beauty-view .bottom-info {
+    margin: 27px 0 0 20px;
+    font-size: 43px;
+    font-weight: 500;
+    text-align: center;
+    font-family:'Times New Roman', sans-serif;
+  }
+
+  #beauty-view .bottom-info small {
+    display: block;
+    font-size: 11px;
+    margin-top: 14px;
+    font-family: "Roboto", sans-serif;
+    /* font-weight: 900; */
+  }
+
+  #beauty-view .gallery-container {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr); 
+      gap: 60px; /*줄이면 전체 세로 공간도 줄어듦 */
+      padding: 30px 40px 40px;
+      /* max-width: 1440px; */
+      margin: auto;
+    }
+
+  #beauty-view .title{
+    /* font-family: "Roboto", sans-serif; */
+    /* font-family: 'EngraversGothic'; */
+    font-family: 'Helvetica Neue', sans-serif;
+    /* font-weight: 900; */
+    font-size: 16px;
+    padding: 0 40px;
+    text-transform: uppercase;
+  }
+
+  #beauty-view .gallery-item img {
+    width: 100%;
+    height: 340px;
+    cursor: pointer;
+    aspect-ratio: 2 / 2;
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+  }
+
+
+  #beauty-view .gallery-item span{
+    display: block;
+    padding: 5px 0;
+    font-size: 15px;
+    font-weight: 700;
+    text-align: center;
+    text-transform: uppercase;
+  }
+
+  #beauty-view .view-more-btn{
+    padding:30px 0;
+    margin-bottom:100px;
+    text-align: center;
+    text-decoration: underline;
+    font-size:20px;
+    font-family: 'Times New Roman', sans-serif;
+  }
+
+  #beauty-view .view-more-btn a{
+    color:#000;
+
+  }
+
+  @media screen and (min-width: 1728px) {
+
+    #beauty-view .main-content{
+      margin-top: 30px;
+    }
+
+    #beauty-view .main-content .bottom-info {
+      margin: 10px 0 0 0px;
+    }
+
+    #beauty-view .main-content .magazine-cover{
+      width: 1013px;
+    }
+
+    #beauty-view .main-content .bottom-info small{
+      margin-top: 6px;
+    }
+
+    #beauty-view .main-content .bottom-info{
+      font-size:37px;
+    }
+  }
+
+  
+/* 아이패드(1024px 이하) */
+  @media (max-width: 1024px) {
+  #beauty-view .gallery-container {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+    padding: 20px;
+  }
+
+  #beauty-view .bottom-info {
+    font-size: 30px;
+  }
+
+  #beauty-view .bottom-info small {
+    font-size: 10px;
+  }
+
+}
+
+/* 모바일 */
+  @media (max-width: 767px) {
+    #beauty-view .main-content {
+      flex-direction: column;
+      align-items: center;
+      margin-top: 120px;
+    }
+
+    #beauty-view .magazine-cover {
+      width: 90%;
+      height: auto;
+    }
+
+    #beauty-view .bottom-info {
+      font-size: 24px;
+      margin-left: 0;
+      text-align: center;
+    }
+
+    #beauty-view .bottom-info small {
+      font-size: 9px;
+    }
+
+    #beauty-view .gallery-container {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 10px;
+      padding: 10px;
+    }
+
+    #beauty-view .item01 h2 {
+      font-size: 14px;
+      padding: 0 20px;
+    }
+  }
+
+@media screen and (min-width: 1728px) {
+
+    #photographer-personal-detail .container, #photographer-ad-detail .container, #stylist-fashion-view-all .container{
+        margin: 30px 100px;
+    }
+
+}
