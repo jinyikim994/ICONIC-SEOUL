@@ -1,0 +1,147 @@
+/* 기본 (데스크탑 + 아이패드 포함): 3열 유지 */
+#main {
+    background: #fff;
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+#main .gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    width: 100vw;
+    height: 100vh;
+    margin-top: 75px; 
+    overflow: hidden;
+}
+
+#main .gallery .column {
+    overflow: hidden;
+    position: relative;
+}
+
+#main .gallery .scroller {
+    display: flex;
+    flex-direction: column;
+    animation: scrollLoop 40s linear infinite;
+}
+
+#main .gallery .column-2 .scroller {
+    animation: scrollLoopReverse 30s linear infinite;
+}
+
+#main .gallery .column-3 .scroller {
+    animation: scrollLoop 40s linear infinite;
+}
+
+#main .gallery .masonry-item {
+    overflow: hidden;
+    position: relative;
+    line-height: 0;
+}
+
+#main .gallery .masonry-item img,
+#main .gallery .masonry-item video {
+    width: 100%;
+    height: auto;
+    display: block;
+    margin: 0;
+    padding: 0;
+    border: none;
+}
+
+#main .gallery .masonry-item video {
+    max-height: 350px;
+    height: 350px;
+    object-fit: cover;
+}
+
+/* 이미지 호버 정보 */
+#main .gallery .masonry-item .info {
+    display: none;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.9);
+    color: #000;
+    padding: 10px;
+    font-family: 'Cormorant', serif;
+    font-size: 18px;
+    font-weight: 600;
+    text-transform: uppercase;
+    transform: translateY(100%);
+    transition: transform 0.3s ease;
+}
+
+#main .gallery .masonry-item:hover .info {
+    display: flex;
+    transform: translateY(0);
+}
+
+/* 애니메이션 */
+@keyframes scrollLoop {
+    0% { transform: translateY(0); }
+    100% { transform: translateY(-50%); }
+}
+
+@keyframes scrollLoopReverse {
+    0% { transform: translateY(-50%); }
+    100% { transform: translateY(0); }
+}
+
+#main .gallery .scroller > * {
+    flex-shrink: 0;
+}
+
+
+/* ───── 미디어 쿼리: 태블릿 이하 ───── */
+@media (max-width: 1024px) {
+    #main .gallery {
+        grid-template-columns: repeat(2, 1fr);
+        height: auto;
+    }
+
+    #main .gallery .masonry-item video {
+        max-height: 250px;
+        height: 250px;
+    }
+
+    #main .gallery .masonry-item .info {
+        font-size: 14px;
+        display: none !important; /* hover info 숨김 */
+    }
+}
+
+/* ───── 미디어 쿼리: 모바일 ───── */
+@media (max-width: 768px) {
+    #main .gallery {
+        grid-template-columns: repeat(2, 1fr);
+        height: 100vh; 
+        overflow: hidden; 
+    }
+
+    #main .gallery .column {
+        height: 100vh; 
+        overflow: hidden;
+    }
+
+    #main .gallery .scroller {
+        animation: scrollLoop 40s linear infinite;
+        height: auto;
+    }
+
+    #main .gallery .masonry-item video {
+        max-height: 200px;
+        height: 200px;
+    }
+
+    #main .gallery .masonry-item .info {
+        font-size: 12px;
+        display: none !important;
+    }
+}

@@ -1,0 +1,21 @@
+/* common class */
+.border-l{
+    border-left: 1px solid #121717;
+}
+
+.border-r{
+    border-right: 1px solid #121717;
+}
+
+.border-t{
+    border-top: 1px solid #121717;
+}
+
+.border-b{
+    border-bottom: 1px solid #121717;
+}
+
+.border-b-g{
+    border-bottom: 1px solid #d1d1d1;
+}
+

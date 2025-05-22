@@ -1,0 +1,81 @@
+#contact{
+    overflow: visible;
+}
+
+#contact header{
+    position: unset;
+}
+
+#contact header .logo a{
+    position: relative;
+    top: 5px;
+}
+
+#contact .container {
+    /* font-family:'Times New Roman', sans-serif; */
+    height: 100vh;
+    display: flex;
+    /* justify-content: center; */
+    flex-direction: column;
+    align-items: center;
+    padding: 80px 20px;
+}
+
+#contact .container .title{
+    margin-bottom: 100px;
+    font-size: 30px;
+    color:#000;
+    text-align: center;
+}
+
+#contact .info-wrap{display: flex;}
+
+#contact .column {
+    width: 600px;
+}
+#contact .column:first-child {
+    border-right: 1px solid #000;
+    padding-right: 60px;
+}
+
+#contact .column:last-child {
+    padding-left: 100px;
+
+}
+
+#contact .title {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+#contact .info {
+    margin-bottom: 15px;
+}
+
+#contact .info label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+#contact .info p {
+    margin: 0;
+    line-height: 1.6;
+}
+#contact .insta {
+    margin-top: 40px;
+    font-size: 1.2rem;
+}
+
+#contact .insta a{
+    color: #000;
+}
+
+/* 16인치 MacBook Pro 스타일 */
+@media screen and (min-width: 1728px) {
+    #contact header .logo a{
+        position: relative;
+        top: 0;
+    }
+}
