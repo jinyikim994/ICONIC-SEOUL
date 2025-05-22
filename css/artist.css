@@ -113,7 +113,7 @@
 @media screen and (min-width: 1728px) {
   #artist-list {
     margin: 0;
-    padding: 0;
+    padding: 10px;
   }
 
   #artist-list .gallery-container {
