@@ -1,4 +1,6 @@
 /* ARTIST - LIST */
+#artist-list {overflow: initial;}
+
 #artist-list .gallery-container {
     position: relative;
     display: grid;
@@ -806,7 +808,7 @@
 
 @media screen and (min-width: 1728px) {
 
-    #photographer-personal-detail .container, #photographer-ad-detail .container, #stylist-fashion-view-all .container{
+    #photographer-personal-detail .container, #photographer-ad-detail .container{
         margin: 30px 100px;
     }
 

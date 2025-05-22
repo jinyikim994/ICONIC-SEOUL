@@ -1,8 +1,284 @@
-/* Reset */
-@import url("../css/base/reset.css");
+/* 구글 폰트 */
+@import url('https://fonts.googleapis.com/css2?family=Cal+Sans');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,300..700;1,300..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Syncopate:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900');
+@import url('https://fonts.googleapis.com/css2?family=Italiana&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,200..900;1,8..60,200..900&display=swap');
 
-/* Font */
-@import url("../css/base/font.css");
+/* 어도비 폰트 */
+@import url('https://fonts.cdnfonts.com/css/times-new-roman');
+@import url('https://fonts.cdnfonts.com/css/pragmatica');
+@import url('https://fonts.cdnfonts.com/css/adobe-garamond-pro-2');
+@import url('https://fonts.cdnfonts.com/css/inter');
+@import url('https://fonts.cdnfonts.com/css/aktiv-grotesk-cd-trial');
+@import url('https://fonts.cdnfonts.com/css/acumin-pro'); 
+@import url('https://fonts.cdnfonts.com/css/anton');
 
-/* Layout */
-@import url("../css/layout/header.css");
+/* 고정 폰트 */
+@font-face {
+    font-family: 'Helvetica Neue';
+    src: url('../font/Helvetica Neue/HelveticaNeueLTPro-Lt.otf') format('opentype');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Helvetica Neue';
+    src: url('../font/Helvetica Neue/HelveticaNeueLTPro-HvCn.otf') format('opentype');
+    font-weight: 700;
+    font-style: normal;
+}
+
+
+@font-face {
+    font-family: 'LayGrotesk';
+    src: url('../font/lay-grotesk/LayGrotesk-Trial-Black.otf') format('opentype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Feature Display';
+    src: url('../font/FeatureDisplay-Regular.ttf') format('opentype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'appleNeo';
+    src: url('../font/Apple\ 산돌고딕\ Neo/AppleSDGothicNeoM.ttf') format('opentype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap');
+
+/* common */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style: none;
+}
+
+#main {
+    background: #fff;
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+/* common */
+.border-l{
+    border-left: 1px solid #121717;
+}
+
+.border-r{
+    border-right: 1px solid #121717;
+}
+
+.border-t{
+    border-top: 1px solid #121717;
+}
+
+.border-b{
+    border-bottom: 1px solid #121717;
+}
+
+.border-b-g{
+    border-bottom: 1px solid #d1d1d1;
+}
+
+/* header */
+header .logo a{
+    font-family: 'Helvetica Neue', sans-serif;
+    font-size: 39px;
+    font-weight: bold;
+    color: #000;
+}
+
+header nav a {
+    font-family: "Roboto Condensed", sans-serif;
+    margin-left: 52px;
+    text-decoration: none;
+    font-size: 17px;
+    font-weight: 400;
+    color: #343a40;
+}
+
+header .active{
+    color: #a9a9a9;
+}
+
+.hamburger{ 
+    display: none;
+}
+
+#main-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 75px;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 101px 0 39px;
+    z-index: 10;
+}
+
+#main-header .logo{
+    position: relative;
+    top: 3px;
+
+}
+
+#sub-header{
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 101px 0 57px;
+}
+
+#sub-header .logo a{
+    position: relative;
+    top: 5px;
+}
+
+
+
+/* 아이패드 (1024px 이하) */
+@media (max-width: 1024px) {
+    
+    header {
+        display: flex;
+        align-items: center;
+        height: 80px;
+        padding: 0;
+    }
+
+    header .logo a{
+        font-size: 35px;
+        /* padding: 0 10px;*/
+    }
+
+    header #navMenu{
+        position: absolute;
+        top: 80px;  
+        left: 0;
+    }
+
+    header nav a{
+        margin-left: 0;
+    }
+
+    nav {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        text-align: center;
+        background-color: white;
+    }
+
+    nav a {
+        padding: 20px;
+        display: block;
+    }
+
+    .hamburger {
+        display: block;
+        position: absolute;
+        top: 20px;
+        right: 20px;
+    }
+
+    nav.show {
+        display: flex;
+    }
+
+    .hamburger {
+        display: block;
+        position: absolute;
+        top: 35px;
+        right: 20px;
+        font-size: 28px;
+        background: none;
+        border: none;
+        cursor: pointer;
+        width: 40px;
+        height: 10px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        background: none;
+        border: none;
+        cursor: pointer;
+        padding: 0;
+        z-index: 999;
+    }
+
+    .hamburger span {
+        display: block;
+        height: 1px; /* ★ 얇게 설정 */
+        width: 100%;
+        background-color: #000;
+        border-radius: 1px;
+        transition: all 0.3s ease;
+    }
+
+    .accordion-menu {
+        overflow: hidden;
+        max-height: 0;
+        transition: max-height 0.4s ease-in-out;
+    }
+    
+    .accordion-menu.show {
+        max-height: 500px; /* 충분한 높이 설정 */
+    }
+
+    .accordion-menu {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        background-color: white;
+    }
+
+    .accordion-menu a {
+        padding: 25px;
+        text-align: left;
+        text-decoration: none;
+        color: black;
+    }
+}
+
+@media (max-width: 768px) {
+    header .logo a{
+        font-size: 20px;
+        padding: 0 10px;    
+    }
+}
+
+/* 16인치 MacBook Pro 스타일 */
+@media screen and (min-width: 1728px) {
+    #sub-header{
+        height: 55px;
+        padding: 0 101px 0 18px;
+    }
+
+    #sub-header .logo a{
+        font-size:25px;
+    }
+
+    #sub-header .logo a{
+        position: relative;
+        top: 0;
+    }
+}
