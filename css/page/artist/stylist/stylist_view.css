@@ -1,0 +1,174 @@
+/* STYLIST - VIEW */
+#stylist-view{ overflow: visible; }
+
+#stylist-view video{
+    width: 100%;
+    min-height: 186px;
+    object-fit: cover;
+}
+
+#stylist-view .main-content {
+    display: flex;
+    justify-content: center;
+    margin-top: 130px;
+    margin-bottom: 118px;
+}
+
+#stylist-view .magazine-cover {
+    width: 575px;
+    height: auto;
+}
+
+#stylist-view .magazine-cover img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Bottom text */
+#stylist-view .bottom-info {
+    margin: 27px 0 0 20px;
+    font-size: 43px;
+    font-weight: 500;
+    text-align: center;
+    font-family:'Times New Roman', sans-serif;
+}
+
+#stylist-view .bottom-info small {
+    display: block;
+    font-size: 11px;
+    margin-top: 14px;
+    font-family: "Roboto", sans-serif;
+    font-weight: 900;
+}
+
+#stylist-view .gallery-container {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr); 
+    gap: 30px 100px; 
+    padding: 30px 40px 40px;
+    margin: auto;
+}
+
+#stylist-view .title{
+    font-family: 'Helvetica Neue', sans-serif;
+    font-size: 16px;
+    padding: 0 40px;
+    text-transform: uppercase;
+}
+
+#stylist-view .gallery-item img {
+    width: 100%;
+    height: auto;
+    cursor: pointer;
+     /* aspect-ratio: 2 / 2; */
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+}
+
+
+#stylist-view .gallery-item span{
+    display: block;
+    padding: 5px 0;
+    font-size: 15px;
+    font-weight: 700;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+#stylist-view .view-more-btn{
+    padding:30px 0;
+    margin-bottom:100px;
+    text-align: center;
+    text-decoration: underline;
+    font-size:20px;
+    font-family: 'Times New Roman', sans-serif;
+}
+
+#stylist-view .view-more-btn a{
+    color:#000;
+}
+
+#stylist-view .film .gallery-container { 
+    gap: 20px; 
+}
+
+/* 노트북 */
+@media screen and (min-width: 1728px) {
+
+    #stylist-view .main-content{
+        margin-top: 30px;
+    }
+
+    #stylist-view .main-content .bottom-info {
+        margin: 10px 0 0 0px;
+    }
+
+    #stylist-view .main-content .magazine-cover{
+        width: 531px;
+    }
+
+    #stylist-view .main-content .bottom-info small{
+        margin-top: 6px;
+    }
+
+    #stylist-view .main-content .bottom-info{
+        font-size:37px;
+    }
+}
+
+
+/* 아이패드 */
+@media (max-width: 1024px) {
+    #stylist-view .gallery-container {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 40px;
+        padding: 20px;
+    }
+    
+    #stylist-view .magazine-cover {
+        width: 400px;
+        height: auto;
+    }
+
+    #stylist-view .bottom-info {
+        font-size: 32px;
+    }
+}
+
+/* 모바일 */
+@media (max-width: 768px) {
+    #stylist-view .gallery-container {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+        padding: 15px;
+    }
+
+    #stylist-view .main-content {
+        margin-top: 80px;
+        margin-bottom: 60px;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #stylist-view .magazine-cover {
+        width: 90%;
+        max-width: 350px;
+    }
+
+    #stylist-view .title {
+        padding: 0 20px;
+        font-size: 14px;
+    }
+
+    #stylist-view .gallery-item span {
+        font-size: 13px;
+    }
+
+    #stylist-view .view-more-btn {
+        font-size: 16px;
+        padding: 20px 0;
+        margin-bottom: 60px;
+    }
+}

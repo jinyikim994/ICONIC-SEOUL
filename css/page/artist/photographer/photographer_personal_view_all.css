@@ -1,0 +1,86 @@
+/* PHOTOGRAPHER - PERSONAL DETAIL */
+#photographer-personal-detail .container{margin:100px;}
+
+#photographer-personal-detail .grid {
+    display: grid;
+    grid-template-columns: repeat(9, 1fr);
+    gap: 8px;
+    margin-top: 20px;
+    margin-bottom:77px;
+}
+
+#photographer-personal-detail .grid img {
+    width: 100%;
+    /* max-height: 206px; */
+    display: block;
+    aspect-ratio: 3 / 4; 
+    object-fit: cover;
+}
+
+#photographer-personal-detail .row-span-2 {
+    grid-row: span 2;
+}
+
+#photographer-personal-detail .col-span-2 {
+    grid-column: span 1;
+}
+
+#photographer-personal-detail .cover {
+    grid-column: span 2;
+    aspect-ratio: 3 / 1;
+    object-fit: cover;
+    width: 100%;
+    display: block;
+    max-height: 220px; 
+    
+}
+
+/* 노트북 16인치 */
+@media screen and (min-width: 1728px) {
+    #photographer-personal-detail .container{margin:20px 114px;}
+    #photographer-personal-detail .grid{gap:40px 8px;}
+
+}
+
+/* 반응형 대응 */
+@media (max-width: 1440px) {
+    #photographer-personal-detail .grid {
+        grid-template-columns: repeat(6, 1fr);
+    }
+
+    #photographer-personal-detail .cover {
+        grid-column: span 2;
+        aspect-ratio: 3 / 1.2;
+        max-height: none;
+    }
+}
+
+@media (max-width: 1024px) {
+    #photographer-personal-detail .grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    #photographer-personal-detail .cover {
+        grid-column: span 2;
+        aspect-ratio: 4 / 3;
+        max-height: 230px;
+    }
+}
+
+@media (max-width: 768px) {
+    #photographer-personal-detail .grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 12px;
+    }
+
+    #photographer-personal-detail .container {
+        margin: 60px 16px;
+    }
+
+    #photographer-personal-detail .cover {
+        grid-column: span 2;
+        aspect-ratio: 4 / 3;
+        max-height: 250px;
+    }
+}
+

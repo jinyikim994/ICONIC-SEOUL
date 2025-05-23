@@ -1,0 +1,41 @@
+/* 고정 폰트 */
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap');
+
+@font-face {
+    font-family: 'Helvetica Neue';
+    src: url('../font/Helvetica\ Neue/HelveticaNeueLTPro-Lt.otf') format('opentype');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Helvetica Neue';
+    src: url('../font/Helvetica Neue/HelveticaNeueLTPro-HvCn.otf') format('opentype');
+    font-weight: 700;
+    font-style: normal;
+    
+}
+
+@font-face {
+    font-family: 'LayGrotesk';
+    src: url('../font/lay-grotesk/LayGrotesk-Trial-Black.otf') format('opentype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Feature Display';
+    src: url('../font/FeatureDisplay-Regular.ttf') format('opentype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'appleNeo';
+    src: url('../font/Apple\ 산돌고딕\ Neo/AppleSDGothicNeoM.ttf') format('opentype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+

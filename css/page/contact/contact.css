@@ -1,0 +1,159 @@
+#contact {
+    overflow: visible;
+}
+
+#contact header {
+    position: unset;
+}
+
+#contact header .logo a {
+    position: relative;
+    top: 5px;
+}
+
+#contact .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 80px 20px;
+    box-sizing: border-box;
+}
+
+#contact .container .title {
+    margin-bottom: 80px;
+    font-size: 30px;
+    color: #000;
+    text-align: center;
+}
+
+#contact .info-wrap {
+    display: flex;
+    gap: 60px;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+    max-width: 1200px;
+}
+
+#contact .column {
+    flex: 1 1 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+    padding: 0 10px;
+}
+
+#contact .column:first-child {
+    border-right: none;
+    padding-right: 0;
+}
+
+#contact .column:last-child {
+    padding-left: 0;
+}
+
+#contact .column .title {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+#contact .info {
+    margin-bottom: 15px;
+}
+
+#contact .info label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+#contact .info p {
+    margin: 0;
+    line-height: 1.6;
+}
+
+#contact .insta {
+    margin-top: 40px;
+    font-size: 1.2rem;
+}
+
+#contact .insta a {
+    color: #000;
+}
+
+/* 태블릿 이상: 769px ~ 1024px */
+@media (min-width: 769px) {
+    #contact .info-wrap {
+        flex-direction: row;
+        gap: 60px;
+    }
+
+    #contact .column {
+        flex: 1 1 45%;
+        max-width: 45%;
+    }
+
+    #contact .column:first-child {
+        border-right: 1px solid #000;
+        padding-right: 60px;
+    }
+
+    #contact .column:last-child {
+        padding-left: 60px;
+    }
+}
+
+/* 데스크탑: 1025px 이상 */
+@media (min-width: 1025px) {
+    #contact .container .title {
+        font-size: 36px;
+        margin-bottom: 100px;
+    }
+}
+
+/* 대형 화면: 1728px 이상 (16" MacBook Pro 대응) */
+@media screen and (min-width: 1728px) {
+    #contact header .logo a {
+        top: 0;
+    }
+}
+
+/* 모바일 대응: 768px 이하 */
+@media (max-width: 768px) {
+    #contact .container {
+        padding: 60px 20px;
+    }
+
+    #contact .container .title {
+        font-size: 24px;
+        margin-bottom: 60px;
+    }
+
+    #contact .column {
+        max-width: 100%;
+        padding: 0;
+    }
+
+    #contact .column:first-child {
+        border-right: none;
+        padding-right: 0;
+        margin-bottom: 40px;
+    }
+
+    #contact .column:last-child {
+        padding-left: 0;
+    }
+
+    #contact .info label {
+        font-size: 14px;
+    }
+
+    #contact .info p {
+        font-size: 14px;
+    }
+
+    #contact .insta {
+        font-size: 1rem;
+    }
+}

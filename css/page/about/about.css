@@ -111,7 +111,7 @@
 @media (max-width: 1024px) and (min-width: 769px) {
     #about .container {
         width: 90%;
-        margin: 120px auto;
+        /* margin: 120px auto; */
     }
 
     #about .container .wrap {
@@ -131,3 +131,5 @@
         line-height: 1.7;
     }
 }
+
+

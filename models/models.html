@@ -4,160 +4,21 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>ARTIST - MODELS</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   <link rel="stylesheet" href="../css/common.css">
-  <link rel="stylesheet" href="../css/models.css">
+  <link rel="stylesheet" href="../css/page/models/models.css">
   <script defer src="../js/common.js"></script>
-  <style>
-
-  body{ overflow: visible; }
-  
-  .slider-images {
-    position: relative;
-    width: 100%;
-    height: 100vh;
-  }
-
-  .slide {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    opacity: 0;
-    transition: opacity 0.5s ease;
-  }
-
-  .slide.active {
-    opacity: 1;
-  }
-
-  .slider-container,
-  .slider-images {
-    margin: 10px auto;
-  }
-
-  .slider-images{
-    width: 1000px;
-    max-height: 583px; 
-  }
-
-  .slider-images img{
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-  }
-
-  .hover-zone {
-    position: absolute;
-    top: 0;
-    width: 50%;
-    height: 100%;
-    z-index: 20;
-    cursor: none;
-  }
-
-  .hover-zone.left-zone {
-    position: absolute;
-    left: 0;
-  }
-
-  .hover-zone.right-zone {
-    position: absolute;
-    right: 0;
-    width: 50%;
-    /* cursor: url('right-arrow.png'), auto; */
-    z-index: 20;
-  }
-
-  .floating-arrow {
-    position: absolute;
-    pointer-events: none; 
-    width: 40px;
-    height: 40px;
-    display: none;
-    z-index: 999;
-  }
-
-  .slider-container {
-    position: relative;
-  }
-
-  .name{
-    font-family: "Libre Baskerville", serif;
-    text-transform: uppercase;
-    font-weight: 400;
-    font-size:66px;
-    color: #000;
-  }
-
-  .name span{
-    font-family: 'Feature Display';
-  }
-
-  .bottom-text{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-
-  }
-
-  .bottom-text .info{
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-  }
-
-  .bottom-text .info p{
-      padding-bottom: 10px;
-  }
-
-  .download-btn {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 14px;
-      color: black;
-      text-decoration: none;
-      border: none;
-      background: none;
-      cursor: pointer;
-      font-family: Lay Grotesk;
-    }
-
-  .download-btn:hover {
-    text-decoration: underline;
-  }
-
-  .download-icon {
-    margin-left: 6px;
-    font-size: 16px;
-  }
-
-  .pdf-down-btn{
-    width: 14px;
-    height:14px;
-  }
-
-  /* 16인치 MacBook Pro 스타일 */
-
-  @media screen and (min-width: 1728px) {
-      .slider-container, .slider-images{
-          margin: 26px auto;
-      }
-  }
-</style>
 </head>
 <body>
   <!-- header -->
   <header class="border-b-g" id="sub-header">
     <h1 class="logo"><a href="../index.html">ICONIC CREATIVE STUDIO</a></h1>
-    <button class="hamburger" onclick="toggleMenu()">
+    <button class="mobile-btn" onclick="toggleMenu()">
       <span></span>
       <span></span>
       <!-- <span></span> -->
     </button>
     <nav id="navMenu" class="accordion-menu">
-      <a href="../artist/artist.html">ARTISTS</a>
+      <a href="../artist/artist_list.html">ARTISTS</a>
       <a href="./models.html" class="active">MODELS</a>
       <a href="../about/about.html">ABOUT</a>
       <a href="../contact/contact.html">CONTACT</a>
@@ -167,10 +28,11 @@
   <!-- artist -->
   <div class="slider-container">
     <div class="slider-images">
-      <img src="https://res.cloudinary.com/dlsvukxi1/image/upload/v1747806923/3_birgz4.jpg" class="slide active"/>
-      <img src="https://res.cloudinary.com/dlsvukxi1/image/upload/v1747806929/2_lbv2vf.jpg" class="slide"/>
-      <img src="https://res.cloudinary.com/dlsvukxi1/image/upload/v1747806926/1_n0bpkv.jpg" class="slide"/>
+      <img src="https://res.cloudinary.com/dlsvukxi1/image/upload/v1747988800/3_xp4rvg.jpg" class="slide active"/>
+      <img src="https://res.cloudinary.com/dlsvukxi1/image/upload/v1747988799/2_q6kncn.jpg" class="slide"/>
+      <img src="https://res.cloudinary.com/dlsvukxi1/image/upload/v1747988799/1_xxibsu.jpg" class="slide"/>
     </div>
+    <!-- hover  -->
     <div class="hover-zone left-zone"></div>
     <div class="hover-zone right-zone"></div>
     <div class="floating-arrow left">
@@ -183,6 +45,7 @@
         <path stroke-linecap="round" stroke-linejoin="round" d="M17.25 8.25 21 12m0 0-3.75 3.75M21 12H3" />
       </svg>
     </div>
+    <!-- hover  -->
   </div>
   <!-- //artist -->
   <!-- info -->
@@ -257,5 +120,6 @@
         rightArrow.style.top = `${e.clientY}px`;
       });
   </script>
+  
 </body>
 </html>

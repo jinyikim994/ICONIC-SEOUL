@@ -53,34 +53,8 @@
 
 #main .gallery .masonry-item video {
     max-height: 350px;
-    height: 350px;
+    height: auto;
     object-fit: cover;
-}
-
-/* 이미지 호버 정보 */
-#main .gallery .masonry-item .info {
-    display: none;
-    justify-content: center;
-    align-items: center;
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    height: 100%;
-    background: rgba(255, 255, 255, 0.9);
-    color: #000;
-    padding: 10px;
-    font-family: 'Cormorant', serif;
-    font-size: 18px;
-    font-weight: 600;
-    text-transform: uppercase;
-    transform: translateY(100%);
-    transition: transform 0.3s ease;
-}
-
-#main .gallery .masonry-item:hover .info {
-    display: flex;
-    transform: translateY(0);
 }
 
 /* 애니메이션 */
@@ -98,7 +72,6 @@
     flex-shrink: 0;
 }
 
-
 /* ───── 미디어 쿼리: 태블릿 이하 ───── */
 @media (max-width: 1024px) {
     #main .gallery {
@@ -108,7 +81,7 @@
 
     #main .gallery .masonry-item video {
         max-height: 250px;
-        height: 250px;
+        height: auto;
     }
 
     #main .gallery .masonry-item .info {
@@ -119,17 +92,10 @@
 
 /* ───── 미디어 쿼리: 모바일 ───── */
 @media (max-width: 768px) {
-
-    #main-header{padding:0; height:60px;}
-    #main-header .logo {top:0;}
-    .hamburger{top:26px;}
-    header #navMenu{top:60px;}
-
     #main .gallery {
         grid-template-columns: repeat(2, 1fr);
         height: 100vh; 
         overflow: hidden; 
-        margin-top: 60px;   
     }
 
     #main .gallery .column {
@@ -144,7 +110,7 @@
 
     #main .gallery .masonry-item video {
         max-height: 200px;
-        height: 200px;
+        height: auto;
     }
 
     #main .gallery .masonry-item .info {
