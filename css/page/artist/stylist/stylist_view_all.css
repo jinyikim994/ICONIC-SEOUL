@@ -19,9 +19,9 @@
 #stylist-fashion-view-all .grid img {
     width: 100%;
     height: auto;
-    max-height: 370px;
+    max-height: 320px;
     display: block;
-    /* aspect-ratio: 2 / 2; */
+    aspect-ratio: 3 / 4;
     object-fit: cover;
 }
 
