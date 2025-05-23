@@ -1,5 +1,5 @@
 /* 기본 (데스크탑 + 아이패드 포함): 3열 유지 */
-.masonry-item video {
+.gallery video {
     pointer-events: none;
     touch-action: none;
 }
