@@ -172,4 +172,9 @@
         padding: 20px 0;
         margin-bottom: 60px;
     }
+
+    #stylist-view video{
+        height: 120px;
+        min-height: 120px;
+    }
 }

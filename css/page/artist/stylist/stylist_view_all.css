@@ -60,7 +60,7 @@
 
   #stylist-fashion-view-all .grid img {
     height: auto;
-    max-height: 3 00px;
+    max-height: 300px;
   }
 
   #stylist-fashion-view-all .container {
@@ -86,6 +86,6 @@
   }
 
   #stylist-fashion-view-all .container {
-    margin: 60px 20px;
+    margin: 20px 20px;
   }
 }
