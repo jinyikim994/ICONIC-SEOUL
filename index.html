@@ -104,18 +104,7 @@
         const clone = scroller.innerHTML;
         scroller.innerHTML += clone;
       });
-
-    // 자동 재생 재시도 로직 포함
-    document.querySelectorAll('video').forEach(video => {
-      const tryPlay = () => {
-        video.play().catch((err) => {
-          console.log('Autoplay prevented, retrying...', err);
-          setTimeout(tryPlay, 500); // 0.5초마다 재시도
-        });
-      };
-      tryPlay();
-    });
-  });
+      });
     </script> 
   </div>
 </body>

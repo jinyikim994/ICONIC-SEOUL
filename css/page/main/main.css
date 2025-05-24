@@ -115,6 +115,13 @@ video {
 
 /* ───── 미디어 쿼리: 모바일 ───── */
 @media (max-width: 768px) {
+    .column-1 { order: 1; }
+    .column-2 { order: 3; }
+    .column-3 { order: 2; }
+    
+    video {
+        display: none !important;
+    }
     #main .gallery {
         grid-template-columns: repeat(2, 1fr);
         height: 100vh; 
