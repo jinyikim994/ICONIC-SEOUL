@@ -46,17 +46,7 @@
           </div>
           <!-- 04 -->
           <div class="masonry-item border-r border-r border-b">
-            <video
-            src="https://res.cloudinary.com/dlsvukxi1/video/upload/v1748068559/3%E1%84%87%E1%85%A5%E1%86%AB%E1%84%8B%E1%85%A7%E1%86%BC%E1%84%89%E1%85%A1%E1%86%BC_ebrvw4.mp4"
-            autoplay
-            muted
-            loop
-            playsinline
-            preload="auto"
-            controlslist="nodownload nofullscreen noremoteplayback"
-            disablepictureinpicture
-          >
-        </video>
+            <video src="https://res.cloudinary.com/dlsvukxi1/video/upload/v1748068559/3%E1%84%87%E1%85%A5%E1%86%AB%E1%84%8B%E1%85%A7%E1%86%BC%E1%84%89%E1%85%A1%E1%86%BC_ebrvw4.mp4" autoplay muted loop playsinline preload="auto" controlslist="nodownload nofullscreen noremoteplayback" disablepictureinpicture></video>
           </div>
           <!-- 05 -->
           <div class="masonry-item border-r border-r border-b">
@@ -69,7 +59,7 @@
         <div class="scroller">
           <!-- 01 -->
           <div class="masonry-item border-r border-b">
-            <img src="https://images.squarespace-cdn.com/content/v1/661cb73c808401180cc94eb2/847749cf-c0e2-4273-8df8-48eaf1f6c53f/SUZI_10.jpg?format=750w" loading="lazy" width="500" height="750" alt="img07"/>
+            <img src="https://res.cloudinary.com/dlsvukxi1/image/upload/v1747988889/5_jd9xpt.jpg" loading="lazy" width="500" height="750" alt="img07"/>
           </div>
           <!-- 02 -->
           <div class="masonry-item border-r border-b">
@@ -77,17 +67,7 @@
           </div>
           <!-- 03 -->
           <div class="masonry-item border-r border-b">
-            <video
-            src="ttps://res.cloudinary.com/dlsvukxi1/video/upload/v1748068559/3%E1%84%87%E1%85%A5%E1%86%AB%E1%84%8B%"
-            autoplay
-            muted
-            loop
-            playsinline
-            preload="auto"
-            controlslist="nodownload nofullscreen noremoteplayback"
-            disablepictureinpicture
-          >
-        </video>
+            <video src="https://res.cloudinary.com/dlsvukxi1/video/upload/v1748068639/PROJEKT_PRODUKT_mciflb.mp4" autoplay muted loop playsinline preload="auto" controlslist="nodownload nofullscreen noremoteplayback" disablepictureinpicture loading="lazy"></video>
           </div>
         </div>
       </div>
@@ -100,21 +80,11 @@
           </div>
           <!-- 02 -->
           <div class="masonry-item border-b">
-            <img src="https://images.squarespace-cdn.com/content/v1/661cb73c808401180cc94eb2/404b9c2f-9c9e-4271-91e2-3c9045dfaead/MO%26CO_13.jpg?format=750w" loading="lazy" width="500" height="750" alt="img12"/>
+            <img src="https://res.cloudinary.com/dlsvukxi1/image/upload/v1747997958/8_gnrw9x.jpg" loading="lazy" width="500" height="750" alt="img12"/>
           </div>
           <!-- 03 -->
           <div class="masonry-item border-b">
-            <video
-            src="https://res.cloudinary.com/dlsvukxi1/video/upload/v1748068559/3%E1%84%87%E1%85%A5%E1%86%AB%E1%84"
-            autoplay
-            muted
-            loop
-            playsinline
-            preload="auto"
-            controlslist="nodownload nofullscreen noremoteplayback"
-            disablepictureinpicture
-          >
-          </video>
+            <video src="https://res.cloudinary.com/dlsvukxi1/video/upload/v1748068554/2%E1%84%87%E1%85%A5%E1%86%AB_%E1%84%92%E1%85%B3%E1%86%A8%E1%84%87%E1%85%A2%E1%86%A8%E1%84%86%E1%85%A1%E1%86%AB_ttl92r.mp4" autoplay muted loop playsinline preload="auto" controlslist="nodownload nofullscreen noremoteplayback" disablepictureinpicture loading="lazy"></video>
           </div>
           <!-- 04 -->
           <div class="masonry-item border-b">
@@ -135,18 +105,17 @@
         scroller.innerHTML += clone;
       });
 
-      document.addEventListener('DOMContentLoaded', () => {
-  document.querySelectorAll('video').forEach(video => {
-    const tryPlay = () => {
-      video.play().catch((err) => {
-        console.log('Autoplay failed, retrying...', err);
-        setTimeout(tryPlay, 500); // 실패 시 재시도
-      });
-    };
-    tryPlay();
+    // 자동 재생 재시도 로직 포함
+    document.querySelectorAll('video').forEach(video => {
+      const tryPlay = () => {
+        video.play().catch((err) => {
+          console.log('Autoplay prevented, retrying...', err);
+          setTimeout(tryPlay, 500); // 0.5초마다 재시도
+        });
+      };
+      tryPlay();
+    });
   });
-});
-
     </script> 
   </div>
 </body>
