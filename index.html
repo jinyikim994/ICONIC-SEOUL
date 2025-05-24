@@ -78,7 +78,7 @@
           <!-- 03 -->
           <div class="masonry-item border-r border-b">
             <video
-            src="https://res.cloudinary.com/dlsvukxi1/video/upload/v1748068559/3%E1%84%87%E1%85%A5%E1%86%AB%E1%84%8B%E1%85%A7%E1%86%BC%E1%84%89%E1%85%A1%E1%86%BC_ebrvw4.mp4"
+            src="ttps://res.cloudinary.com/dlsvukxi1/video/upload/v1748068559/3%E1%84%87%E1%85%A5%E1%86%AB%E1%84%8B%"
             autoplay
             muted
             loop
@@ -105,7 +105,7 @@
           <!-- 03 -->
           <div class="masonry-item border-b">
             <video
-            src="https://res.cloudinary.com/dlsvukxi1/video/upload/v1748068559/3%E1%84%87%E1%85%A5%E1%86%AB%E1%84%8B%E1%85%A7%E1%86%BC%E1%84%89%E1%85%A1%E1%86%BC_ebrvw4.mp4"
+            src="https://res.cloudinary.com/dlsvukxi1/video/upload/v1748068559/3%E1%84%87%E1%85%A5%E1%86%AB%E1%84"
             autoplay
             muted
             loop
@@ -135,17 +135,18 @@
         scroller.innerHTML += clone;
       });
 
-    // 자동 재생 재시도 로직 포함
-    document.querySelectorAll('video').forEach(video => {
-      const tryPlay = () => {
-        video.play().catch((err) => {
-          console.log('Autoplay prevented, retrying...', err);
-          setTimeout(tryPlay, 500); // 0.5초마다 재시도
-        });
-      };
-      tryPlay();
-    });
+      document.addEventListener('DOMContentLoaded', () => {
+  document.querySelectorAll('video').forEach(video => {
+    const tryPlay = () => {
+      video.play().catch((err) => {
+        console.log('Autoplay failed, retrying...', err);
+        setTimeout(tryPlay, 500); // 실패 시 재시도
+      });
+    };
+    tryPlay();
   });
+});
+
     </script> 
   </div>
 </body>
