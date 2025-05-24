@@ -17,10 +17,15 @@ video {
     height: auto;
 }
 
+#main  html, body {
+    height: 100%;
+    overflow: hidden;
+}
+
 #main {
     background: #fff;
     height: 100vh;
-    overflow: hidden;
+    overflow: hidden !important;
     display: flex;
     flex-direction: column;
 }
