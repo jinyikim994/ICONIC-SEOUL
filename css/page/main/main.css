@@ -97,6 +97,14 @@ video {
 
 /* ───── 미디어 쿼리: 태블릿 이하 ───── */
 @media (max-width: 1024px) {
+    .column-1 { order: 1; }
+    .column-2 { order: 3; }
+    .column-3 { order: 2; }
+
+    #main .gallery .column-3 .scroller {
+        animation: scrollLoopReverse 30s linear infinite;
+    }
+    
     #main .gallery {
         grid-template-columns: repeat(2, 1fr);
         height: auto;
@@ -119,7 +127,7 @@ video {
     .column-2 { order: 3; }
     .column-3 { order: 2; }
 
-    #main .gallery .column-2 .scroller {
+    #main .gallery .column-3 .scroller {
         animation: scrollLoopReverse 30s linear infinite;
     }
     
