@@ -166,4 +166,8 @@
         /* padding: 0 15px; */
         aspect-ratio: 12 / 9;
     }
+
+    .hover-zone {
+        /* display: none; */
+    }
 }

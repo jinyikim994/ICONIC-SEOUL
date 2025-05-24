@@ -108,7 +108,7 @@
     #photographer-view .main-content {
         flex-direction: column;
         align-items: center;
-        margin: 80px 20px;
+        margin: 20px 20px;
     }
 
     #photographer-view .main-content .magazine-cover {
