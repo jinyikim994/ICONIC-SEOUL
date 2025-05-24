@@ -4,6 +4,19 @@
     touch-action: none;
 }
 
+video::-webkit-media-controls {
+    display: none !important;
+}
+video::-webkit-media-controls-start-playback-button {
+    display: none !important;
+}
+
+video {
+    object-fit: cover;
+    width: 100%;
+    height: auto;
+}
+
 #main {
     background: #fff;
     height: 100vh;
