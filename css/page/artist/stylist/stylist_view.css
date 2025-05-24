@@ -16,7 +16,7 @@
 }
 
 #stylist-view .magazine-cover {
-    width: 575px;
+    width: 530px;
     height: auto;
 }
 
@@ -27,21 +27,23 @@
 }
 
 /* Bottom text */
-#stylist-view .bottom-info {
+#stylist-view .main-content .bottom-info {
     margin: 27px 0 0 20px;
     font-size: 43px;
     font-weight: 500;
+    flex-shrink: 0;
     text-align: center;
     font-family:'Times New Roman', sans-serif;
 }
 
-#stylist-view .bottom-info small {
+#stylist-view .main-content .bottom-info small {
     display: block;
     font-size: 11px;
     margin-top: 14px;
     font-family: "Roboto", sans-serif;
-    font-weight: 700;
+    font-weight: 700;;
 }
+
 
 #stylist-view .gallery-container {
     display: grid;
@@ -95,19 +97,14 @@
     gap: 20px; 
 }
 
-/* 노트북 */
+/* 노트북 16인치 */
 @media screen and (min-width: 1728px) {
-
     #stylist-view .main-content{
         margin-top: 30px;
     }
-
+    
     #stylist-view .main-content .bottom-info {
         margin: 10px 0 0 0px;
-    }
-
-    #stylist-view .main-content .magazine-cover{
-        width: 531px;
     }
 
     #stylist-view .main-content .bottom-info small{
@@ -118,7 +115,6 @@
         font-size:37px;
     }
 }
-
 
 /* 아이패드 */
 @media (max-width: 1024px) {
@@ -133,8 +129,14 @@
         height: auto;
     }
 
-    #stylist-view .bottom-info {
-        font-size: 32px;
+    #stylist-view .main-content .bottom-info {
+        margin: 20px 0 0 0;
+        font-size: 28px;
+        text-align: center;
+    }
+    
+    #stylist-view .main-content .bottom-info small {
+        font-size: 10px;
     }
 }
 
@@ -174,7 +176,7 @@
     }
 
     #stylist-view video{
-        height: 120px;
-        min-height: 120px;
+        height: 100px;
+        min-height: 100px;
     }
 }

@@ -1,5 +1,4 @@
 /* BEAUTY - VIEW */
-/* 메인 커버 */
 #beauty-view .main-content {
   display: flex;
   justify-content: center;
@@ -24,6 +23,7 @@
   font-size: 11px;
   margin-top: 14px;
   font-family: "Roboto", sans-serif;
+  font-weight: 700;
 }
 
 /* 갤러리 */

@@ -92,6 +92,14 @@
     #photographer-view .main-content{
         margin-top: 30px;
     }
+
+    #photographer-view .main-content .magazine-cover img {
+        width: 100%;
+        height: 689px;
+        max-height: 689px;
+        object-fit: contain;
+        display: block;
+    }
     
     #photographer-view .main-content .bottom-info {
         margin: 10px 0 0 0px;
