@@ -103,8 +103,16 @@
         document.querySelectorAll('.scroller').forEach(scroller => {
           const clone = scroller.innerHTML;
           scroller.innerHTML += clone;
+      });
+
+      // 자동 재생 처리 (모바일용)
+      document.querySelectorAll('video').forEach(video => {
+        video.play().catch(() => {
+          // 모바일 자동재생 차단 시 예외 발생 가능
+          console.log('Autoplay prevented');
         });
       });
+    });
     </script> 
   </div>
 </body>
