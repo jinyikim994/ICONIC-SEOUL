@@ -1,9 +1,4 @@
 /* PHOTOGRAPHER - ADVERTISING DETAIL */
-#photographer-ad-detail{ overflow: unset; }
-
-#photographer-ad-detail header{
-    height: 70px;
-}
 
 #photographer-ad-detail header .logo a{
     position: relative;

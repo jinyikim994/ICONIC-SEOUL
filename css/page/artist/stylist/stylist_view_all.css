@@ -4,7 +4,7 @@
   overflow: unset;
 }
 
-#stylist-fashion-view-all .container{margin:100px;}
+#stylist-fashion-view-all .container{margin:20px 100px;}
 
 #stylist-fashion-view-all .grid {
     display: grid;
