@@ -46,7 +46,7 @@
           </div>
           <!-- 04 -->
           <div class="masonry-item border-r border-r border-b">
-            <video src="https://res.cloudinary.com/dlsvukxi1/video/upload/v1747988807/video01_hefzqq.mp4" autoplay muted loop playsinline preload="auto"></video>
+            <video src="https://res.cloudinary.com/dlsvukxi1/video/upload/v1747988807/video01_hefzqq.mp4" autoplay muted loop playsinline preload="auto" controlslist="nodownload nofullscreen noremoteplayback" disablepictureinpicture></video>
           </div>
           <!-- 05 -->
           <div class="masonry-item border-r border-r border-b">
@@ -67,7 +67,7 @@
           </div>
           <!-- 03 -->
           <div class="masonry-item border-r border-b">
-            <video src="https://res.cloudinary.com/dlsvukxi1/video/upload/v1747988891/video02_ly7siz.mp4" autoplay muted loop playsinline preload="auto"></video>
+            <video src="https://res.cloudinary.com/dlsvukxi1/video/upload/v1747988891/video02_ly7siz.mp4" autoplay muted loop playsinline preload="auto" controlslist="nodownload nofullscreen noremoteplayback" disablepictureinpicture></video>
           </div>
         </div>
       </div>
@@ -84,7 +84,7 @@
           </div>
           <!-- 03 -->
           <div class="masonry-item border-b">
-            <video src="https://res.cloudinary.com/dlsvukxi1/video/upload/v1747988856/video03_mtdcge.mp4" autoplay muted loop playsinline preload="auto"></video>
+            <video src="https://res.cloudinary.com/dlsvukxi1/video/upload/v1747988856/video03_mtdcge.mp4" autoplay muted loop playsinline preload="auto" controlslist="nodownload nofullscreen noremoteplayback" disablepictureinpicture></video>
           </div>
           <!-- 04 -->
           <div class="masonry-item border-b">
@@ -100,19 +100,22 @@
     <!-- gallery -->
     <script>
       document.addEventListener('DOMContentLoaded', () => {
-        document.querySelectorAll('.scroller').forEach(scroller => {
-          const clone = scroller.innerHTML;
-          scroller.innerHTML += clone;
+      document.querySelectorAll('.scroller').forEach(scroller => {
+        const clone = scroller.innerHTML;
+        scroller.innerHTML += clone;
       });
 
-      // 자동 재생 처리 (모바일용)
-      document.querySelectorAll('video').forEach(video => {
-        video.play().catch(() => {
-          // 모바일 자동재생 차단 시 예외 발생 가능
-          console.log('Autoplay prevented');
+    // 자동 재생 재시도 로직 포함
+    document.querySelectorAll('video').forEach(video => {
+      const tryPlay = () => {
+        video.play().catch((err) => {
+          console.log('Autoplay prevented, retrying...', err);
+          setTimeout(tryPlay, 500); // 0.5초마다 재시도
         });
-      });
+      };
+      tryPlay();
     });
+  });
     </script> 
   </div>
 </body>
