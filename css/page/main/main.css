@@ -118,6 +118,10 @@ video {
     .column-1 { order: 1; }
     .column-2 { order: 3; }
     .column-3 { order: 2; }
+
+    #main .gallery .column-2 .scroller {
+        animation: scrollLoopReverse 30s linear infinite;
+    }
     
     video {
         display: none !important;

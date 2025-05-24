@@ -108,11 +108,15 @@
 
 
 /* ───── 모바일 & 태블릿 반응형 대응 ───── */
-@media (max-width: 1366px) {
+@media (max-width: 1024px) {
     #photographer-view .main-content {
         flex-direction: column;
         align-items: center;
         margin: 20px 20px;
+    }
+
+    .ad{
+        margin-top: 50px;
     }
 
     #photographer-view .main-content .magazine-cover {
