@@ -1,4 +1,8 @@
 /* PHOTOGRAPHER - VIEW */
+#photographer-view .main-content .bottom-info small{
+    margin-top: 6px;
+    font-weight: 700;
+}
 #photographer-view .main-content {
     display: flex;
     justify-content: center;
