@@ -13,12 +13,15 @@
     justify-content: center;
     margin-top: 130px;
     margin-bottom: 118px;
-    max-height: 78vh;
 }
 
 #stylist-view .magazine-cover {
-    width: 530px;
+    width: 100%;
+    max-width: 530px;
     height: auto;
+    max-height: 78vh; /* 뷰포트 높이 기준 제한 */
+    object-fit: contain;
+    flex-shrink: 1;
 }
 
 #stylist-view .magazine-cover img {
@@ -100,9 +103,7 @@
 
 /* 노트북 16인치 */
 @media screen and (min-width: 1728px) {
-    #stylist-view .main-content{
-        margin-top: 30px;
-    }
+    
     
     #stylist-view .main-content .bottom-info {
         margin: 10px 0 0 0px;
@@ -119,6 +120,12 @@
 
 /* 아이패드 */
 @media (max-width: 1024px) {
+    #stylist-view .main-content {
+        flex-direction: column;
+        align-items: center;
+        margin: 20px 20px 90px 20px;
+    }
+
     #stylist-view .gallery-container {
         grid-template-columns: repeat(3, 1fr);
         gap: 40px;
@@ -127,8 +134,6 @@
     
     #stylist-view .magazine-cover {
         width: 500px;
-        height:437px;
-        
     }
 
     #stylist-view .main-content .bottom-info {
@@ -144,6 +149,11 @@
 
 /* 모바일 */
 @media (max-width: 768px) {
+    #stylist-view .main-content {
+        flex-direction: column;
+        align-items: center;
+        margin: 20px 20px 90px 20px;
+    }
     #stylist-view .gallery-container {
         grid-template-columns: repeat(2, 1fr);
         gap: 20px;
@@ -158,7 +168,7 @@
 
     #stylist-view .magazine-cover {
         width: 100%;
-        max-width: 350px;
+        /* max-width: 500x; */
     }
 
     #stylist-view .title {
