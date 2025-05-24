@@ -6,13 +6,10 @@
 
 video::-webkit-media-controls {
     display: none !important;
-  }
-  video {
-    object-fit: cover;
-    width: 100%;
-    height: auto;
-  }
-  
+}
+video::-webkit-media-controls-start-playback-button {
+    display: none !important;
+}
 
 video {
     object-fit: cover;
