@@ -65,7 +65,7 @@ video {
 }
 
 #main .gallery .column-3 .scroller {
-    animation: scrollLoop 40s linear infinite;
+    animation: scrollLoop 30s linear infinite;
 }
 
 #main .gallery .masonry-item {
