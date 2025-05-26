@@ -54,6 +54,7 @@
             <img src="https://res.cloudinary.com/dlsvukxi1/image/upload/q_80/v1747988889/4_udjvcp.jpg" loading="lazy" width="500" height="750" alt="img05"/>
           </div>
         </div>
+        
       </div>
       <!-- 두번째 열 -->
       <div class="column column-2">
@@ -105,13 +106,11 @@
     <!-- gallery -->
     <script>
       document.addEventListener('DOMContentLoaded', () => {
-      if(window.innerWidth > 768) { // 데스크탑만 복제
-        document.querySelectorAll('.scroller').forEach(scroller => {
-          const clone = scroller.innerHTML;
-          scroller.innerHTML += clone;
-        });
-      }
-    });
+      document.querySelectorAll('.scroller').forEach(scroller => {
+        const clone = scroller.innerHTML;
+        scroller.innerHTML += clone;
+      });
+      });
     </script> 
   </div>
 </body>
