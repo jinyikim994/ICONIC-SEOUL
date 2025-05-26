@@ -105,11 +105,13 @@
     <!-- gallery -->
     <script>
       document.addEventListener('DOMContentLoaded', () => {
-      document.querySelectorAll('.scroller').forEach(scroller => {
-        const clone = scroller.innerHTML;
-        scroller.innerHTML += clone;
-      });
-      });
+      if(window.innerWidth > 768) { // 데스크탑만 복제
+        document.querySelectorAll('.scroller').forEach(scroller => {
+          const clone = scroller.innerHTML;
+          scroller.innerHTML += clone;
+        });
+      }
+    });
     </script> 
   </div>
 </body>
