@@ -5,6 +5,10 @@
   margin: 130px 0 118px;
 }
 
+#beauty-view .magazine-cover{
+  width: 55%;
+}
+
 #beauty-view .magazine-cover img {
   width: 100%;
   display: block;
