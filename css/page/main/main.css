@@ -10,7 +10,7 @@ video {
 }
 
 video::-webkit-media-controls-play-button {
-  display: none;
+    display: none;
 }
 
 video {
@@ -20,10 +20,10 @@ video {
 }
 
 
-#main  html, body {
+#main {
     height: 100%;
     overflow: hidden;
-}
+}å
 
 #main {
     background: #fff;
@@ -107,7 +107,7 @@ video {
     video {
         display: none !important;
     }
-    
+
     #main .gallery .column-3 .scroller {
         animation: scrollLoopReverse 30s linear infinite;
     }
