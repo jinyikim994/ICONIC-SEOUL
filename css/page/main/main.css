@@ -1,4 +1,11 @@
 /* 기본 (데스크탑 + 아이패드 포함): 3열 유지 */
+
+.scroller {
+    will-change: transform;
+    transform: translate3d(0, 0, 0);
+    backface-visibility: hidden;
+}
+
 .gallery video {
     pointer-events: none;
     touch-action: none;
