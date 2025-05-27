@@ -1,5 +1,4 @@
 /* 기본 (데스크탑 + 아이패드 포함): 3열 유지 */
-
 .scroller {
     will-change: transform;
     transform: translate3d(0, 0, 0);
@@ -10,22 +9,6 @@
     pointer-events: none;
     touch-action: none;
 }
-
-video {
-    pointer-events: none;
-    touch-action: none;
-}
-
-video::-webkit-media-controls-play-button {
-    display: none;
-}
-
-video {
-    object-fit: cover;
-    width: 100%;
-    height: auto;
-}
-
 
 #main {
     height: 100%;
