@@ -96,7 +96,7 @@
 
 
     #main .gallery .column-3 .scroller {
-        animation: scrollLoopReverse 30s linear infinite;
+        animation: scrollLoopReverse 10s linear infinite;
     }
 
     #main .gallery {
@@ -124,7 +124,7 @@
     
 
     #main .gallery .column-3 .scroller {
-        animation: scrollLoopReverse 30s linear infinite;
+        animation: scrollLoopReverse 10s linear infinite;
     }
     
     /*   video {
@@ -142,7 +142,7 @@
     }
 
     #main .gallery .scroller {
-        animation: scrollLoop 40s linear infinite;
+        animation: scrollLoop 10s linear infinite;
         height: auto;
     }
 
