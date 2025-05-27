@@ -6,3 +6,12 @@
     text-decoration: none;
     list-style: none;
 }
+
+video {
+    pointer-events: none;
+    touch-action: none;
+}
+
+video::-webkit-media-controls-play-button {
+    display: none;
+}

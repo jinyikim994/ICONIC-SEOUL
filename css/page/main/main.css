@@ -73,13 +73,12 @@
     object-fit: cover;
 }
 
-
-/* ───── 미디어 쿼리: 태블릿 이하 ───── */
+/* ───── 태블릿 ───── */
 @media (max-width: 1024px) {
 
-    .column-1 { order: 1; }
-    .column-2 { order: 3; }
-    .column-3 { order: 2; }
+    #main .column-1 { order: 1; }
+    #main .column-2 { order: 3; }
+    #main .column-3 { order: 2; }
 
     #main .gallery {
         grid-template-columns: repeat(2, 1fr);
@@ -99,42 +98,41 @@
 /* ───── 모바일 ───── */
 @media (max-width: 768px) {
     #main .gallery {
-      grid-template-columns: repeat(2, 1fr);
-      height: 100vh;
-      overflow: hidden;
-      margin-top: 0;
+        grid-template-columns: repeat(2, 1fr);
+        height: 100vh;
+        overflow: hidden;
+        margin-top: 0;
     }
-  
+
     #main .gallery .column {
-      height: 100vh;
-      overflow: hidden;
-      position: relative;
+        height: 100vh;
+        overflow: hidden;
+        position: relative;
     }
-  
+
     #main .gallery .scroller {
-      display: flex;
-      flex-direction: column;
-      animation: scrollLoopMobile 10s linear infinite;
-      will-change: transform;
+        display: flex;
+        flex-direction: column;
+        animation: scrollLoopMobile 10s linear infinite;
+        will-change: transform;
     }
-  
-    @keyframes scrollLoopMobile {
-      0% { transform: translateY(0); }
-      100% { transform: translateY(-50%); }
-    }
-  
+
     #main .gallery .column-3 .scroller {
-      animation: scrollLoopReverseMobile 10s linear infinite;
+        animation: scrollLoopReverseMobile 10s linear infinite;
     }
-  
+
+    @keyframes scrollLoopMobile {
+        0% { transform: translateY(0); }
+        100% { transform: translateY(-50%); }
+    }
+
     @keyframes scrollLoopReverseMobile {
-      0% { transform: translateY(-50%); }
-      100% { transform: translateY(0); }
+        0% { transform: translateY(-50%); }
+        100% { transform: translateY(0); }
     }
-  
+
     #main .gallery .masonry-item video {
-      max-height: 126px;
-      height: auto;
+        max-height: 126px;
+        height: auto;
     }
-  }
-  
+}
