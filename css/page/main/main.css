@@ -1,4 +1,10 @@
 /* 기본 (데스크탑 + 아이패드 포함): 3열 유지 */
+.scroller {
+    will-change: transform;
+    transform: translate3d(0, 0, 0);
+    backface-visibility: hidden;
+}
+
 #main {
     height: 100%;
     overflow: hidden;
@@ -10,39 +16,6 @@
     overflow: hidden !important;
     display: flex;
     flex-direction: column;
-}
-
-#main .scroller {
-    will-change: transform;
-    transform: translate3d(0, 0, 0);
-    backface-visibility: hidden;
-    display: flex;
-    flex-direction: column;
-    animation: scrollLoop 40s linear infinite;
-    will-change: transform;
-}
-
-#main .gallery .column-2 .scroller {
-    animation: scrollLoopReverse 30s linear infinite;
-}
-
-#main .gallery .column-3 .scroller {
-    animation: scrollLoop 30s linear infinite;
-}
-
-/* 애니메이션 */
-@keyframes scrollLoop {
-    0% { transform: translateY(0); }
-    100% { transform: translateY(-33.333%); } 
-}
-
-@keyframes scrollLoopReverse {
-    0% { transform: translateY(-50%); }
-    100% { transform: translateY(0); }
-}
-
-#main .gallery .scroller > * {
-    flex-shrink: 0;
 }
 
 #main .gallery {
@@ -57,6 +30,20 @@
 #main .gallery .column {
     overflow: hidden;
     position: relative;
+}
+
+#main .gallery .scroller {
+    display: flex;
+    flex-direction: column;
+    animation: scrollLoop 10s linear infinite;
+}
+
+#main .gallery .column-2 .scroller {
+    animation: scrollLoopReverse 10s linear infinite;
+}
+
+#main .gallery .column-3 .scroller {
+    animation: scrollLoop 10s linear infinite;
 }
 
 #main .gallery .masonry-item {
@@ -81,7 +68,22 @@
     object-fit: cover;
 }
 
-/* ───── 태블릿 이하 ───── */
+/* 애니메이션 */
+@keyframes scrollLoop {
+    0% { transform: translateY(0); }
+    100% { transform: translateY(-50%); }
+}
+
+@keyframes scrollLoopReverse {
+    0% { transform: translateY(-50%); }
+    100% { transform: translateY(0); }
+}
+
+#main .gallery .scroller > * {
+    flex-shrink: 0;
+}
+
+/* ───── 미디어 쿼리: 태블릿 이하 ───── */
 @media (max-width: 1024px) {
 
     video {
@@ -141,6 +143,7 @@
 
     #main .gallery .scroller {
         animation: scrollLoop 40s linear infinite;
+        height: auto;
     }
 
     #main .gallery .masonry-item video {
