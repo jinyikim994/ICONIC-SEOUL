@@ -121,30 +121,31 @@
     .column-2 { order: 3; }
     .column-3 { order: 2; }
 
-    
+    #main .gallery .scroller {
+        animation: scrollLoop 6s linear infinite;
+        height: auto;
+    }
 
     #main .gallery .column-3 .scroller {
-        animation: scrollLoopReverse 10s linear infinite;
+        animation: scrollLoopReverseMobile 6s linear infinite;
     }
     
-    /*   video {
-        display: none !important;
-    } */
+    @keyframes scrollLoopReverseMobile {
+        0%   { transform: translateY(-30%); } /* 이동 범위가 커야 더 빨라 보임 */
+        100% { transform: translateY(10%); }
+    }
+    
     #main .gallery {
         grid-template-columns: repeat(2, 1fr);
-        height: 100vh; 
-        overflow: hidden; 
+        height: auto; 
+        overflow: visible;
+        margin-top: 0;
     }
 
     #main .gallery .column {
-        height: 100vh; 
-        overflow: hidden;
-    }
-
-    #main .gallery .scroller {
-        animation: scrollLoop 10s linear infinite;
         height: auto;
     }
+
 
     #main .gallery .masonry-item video {
         max-height: 126px;
