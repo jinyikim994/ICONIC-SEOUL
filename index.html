@@ -108,11 +108,16 @@
     <script>
     document.addEventListener('DOMContentLoaded', () => {
       document.querySelectorAll('.scroller').forEach(scroller => {
-        const clone = scroller.innerHTML;
-        scroller.innerHTML += clone; // 2배
-        scroller.innerHTML += clone; // 3배
+        const originalNodes = Array.from(scroller.children);
+        for (let i = 0; i < 2; i++) { // 2배 복제
+          originalNodes.forEach(node => {
+            const clone = node.cloneNode(true);
+            scroller.appendChild(clone);
+          });
+        }
       });
     });
+
     </script> 
   </div>
 </body>
