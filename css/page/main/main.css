@@ -86,10 +86,6 @@
 /* ───── 미디어 쿼리: 태블릿 이하 ───── */
 @media (max-width: 1024px) {
 
-    video {
-        display: none;
-    }
-
     .column-1 { order: 1; }
     .column-2 { order: 3; }
     .column-3 { order: 2; }
@@ -108,22 +104,22 @@
         max-height: 250px;
         height: auto;
     }
-
-    #main .gallery .masonry-item .info {
-        font-size: 14px;
-        display: none !important; /* hover info 숨김 */
-    }
 }
 
 /* ───── 모바일 ───── */
 @media (max-width: 768px) {
+
     .column-1 { order: 1; }
     .column-2 { order: 3; }
     .column-3 { order: 2; }
 
-    #main .gallery .scroller {
-        animation: scrollLoop 6s linear infinite;
-        height: auto;
+    @keyframes scrollLoopMobile {
+        0%   { transform: translateY(0); }
+        100% { transform: translateY(-40%); } /* -50%보다 약간 줄이기 */
+    }
+    
+    #main .gallery .column-1 .scroller {
+        animation: scrollLoopMobile 6s linear infinite;
     }
 
     #main .gallery .column-3 .scroller {
