@@ -31,7 +31,7 @@ video::-webkit-media-controls-play-button {
 }
 
 video {
-    object-fit: cover;
+    /* object-fit: cover; */
     width: 100%;
     height: auto;
 }

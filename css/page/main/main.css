@@ -35,15 +35,15 @@
 #main .gallery .scroller {
     display: flex;
     flex-direction: column;
-    animation: scrollLoop 10s linear infinite;
+    animation: scrollLoop 20s linear infinite;
 }
 
 #main .gallery .column-2 .scroller {
-    animation: scrollLoopReverse 10s linear infinite;
+    animation: scrollLoopReverse 20s linear infinite;
 }
 
 #main .gallery .column-3 .scroller {
-    animation: scrollLoop 10s linear infinite;
+    animation: scrollLoop 20s linear infinite;
 }
 
 #main .gallery .masonry-item {
