@@ -70,13 +70,11 @@
 
 #main .gallery .masonry-item video {
     max-height: 350px;
+    height: auto;
     object-fit: cover;
-    backface-visibility: hidden;
-    will-change: auto !important; /* 애니메이션 적용된 부모 요소와 중복 GPU 할당 방지 */
-    -webkit-transform: translateZ(0); /* GPU 가속 트리거 */
-    transform-style: preserve-3d;
     pointer-events: none;
     outline: none;
+    display: block;
 }
 
 /* ───── 태블릿 ───── */
@@ -117,6 +115,7 @@
     }
 
     #main .gallery .scroller {
+        height: 200vh;
         display: flex;
         flex-direction: column;
         animation: scrollLoopMobile 10s linear infinite;
