@@ -107,6 +107,10 @@ video {
 
 /* ───── 미디어 쿼리: 태블릿 이하 ───── */
 @media (max-width: 1024px) {
+
+    video {
+        display: none;
+    }
     .column-1 { order: 1; }
     .column-2 { order: 3; }
     .column-3 { order: 2; }
