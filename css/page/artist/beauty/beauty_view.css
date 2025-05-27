@@ -97,6 +97,10 @@
     align-items: center;
   }
 
+  #beauty-view .magazine-cover{
+    width: 100%;
+  }
+
   #beauty-view .title {
     padding: 0 20px;
     font-size: 14px;
