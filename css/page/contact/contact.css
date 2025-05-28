@@ -69,44 +69,7 @@
     color: #000;
 }
 
-/* 태블릿 이상: 769px ~ 1024px */
-@media (min-width: 769px) {
-    #contact .info-wrap {
-        flex-direction: row;
-        gap: 60px;
-    }
-
-    #contact .column {
-        flex: 1 1 45%;
-        max-width: 45%;
-    }
-
-    #contact .column:first-child {
-        border-right: 1px solid #000;
-        padding-right: 60px;
-    }
-
-    #contact .column:last-child {
-        padding-left: 60px;
-    }
-}
-
-/* 데스크탑: 1025px 이상 */
-@media (min-width: 1025px) {
-    #contact .container .title {
-        font-size: 36px;
-        margin-bottom: 100px;
-    }
-}
-
-/* 대형 화면: 1728px 이상 (16" MacBook Pro 대응) */
-@media screen and (min-width: 1728px) {
-    #contact header .logo a {
-        top: 0;
-    }
-}
-
-/* 모바일 대응: 768px 이하 */
+/* ───── 모바일 ───── */
 @media (max-width: 768px) {
     #contact .container {
         padding: 60px 20px;
@@ -148,3 +111,50 @@
         font-size: 1rem;
     }
 }
+
+/* 태블릿 이상: 769px ~ 1024px */
+@media (min-width: 769px) {
+    #contact .info-wrap {
+        flex-direction: row;
+        gap: 60px;
+    }
+
+    #contact .column {
+        flex: 1 1 45%;
+        max-width: 45%;
+    }
+
+    #contact .column:first-child {
+        border-right: 1px solid #000;
+        padding-right: 60px;
+    }
+
+    #contact .column:last-child {
+        padding-left: 60px;
+    }
+}
+
+/* 데스크탑: 1025px 이상 */
+@media (min-width: 1025px) {
+    #contact .container .title {
+        font-size: 36px;
+        margin-bottom: 100px;
+    }
+
+    #contact .container{
+        padding: 60px 20px;
+
+    }
+}
+
+/* ───── 13인치 노트북 ───── */
+@media (min-width: 1280px) and (max-width: 1439px) {
+    #contact .container {
+        padding: 30px 20px;
+    }
+
+    #contact header .logo a {
+        top: 0;
+    }
+}
+

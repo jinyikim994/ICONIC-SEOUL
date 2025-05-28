@@ -120,35 +120,8 @@
     height: 14px;
 }
 
-/* 16인치 MacBook Pro 스타일 */
-@media screen and (min-width: 1728px) {
-    .slider-container, .slider-images {
-        margin: 20px auto 0;
-    }
-    .slider-images {
-        position: relative;
-        width: 100%;
-        max-width: 900px;
-        height: auto;
-        aspect-ratio: 13 / 9;
-    }
-}
-/*  */
-@media (max-width: 1366px) {
-    .slider-container, .slider-images {
-        margin: 20px auto 0;
-    }
-    .slider-images {
-        position: relative;
-        width: 100%;
-        max-width: 900px;
-        height: auto;
-        aspect-ratio: 13 / 9;
-    }
-}
-
-/* 반응형 스타일 */
-@media screen and (max-width: 768px) {
+/* ───── 모바일 ───── */
+@media (max-width: 767px) {
     .name {
         font-size: 36px;
         text-align: center;
@@ -169,5 +142,29 @@
 
     .hover-zone {
         /* display: none; */
+    }
+}
+
+
+/* ───── 16인치 노트북 ───── */
+@media (min-width: 1440px) and (max-width: 1919px) {
+    .name {
+        font-size: 36px;
+        text-align: center;
+    }
+
+    .bottom-text .info p {
+        font-size: 14px;
+    }
+
+    .slider-container, .slider-images {
+        margin: 20px auto 0;
+    }
+    .slider-images {
+        position: relative;
+        width: 100%;
+        max-width: 750px;
+        height: auto;
+        aspect-ratio: 13 / 9;
     }
 }

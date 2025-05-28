@@ -73,22 +73,8 @@
   background-color: #fff;
 }
 
-/* 노트북 */
-@media screen and (min-width: 1728px) {
-  #artist-list .gallery-container {
-    grid-template-columns: repeat(3, 1fr);
-    margin-top: 15px;
-  }
-}
-
-@media (max-width: 1024px) {
-  #artist-list .gallery-container {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-
-/* 모바일 (767px 이하) */
-@media (max-width: 768px) {
+/* ───── 모바일 ───── */
+@media (max-width: 767px) {
   #artist-list .gallery-container {
     display: grid;
     grid-template-columns: repeat(1, 1fr);
@@ -99,4 +85,27 @@
     margin-top: 20px;
   }
 }
+
+/* ───── 13인치 노트북 ───── */
+@media (min-width: 1280px) and (max-width: 1439px) {
+  #artist-list .gallery-container {
+    grid-template-columns: repeat(3, 1fr);
+    margin-top: 15px;
+  }
+}
+
+/* ───── 16인치 노트북 ───── */
+@media (min-width: 1440px) and (max-width: 1919px) {
+  #artist-list .gallery-container {
+    grid-template-columns: repeat(3, 1fr);
+    margin-top: 15px;
+  }
+}
+
+/* @media (max-width: 1024px) {
+  #artist-list .gallery-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+} */
+
 

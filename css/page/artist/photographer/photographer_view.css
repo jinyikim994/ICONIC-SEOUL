@@ -1,4 +1,3 @@
-/* PHOTOGRAPHER - VIEW */
 #photographer-view .main-content .bottom-info small{
     margin-top: 6px;
     font-weight: 700;
@@ -87,35 +86,29 @@
     color:#000;
 }
 
-/* 노트북 16인치 */
-@media screen and (min-width: 1728px) {
-    #photographer-view .main-content{
-        margin-top: 30px;
+/* ───── 모바일 ───── */
+@media (max-width: 768px) {
+    #photographer-view .gallery-container {
+        grid-template-columns: repeat(2, 1fr); /* 모바일은 2열 */
+        gap: 20px;
+        padding: 15px;
     }
 
-    #photographer-view .main-content .magazine-cover img {
-        width: 100%;
-        height: 689px;
-        max-height: 689px;
-        object-fit: cover;
-        display: block;
-    }
-    
-    #photographer-view .main-content .bottom-info {
-        margin: 10px 0 0 0px;
+    #photographer-view .gallery-item span {
+        font-size: 13px;
     }
 
-    #photographer-view .main-content .bottom-info small{
-        margin-top: 6px;
+    #photographer-view .view-more-btn {
+        font-size: 16px;
     }
 
-    #photographer-view .main-content .bottom-info{
-        font-size:37px;
+    #photographer-view .title {
+        font-size: 14px;
+        padding: 0 20px;
     }
 }
 
-
-/* ───── 모바일 & 태블릿 반응형 대응 ───── */
+/* ───── 태블릿  ───── */
 @media (max-width: 1024px) {
     #photographer-view .main-content {
         flex-direction: column;
@@ -147,25 +140,32 @@
     }
 }
 
-/* 모바일 */
-@media (max-width: 768px) {
-    #photographer-view .gallery-container {
-        grid-template-columns: repeat(2, 1fr); /* 모바일은 2열 */
-        gap: 20px;
-        padding: 15px;
+/* ───── 16인치 노트북 ───── */
+@media (min-width: 1440px) and (max-width: 1919px) {
+    #photographer-view .main-content{
+        margin-top: 30px;
+        margin-bottom: 118px;
     }
 
-    #photographer-view .gallery-item span {
-        font-size: 13px;
+    #photographer-view .main-content .magazine-cover img {
+        width: 100%;
+        height: 565px;
+        max-height: 689px;
+        object-fit: contain;
+        display: block;
+    }
+    
+    #photographer-view .main-content .bottom-info {
+        margin: 10px 0 0 0px;
     }
 
-    #photographer-view .view-more-btn {
-        font-size: 16px;
+    #photographer-view .main-content .bottom-info small{
+        margin-top: 6px;
     }
 
-    #photographer-view .title {
-        font-size: 14px;
-        padding: 0 20px;
+    #photographer-view .main-content .bottom-info{
+        font-size:37px;
     }
 }
+
 

@@ -85,8 +85,35 @@
     line-height:24px;
 }
 
-/* 아이패드 */
-@media (max-width: 1024px) {
+/* 모바일 */
+@media (max-width: 1024px) and (min-width: 769px) {
+    
+    #about .container {
+        width: 90%;
+        margin: 0 auto !important;
+    }
+
+    #about .container .wrap {
+        gap: 25px;
+    }
+    
+
+    #about .container .image-container {
+        width: 100%;
+    }
+
+    #about .container .desc {
+        width: 100%;
+    }
+
+    #about .container .desc p {
+        font-size: 15px;
+        line-height: 1.7;
+    }
+}
+
+/* ───── 13인치 노트북 ───── */
+@media (min-width: 1280px) and (max-width: 1439px) {
 
     #about .container {
         width: 90%;
@@ -159,31 +186,5 @@
 
 }
 
-/* 모바일 */
-@media (max-width: 1024px) and (min-width: 769px) {
-    
-    #about .container {
-        width: 90%;
-        margin: 0 auto !important;
-    }
-
-    #about .container .wrap {
-        gap: 25px;
-    }
-    
-
-    #about .container .image-container {
-        width: 100%;
-    }
-
-    #about .container .desc {
-        width: 100%;
-    }
-
-    #about .container .desc p {
-        font-size: 15px;
-        line-height: 1.7;
-    }
-}
 
 
