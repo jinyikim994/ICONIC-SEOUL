@@ -93,6 +93,10 @@
 
 /* ───── 모바일 (2열 유지) ───── */
 @media (max-width: 767px) {
+    #main .column-1 { order: 1; }
+    #main .column-2 { order: 3; }
+    #main .column-3 { order: 2; }
+    
     #main .gallery {
         grid-template-columns: repeat(2, 1fr);
         height: 100vh;
