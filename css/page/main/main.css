@@ -109,7 +109,7 @@
     #main .gallery .scroller {
         display: flex;
         flex-direction: column;
-        height: 200vh;
+        height: auto;
         animation: scrollLoopMobile 10s linear infinite;
         will-change: transform;
     }
