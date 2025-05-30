@@ -1,0 +1,108 @@
+
+#models-list .container {
+    width: 100%;
+    max-width: 1630px;
+    margin: 20px auto;
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+}
+
+#models-list .container .image{
+    height: 828px;
+    max-height: 828px;
+}
+
+#models-list .container .image img{
+    height: 100%;
+}
+
+#models-list .name {
+    font-family: "Libre Baskerville", serif;
+    font-size: 66px;
+    font-weight: 400;
+    color: #000;
+    text-transform: uppercase;
+}
+
+#models-list .name span {
+    font-family: 'Feature Display';
+}
+
+#models-list .info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#models-list .info .insta{
+    display: flex;
+    align-items: center;
+}
+
+#models-list .info .insta a{
+    color: #000;
+    position: relative;
+    top: 2px;
+}
+
+#models-list .info .insta p{
+    padding-left: 10px;
+}
+
+#models-list .download-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+    color: black;
+    text-decoration: none;
+    border: none;
+    background: none;
+    cursor: pointer;
+    font-family: Lay Grotesk;
+    margin-top: 4px;
+}
+
+#models-list .download-btn:hover {
+    text-decoration: underline;
+}
+
+#models-list .download-icon {
+    margin-left: 6px;
+    font-size: 16px;
+}
+
+#models-list .pdf-down-btn {
+    width: 14px;
+    height: 14px;
+}
+
+/* ───── 모바일 ───── */
+@media (max-width: 767px) {
+    .name {
+        font-size: 36px;
+        text-align: center;
+    }
+
+    .bottom-text #models-list .info p {
+        font-size: 14px;
+    }
+
+    .download-btn {
+        font-size: 12px;
+    }
+}
+
+
+/* ───── 16인치 노트북 ───── */
+@media (min-width: 1440px) and (max-width: 1919px) {
+    .name {
+        font-size: 36px;
+        text-align: center;
+    }
+
+    .bottom-text #models-list .info p {
+        font-size: 14px;
+    }
+}
