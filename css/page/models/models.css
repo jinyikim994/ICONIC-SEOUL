@@ -93,6 +93,16 @@
     padding-bottom: 10px;
 }
 
+.bottom-text .insta{
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.bottom-text .insta a{
+    color: #000;
+}
+
 .download-btn {
     display: inline-flex;
     align-items: center;
