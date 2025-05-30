@@ -44,7 +44,7 @@
       { type: "img", src: "https://res.cloudinary.com/dlsvukxi1/image/upload/v1748247752/1_rnyddf_11zon_n9pmxf.webp", alt: "img01" },
       { type: "img", src: "https://res.cloudinary.com/dlsvukxi1/image/upload/v1748247749/2_jbtwqj_11zon_r31woc.webp", alt: "img02" },
       { type: "img", src: "https://res.cloudinary.com/dlsvukxi1/image/upload/v1748247749/3_d6dorr_11zon_i0l7ul.webp", alt: "img03" },
-      { type: "video", src:"https://res.cloudinary.com/dlsvukxi1/video/upload/v1748248686/video01_hefzqq_y7am8r.webm" },
+      { type: "video", src: "https://res.cloudinary.com/dlsvukxi1/video/upload/v1748248686/video01_hefzqq_y7am8r.webm" },
       { type: "img", src: "https://res.cloudinary.com/dlsvukxi1/image/upload/v1748247752/4_udjvcp_11zon_c6ngiw.webp", alt: "img04" }
     ];
 
@@ -58,7 +58,7 @@
       { type: "img", src: "https://res.cloudinary.com/dlsvukxi1/image/upload/v1748247750/7_tthwjf_11zon_hrlk3n.webp", alt: "img07" },
       { type: "img", src: "https://res.cloudinary.com/dlsvukxi1/image/upload/v1748248518/9_ne0lil_11zon_aljwo5.webp", alt: "img08" },
       { type: "video", src: "https://res.cloudinary.com/dlsvukxi1/video/upload/v1748248689/video03_mtdcge_cjzxfv.webm" },
-       { type: "img", src: "https://res.cloudinary.com/dlsvukxi1/image/upload/v1748248610/10_lei7eo_11zon_onypfk.webp", alt: "img09" },
+      { type: "img", src: "https://res.cloudinary.com/dlsvukxi1/image/upload/v1748248610/10_lei7eo_11zon_onypfk.webp", alt: "img09" },
     ];
 
     function renderScroller(columnClass, items) {
@@ -82,7 +82,7 @@
           video.muted = true;
           video.playsInline = true;
           video.setAttribute("decoding", "async");
-           video.removeAttribute("controls"); // 재생 버튼 안 뜨게 하기
+          video.removeAttribute("controls"); // 재생 버튼 안 뜨게 하기
 
           const source = document.createElement('source');
           source.src = item.src;

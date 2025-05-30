@@ -71,26 +71,6 @@
     max-height: 350px;
 }
 
-/* ───── 태블릿 ───── */
-@media only screen and (min-width: 768px) and (max-width: 1279px) {
-    #main .gallery {
-        grid-template-columns: repeat(3, 1fr);
-        height: auto;
-    }
-
-    #main .gallery .masonry-item video {
-        max-height: 250px;
-    }
-
-    #main .column-1 { order: 1; }
-    #main .column-2 { order: 3; }
-    #main .column-3 { order: 2; }
-
-    #main .gallery .column-3 .scroller {
-        animation: scrollLoopReverse 10s linear infinite;
-    }
-}
-
 /* ───── 모바일 (2열 유지) ───── */
 @media (max-width: 767px) {
     #main .column-1 { order: 1; }
@@ -136,3 +116,24 @@
         max-height: 126px;
     }
 }
+
+/* ───── 태블릿 (3열 유지) ───── */
+@media only screen and (min-width: 768px) and (max-width: 1279px) {
+    #main .gallery {
+        grid-template-columns: repeat(3, 1fr);
+        height: auto;
+    }
+
+    #main .gallery .masonry-item video {
+        max-height: 250px;
+    }
+
+    #main .column-1 { order: 1; }
+    #main .column-2 { order: 3; }
+    #main .column-3 { order: 2; }
+
+    #main .gallery .column-3 .scroller {
+        animation: scrollLoopReverse 10s linear infinite;
+    }
+}
+
