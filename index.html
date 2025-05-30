@@ -40,56 +40,63 @@
   <!-- // main -->
 
   <script>
-  function renderScroller(columnClass, items) {
-    const scroller = document.querySelector(`#main .${columnClass} .scroller`);
-    const allItems = [...items, ...items]; // 무한 스크롤용으로 2번 반복
+    const column1Content = [
+      { type: "img", src: "https://res.cloudinary.com/dlsvukxi1/image/upload/v1748247752/1_rnyddf_11zon_n9pmxf.webp", alt: "img01" },
+      { type: "img", src: "https://res.cloudinary.com/dlsvukxi1/image/upload/v1748247749/2_jbtwqj_11zon_r31woc.webp", alt: "img02" },
+      { type: "img", src: "https://res.cloudinary.com/dlsvukxi1/image/upload/v1748247749/3_d6dorr_11zon_i0l7ul.webp", alt: "img03" },
+      { type: "video", src: "https://res.cloudinary.com/dlsvukxi1/video/upload/v1748248686/video01_hefzqq_y7am8r.webm" },
+      { type: "img", src: "https://res.cloudinary.com/dlsvukxi1/image/upload/v1748247752/4_udjvcp_11zon_c6ngiw.webp", alt: "img04" }
+    ];
 
-    allItems.forEach(item => {
-      const wrapper = document.createElement('div');
-      wrapper.classList.add('masonry-item');
+    const column2Content = [
+      { type: "img", src: "https://res.cloudinary.com/dlsvukxi1/image/upload/v1748247751/5_jd9xpt_11zon_pe22z8.webp", alt: "img05" },
+      { type: "video", src: "https://res.cloudinary.com/dlsvukxi1/video/upload/v1748248689/video02_ly7siz_xpd542.webm" },
+      { type: "img", src: "https://res.cloudinary.com/dlsvukxi1/image/upload/v1748259189/kendall-jenner-stella-mccartnery-fall-2023-campaign-photos-b.jpg_copy-Enhanced-SR_copy3_beyxnf.webp", alt: "img06" }
+    ];
 
-      if (item.type === "img") {
-        const img = document.createElement('img');
-        img.src = item.src;
-        img.alt = item.alt || "";
-        wrapper.appendChild(img);
-      } else if (item.type === "video") {
-        const video = document.createElement('video');
-        video.autoplay = true;
-        video.loop = true;
-        video.muted = true;
-        video.playsInline = true;
-        video.setAttribute("decoding", "async");
-        video.removeAttribute("controls"); // ✅ 재생 버튼 안 뜨게 하기
+    const column3Content = [
+      { type: "img", src: "https://res.cloudinary.com/dlsvukxi1/image/upload/v1748247750/7_tthwjf_11zon_hrlk3n.webp", alt: "img07" },
+      { type: "img", src: "https://res.cloudinary.com/dlsvukxi1/image/upload/v1748248518/9_ne0lil_11zon_aljwo5.webp", alt: "img08" },
+      { type: "video", src: "https://res.cloudinary.com/dlsvukxi1/video/upload/v1748248689/video03_mtdcge_cjzxfv.webm" },
+       { type: "img", src: "https://res.cloudinary.com/dlsvukxi1/image/upload/v1748248610/10_lei7eo_11zon_onypfk.webp", alt: "img09" },
+    ];
 
-        const source = document.createElement('source');
-        source.src = item.src;
-        source.type = "video/webm";
+    function renderScroller(columnClass, items) {
+      const scroller = document.querySelector(`#main .${columnClass} .scroller`);
+      // 무한 스크롤용으로 2번 반복
+      const allItems = [...items, ...items];
 
-        video.appendChild(source);
-        wrapper.appendChild(video);
-      }
-      scroller.appendChild(wrapper);
-    });
-  }
+      allItems.forEach(item => {
+        const wrapper = document.createElement('div');
+        wrapper.classList.add('masonry-item');
 
-  renderScroller('column-1', column1Content);
-  renderScroller('column-2', column2Content);
-  renderScroller('column-3', column3Content);
+        if(item.type === "img") {
+          const img = document.createElement('img');
+          img.src = item.src;
+          img.alt = item.alt || "";
+          wrapper.appendChild(img);
+        } else if(item.type === "video") {
+          const video = document.createElement('video');
+          video.autoplay = true;
+          video.loop = true;
+          video.muted = true;
+          video.playsInline = true;
+          video.setAttribute("decoding", "async");
+           video.removeAttribute("controls"); // ✅ 재생 버튼 안 뜨게 하기
 
-  // ✅ 사용자 첫 터치 시 모든 비디오 강제 재생
-  document.addEventListener('DOMContentLoaded', () => {
-    document.body.addEventListener('touchstart', () => {
-      document.querySelectorAll('video').forEach(video => {
-        const playPromise = video.play();
-        if (playPromise !== undefined) {
-          playPromise.catch(err => {
-            console.warn('Video play failed:', err);
-          });
+          const source = document.createElement('source');
+          source.src = item.src;
+          source.type = "video/webm";
+
+          video.appendChild(source);
+          wrapper.appendChild(video);
         }
+        scroller.appendChild(wrapper);
       });
-    }, { once: true }); // 한 번만 실행
-  });
+    }
+    renderScroller('column-1', column1Content);
+    renderScroller('column-2', column2Content);
+    renderScroller('column-3', column3Content);
   </script>
 </body>
 </html>
