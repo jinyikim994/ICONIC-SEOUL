@@ -134,7 +134,7 @@
     }
 
     #photographer-view .gallery-container {
-        grid-template-columns: repeat(3, 1fr); /* 태블릿은 3열 */
+        grid-template-columns: repeat(2, 1fr); /* 태블릿은 3열 */
         gap: 30px;
         padding: 20px;
     }
