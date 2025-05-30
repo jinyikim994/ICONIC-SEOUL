@@ -44,7 +44,7 @@
 #photographer-view .gallery-container {
     display: grid;
     grid-template-columns: repeat(5, 1fr); 
-    gap: 60px; /*줄이면 전체 세로 공간도 줄어듦 */
+    gap: 60px;
     padding: 30px 40px 40px;
     margin: auto;
 }
@@ -71,11 +71,12 @@
     font-size: 15px;
     font-weight: 700;
     text-align: center;
+    text-transform: uppercase;
 }
 
 #photographer-view .view-more-btn{
-    padding:30px 0;
-    margin-bottom:100px;
+    padding: 30px 0;
+    margin-bottom: 100px;
     text-align: center;
     text-decoration: underline;
     font-size:20px;
@@ -115,7 +116,6 @@
         align-items: center;
         margin: 20px 20px 90px 20px;
     }
-
 
     #photographer-view .main-content .magazine-cover {
         width: 100%;
