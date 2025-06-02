@@ -7,8 +7,8 @@
 
 #photographer-view .main-content .magazine-cover {
     max-width: 647px;
-    width: 100%;
     object-fit: contain;
+    width: 100%;
 }
 
 #photographer-view .main-content .magazine-cover img {
@@ -18,44 +18,36 @@
 
 #photographer-view .main-content .info {
     flex-shrink: 0;
-    margin: 29px 0 29px 0; 
-    font-family:'Times New Roman', sans-serif;
-    font-weight: 500;
+    font-family: 'Times New Roman', sans-serif;
     font-size: 43px;
+    font-weight: 500;
+    margin: 29px 0 29px 0;
     text-align: center;
 }
 
 #photographer-view .main-content .info small {
     display: block;
     font-family: "Roboto", sans-serif;
-    font-weight: 700;
     font-size: 11px;
+    font-weight: 700;
 }
 
 /* Common */
 #photographer-view .gallery-container {
     display: grid;
-    grid-template-columns: repeat(5, 1fr); 
     gap: 34px;
+    grid-template-columns: repeat(5, 1fr); 
     padding: 30px 40px 40px;
 }
 
-#photographer-view .title{
-    padding: 0 40px;
-    font-family: 'Helvetica Neue', sans-serif;
-    font-size: 17px;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-}
-
 #photographer-view .gallery-item img {
-    width: 100%;
-    max-height: 370px;
     height: 370px;
+    max-height: 370px;
     object-fit: contain;
+    width: 100%;
 }
 
-#photographer-view .gallery-item span{
+#photographer-view .gallery-item span {
     display: block;
     font-size: 15px;
     font-weight: 700;
@@ -63,54 +55,61 @@
     text-transform: uppercase;
 }
 
-#photographer-view .view-more-btn{
+#photographer-view .title {
+    font-family: 'Helvetica Neue', sans-serif;
+    font-size: 17px;
+    letter-spacing: 2px;
+    padding: 0 40px;
+    text-transform: uppercase;
+}
+
+#photographer-view .view-more-btn {
+    font-family: 'Times New Roman', sans-serif;
+    font-size: 20px;
     margin-bottom: 100px;
     padding: 30px 0;
-    font-family: 'Times New Roman', sans-serif;
-    font-size:20px;
     text-align: center;
     text-decoration: underline;
 }
 
 /* ───── 모바일 ───── */
 @media (max-width: 767px) {
-
-    #photographer-view .main-content{
+    #photographer-view .main-content {
         margin: 20px 0 0;
     }
 
-    #photographer-view .main-content .magazine-cover{
+    #photographer-view .main-content .magazine-cover {
         max-width: 440px;
         padding: 0 15px;
     }
 
-    #photographer-view .main-content .info{
-        margin: 35px 0 35px 0;
+    #photographer-view .main-content .info {
         font-size: 35px;
+        margin: 35px 0 35px 0;
     }
 
-    #photographer-view .main-content .info small{
+    #photographer-view .main-content .info small {
         margin-top: 5px;
     }
 
     #photographer-view .title {
-        padding: 0 20px;
         font-size: 14px;
+        padding: 0 20px;
     }
 
-    #photographer-view .ad{
-        margin-top: 20px
+    #photographer-view .ad {
+        margin-top: 20px;
     }
 
     #photographer-view .gallery-container {
-        grid-template-columns: repeat(2, 1fr);
         gap: 20px 50px;
+        grid-template-columns: repeat(2, 1fr);
         padding: 15px 30px;
     }
-   
+
     #photographer-view .gallery-item img {
-        max-height: 212px;
         height: 212px;
+        max-height: 212px;
     }
 
     #photographer-view .gallery-item span {
@@ -118,21 +117,19 @@
     }
 
     #photographer-view .view-more-btn {
+        font-size: 16px;
         margin-bottom: 30px;
         padding: 15px 0;
-        font-size: 16px;
     }
 }
 
 /* ───── 13인치 노트북 ───── */
 @media (min-width: 1440px) and (max-width: 1919px) {
-    #photographer-view .main-content .magazine-cover{
+    #photographer-view .main-content .magazine-cover {
         max-width: 400px;
     }
 
-    #photographer-view .gallery-container{
+    #photographer-view .gallery-container {
         padding: 0 40px 40px;
     }
 }
-
-
