@@ -85,6 +85,7 @@
     }
 
     #photographer-view .main-content .info{
+        margin: 35px 0 35px 0;
         font-size: 35px;
     }
 
@@ -104,8 +105,8 @@
     }
    
     #photographer-view .gallery-item img {
-        max-height: unset;
-        height: unset;
+        max-height: 212px;
+        height: 212px;
     }
 
     #photographer-view .gallery-item span {
