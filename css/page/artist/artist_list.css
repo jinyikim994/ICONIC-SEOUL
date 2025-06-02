@@ -1,7 +1,6 @@
 /* ───── 데스크탑 ───── */
 #artist-list .gallery-container {
   position: relative;
-
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 10px;
