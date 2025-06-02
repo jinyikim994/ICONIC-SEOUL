@@ -7,6 +7,11 @@
     list-style: none;
 }
 
+a {
+    color: #000;
+}
+
+
 /* video */
 video {
     width: 100%;
