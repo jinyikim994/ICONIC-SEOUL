@@ -76,11 +76,12 @@
 @media (max-width: 767px) {
 
     #photographer-view .main-content{
-        margin: 20px 0;
+        margin: 20px 0 0;
     }
 
     #photographer-view .main-content .magazine-cover{
         max-width: 400px;
+        padding: 0 15px;
     }
 
     #photographer-view .main-content .info{
