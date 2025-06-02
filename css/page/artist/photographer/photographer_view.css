@@ -72,14 +72,17 @@
     text-decoration: underline;
 }
 
-
-
 /* ───── 모바일 ───── */
 @media (max-width: 767px) {
     #photographer-view .gallery-container {
         grid-template-columns: repeat(2, 1fr);
         gap: 20px;
         padding: 15px;
+    }
+
+    #photographer-view .title {
+        padding: 0 20px;
+        font-size: 14px;
     }
 
     #photographer-view .gallery-item span {
@@ -89,16 +92,17 @@
     #photographer-view .view-more-btn {
         font-size: 16px;
     }
-
-    #photographer-view .title {
-        padding: 0 20px;
-        font-size: 14px;
-    }
 }
 
 /* ───── 13인치 노트북 ───── */
 @media (min-width: 1440px) and (max-width: 1919px) {
-    
+    #photographer-view .main-content .magazine-cover{
+        max-width: 400px;
+    }
+
+    #photographer-view .gallery-container{
+        padding: 0 40px 40px;
+    }
 }
 
 
