@@ -1,7 +1,8 @@
-/* ───── 데스크탑 (기본 3열) ───── */
+/* ───── 데스크탑 (3열 유지) ───── */
 #main {
     display: flex;
     flex-direction: column;
+
     height: 100vh;
     background: #fff;
 }
@@ -9,34 +10,24 @@
 #main .gallery {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
+
     width: 100vw;
     height: 100vh;
+
     margin-top: 75px;
+
     overflow: hidden;
 }
 
 #main .gallery .column {
     position: relative;
-    overflow: hidden;
 }
 
-#main .gallery .scroller {
-    display: flex;
-    flex-direction: column;
-    animation: scrollLoop 20s linear infinite;
-    transform: translate3d(0, 0, 0);
-    will-change: transform;
-    backface-visibility: hidden;
+#main .gallery .scroller > * {
+    flex-shrink: 0;
 }
 
-#main .gallery .column-2 .scroller {
-    animation: scrollLoopReverse 20s linear infinite;
-}
-
-#main .gallery .column-3 .scroller {
-    animation: scrollLoop 20s linear infinite;
-}
-
+/* Animation */
 @keyframes scrollLoop {
     0% { transform: translateY(0); }
     100% { transform: translateY(-50%); }
@@ -47,62 +38,67 @@
     100% { transform: translateY(0); }
 }
 
-#main .gallery .scroller > * {
-    flex-shrink: 0;
+#main .gallery .scroller {
+    display: flex;
+    flex-direction: column;
+
+    will-change: transform;
+    transform: translate3d(0, 0, 0);
+    backface-visibility: hidden;
 }
+
+#main .gallery .scroller {
+    animation: scrollLoop 20s linear infinite;  /* 공통 설정 */
+}
+
+#main .gallery .column-2 .scroller {
+    animation: scrollLoopReverse 20s linear infinite;  /* 반대 방향으로 */
+}
+
 
 #main .gallery .masonry-item {
     position: relative;
-    overflow: hidden;
     line-height: 0;
 }
 
-#main .gallery .masonry-item img,
-#main .gallery .masonry-item video {
+#main .gallery .masonry-item img{
     display: block;
+
     width: 100%;
     height: auto;
+
     margin: 0;
     padding: 0;
-    border: none;
-}
 
-#main .gallery .masonry-item video {
-    max-height: 350px;
+    border: none;
 }
 
 /* ───── 모바일 (2열 유지) ───── */
 @media (max-width: 767px) {
+
     #main .column-1 { order: 1; }
     #main .column-2 { order: 3; }
     #main .column-3 { order: 2; }
     
     #main .gallery {
         grid-template-columns: repeat(2, 1fr);
+
         height: 100vh;
+
         margin-top: 0;
-        overflow: hidden;
     }
 
     #main .gallery .column {
         position: relative;
+
         height: 100vh;
-        overflow: hidden;
     }
 
     #main .gallery .scroller {
-        display: flex;
-        flex-direction: column;
         height: auto;
-        animation: scrollLoopMobile 10s linear infinite;
-        will-change: transform;
     }
 
-    #main .gallery .column-3 .scroller {
-        animation: scrollLoopReverseMobile 10s linear infinite;
-    }
-
-    @keyframes scrollLoopMobile {
+     @keyframes scrollLoopMobile {
         0% { transform: translate3d(0, 0, 0); }
         100% { transform: translate3d(0, -50%, 0); }
     }
@@ -111,29 +107,36 @@
         0% { transform: translate3d(0, -50%, 0); }
         100% { transform: translate3d(0, 0, 0); }
     }
+    
+    #main .gallery .column-1 .scroller {
+        animation: scrollLoopMobile 10s linear infinite;
+     }
 
+    #main .gallery .column-3 .scroller {
+        animation: scrollLoopReverseMobile 10s linear infinite;
+    }
+}
+
+/* Videos */
+#main .gallery .masonry-item video {
+    width: 100%;
+    height: auto;
+}
+
+@media (max-width: 767px) {
     #main .gallery .masonry-item video {
         max-height: 126px;
     }
 }
 
-/* ───── 태블릿 (3열 유지) ───── */
-@media only screen and (min-width: 768px) and (max-width: 1279px) {
-    #main .gallery {
-        grid-template-columns: repeat(3, 1fr);
-        height: auto;
-    }
-
+@media (min-width: 768px) and (max-width: 1279px) {
     #main .gallery .masonry-item video {
         max-height: 250px;
     }
-
-    #main .column-1 { order: 1; }
-    #main .column-2 { order: 3; }
-    #main .column-3 { order: 2; }
-
-    #main .gallery .column-3 .scroller {
-        animation: scrollLoopReverse 10s linear infinite;
-    }
 }
 
+@media (min-width: 1280px) {
+    #main .gallery .masonry-item video {
+        max-height: 350px;
+    }
+}
