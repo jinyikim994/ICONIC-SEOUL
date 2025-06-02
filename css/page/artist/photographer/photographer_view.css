@@ -74,15 +74,33 @@
 
 /* ───── 모바일 ───── */
 @media (max-width: 767px) {
+
+    #photographer-view .main-content{
+        margin: 20px 0;
+    }
+
+    #photographer-view .main-content .magazine-cover{
+        max-width: 370px;
+    }
+
+    #photographer-view .main-content .info{
+        font-size: 28px;
+    }
+
+     #photographer-view .title {
+        padding: 0 20px;
+        font-size: 14px;
+    }
+
     #photographer-view .gallery-container {
         grid-template-columns: repeat(2, 1fr);
         gap: 20px;
         padding: 15px;
     }
-
-    #photographer-view .title {
-        padding: 0 20px;
-        font-size: 14px;
+   
+    #photographer-view .gallery-item img {
+        max-height: 289px;
+        height: 289px;
     }
 
     #photographer-view .gallery-item span {
@@ -90,6 +108,8 @@
     }
 
     #photographer-view .view-more-btn {
+        margin-bottom: 30px;
+        padding: 15px 0;
         font-size: 16px;
     }
 }
