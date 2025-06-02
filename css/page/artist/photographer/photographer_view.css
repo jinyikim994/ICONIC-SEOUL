@@ -80,11 +80,15 @@
     }
 
     #photographer-view .main-content .magazine-cover{
-        max-width: 370px;
+        max-width: 400px;
     }
 
     #photographer-view .main-content .info{
-        font-size: 28px;
+        font-size: 35px;
+    }
+
+    #photographer-view .main-content .info small{
+        margin-top: 5px;
     }
 
      #photographer-view .title {
