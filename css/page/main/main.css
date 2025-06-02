@@ -73,6 +73,30 @@
     border: none;
 }
 
+/* Videos */
+#main .gallery .masonry-item video {
+    width: 100%;
+    height: auto;
+}
+
+@media (max-width: 767px) {
+    #main .gallery .masonry-item video {
+        max-height: 126px;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1279px) {
+    #main .gallery .masonry-item video {
+        max-height: 250px;
+    }
+}
+
+@media (min-width: 1280px) {
+    #main .gallery .masonry-item video {
+        max-height: 350px;
+    }
+}
+
 /* ───── 모바일 (2열 유지) ───── */
 @media (max-width: 767px) {
 
@@ -117,26 +141,3 @@
     }
 }
 
-/* Videos */
-#main .gallery .masonry-item video {
-    width: 100%;
-    height: auto;
-}
-
-@media (max-width: 767px) {
-    #main .gallery .masonry-item video {
-        max-height: 126px;
-    }
-}
-
-@media (min-width: 768px) and (max-width: 1279px) {
-    #main .gallery .masonry-item video {
-        max-height: 250px;
-    }
-}
-
-@media (min-width: 1280px) {
-    #main .gallery .masonry-item video {
-        max-height: 350px;
-    }
-}
