@@ -104,8 +104,8 @@
     }
    
     #photographer-view .gallery-item img {
-        max-height: 289px;
-        height: 289px;
+        max-height: unset;
+        height: unset;
     }
 
     #photographer-view .gallery-item span {
