@@ -1,12 +1,16 @@
 #artist-list .gallery-container {
   position: relative;
+
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 10px;
-  padding: 0 10px;
+
   height: auto;
-  overflow: visible;
+
   margin-top:80px;
+  padding: 0 10px;
+
+  overflow: hidden;
 }
 
 #artist-list .gallery-item {
@@ -16,26 +20,29 @@
 }
 
 #artist-list .gallery-item a {
-  flex: 1;
   display: block;
+  flex: 1;
   position: relative;
   text-decoration: none;
   color: inherit;
 }
 
 #artist-list .gallery-item img {
+  display: block;
   width: 100%;
   height: 100%;
   object-fit: cover;
-  display: block;
+  object-position: center; 
 }
 
 #artist-list .gallery-item .overlay {
   position: absolute;
   top: 0;
   left: 0;
+
   width: 100%;
   height: 100%;
+  
   opacity: 0;
   transition: opacity 0.3s ease;
   z-index: 1;
@@ -51,10 +58,10 @@
   position: absolute;
   top: 50%; left: 50%;
   transform: translate(-50%, -50%);
+  z-index: 99;
   font-size: clamp(20px, 4vw, 35px);
   color: #fff;
   text-transform: uppercase;
-  z-index: 99;
   font-weight: 700;
   font-family: "Roboto Condensed", sans-serif;
   letter-spacing: 5px;
@@ -65,11 +72,13 @@
 }
 
 #artist-list .gallery-item .name {
-  font-family: 'Times New Roman', serif;
-  font-weight: 400;
   padding: 13px 0;
+
+  font-family: 'Times New Roman', serif;
   font-size: clamp(16px, 2.5vw, 19px);
+  font-weight: 400;
   color: #000;
+
   background-color: #fff;
 }
 
@@ -89,7 +98,6 @@
 /* ───── 13인치 노트북 ───── */
 @media (min-width: 1280px) and (max-width: 1439px) {
   #artist-list .gallery-container {
-    grid-template-columns: repeat(3, 1fr);
     margin-top: 15px;
   }
 }
@@ -97,15 +105,8 @@
 /* ───── 16인치 노트북 ───── */
 @media (min-width: 1440px) and (max-width: 1919px) {
   #artist-list .gallery-container {
-    grid-template-columns: repeat(3, 1fr);
     margin-top: 15px;
   }
 }
-
-/* @media (max-width: 1024px) {
-  #artist-list .gallery-container {
-    grid-template-columns: repeat(2, 1fr);
-  }
-} */
 
 
