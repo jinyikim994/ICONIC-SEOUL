@@ -93,18 +93,18 @@
         margin-top: 5px;
     }
 
-     #photographer-view .title {
+    #photographer-view .title {
         padding: 0 20px;
         font-size: 14px;
     }
 
-     #photographer-view .ad{
+    #photographer-view .ad{
         margin-top: 20px
     }
 
     #photographer-view .gallery-container {
         grid-template-columns: repeat(2, 1fr);
-        gap: 20px;
+        gap: 15px 0;
         padding: 15px;
     }
    
@@ -122,6 +122,7 @@
         padding: 15px 0;
         font-size: 16px;
     }
+}
 
    
 
