@@ -167,13 +167,12 @@
 
 
   #models-list .name {
-    font-size: 25px;
+    font-size: 35px;
     text-align: center;
   }
-
   
   #models-list .info{
-    padding-top: 10px;
+    padding-top: 2px;
   }
 
   #models-list .info p {

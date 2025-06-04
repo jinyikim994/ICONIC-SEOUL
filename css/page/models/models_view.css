@@ -151,9 +151,16 @@
   }
 
 
+  #models-view .slider-container{
+    margin: 20px auto 32px;
+  }
+
+  #models-view .info{
+    padding-top: 2px;
+  }
+
   #models-view .name {
-    font-size: 36px;
-    padding: 0 10px;
+    font-size: 35px;
   }
 
   #models-view .info .insta p {
