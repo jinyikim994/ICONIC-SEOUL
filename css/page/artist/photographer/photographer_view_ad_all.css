@@ -4,16 +4,16 @@
 }
 
 #photographer-ad-detail .container {
-    margin: 100px;
+    margin: 34px 100px;
 }
 
+/* ───── 그리드 스타일 ───── */
 #photographer-ad-detail .grid {
     display: grid;
-    margin-top: 40px;
-    margin-bottom: 77px;
     grid-template-columns: repeat(5, 1fr);
     grid-column-gap: 5vw;
     grid-row-gap: 2vw;
+    margin-bottom: 77px;
 }
 
 #photographer-ad-detail .grid img {
@@ -30,6 +30,7 @@
     text-align: center;
 }
 
+/* ───── 그리드 아이템 조정 ───── */
 #photographer-ad-detail .row-span-2 {
     grid-row: span 2;
 }
@@ -61,18 +62,15 @@
     #photographer-ad-detail .grid img {
         height: auto;
         max-height: 260px;
-        aspect-ratio: 3 / 4;
     }
 
     #photographer-ad-detail .grid span {
-        padding: 10px 0;
         font-size: 12px;
     }
 }
 
 /* ───── 노트북 13인치 ───── */
 @media (min-width: 1440px) and (max-width: 1919px) {
-
     #photographer-ad-detail .container {
         margin: 20px 100px;
     }
@@ -80,8 +78,5 @@
 
 /* ───── 노트북 16인치 ───── */
 @media screen and (min-width: 1728px) {
-
-    #photographer-ad-detail .container {
-        margin-top: 20px;
-    }
+    /* 현재 사용되는 스타일 없음 */
 }

@@ -1,0 +1,15 @@
+
+/* ───── 모바일 2열 ───── */
+@media (max-width: 768px) {
+   
+}
+
+/* ───── 노트북 13인치 ───── */
+@media (min-width: 1440px) and (max-width: 1919px) {
+   
+}
+
+/* ───── 노트북 16인치 ───── */
+@media screen and (min-width: 1728px) {
+    
+}
