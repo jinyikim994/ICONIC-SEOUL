@@ -11,9 +11,7 @@
   <script defer src="./js/common.js"></script>
 </head>
 <body>
-  <!-- main -->
-  <div id="main">
-    <!-- header -->
+  <!-- Header -->
     <header id="main-header">
       <h1 class="logo"><a href="./index.html">ICONIC CREATIVE STUDIO</a></h1>
       <button class="mobile-btn" onclick="toggleMenu()">
@@ -27,38 +25,40 @@
         <a href="./contact/contact.html">CONTACT</a>
       </nav>
     </header>
-    <!-- //header -->
+  <!-- //Header -->
 
+  <!-- Main -->
+  <div id="main">
     <!-- gallery -->
     <div class="gallery">
       <div class="column column-1"><div class="scroller"></div></div>
       <div class="column column-2"><div class="scroller"></div></div>
       <div class="column column-3"><div class="scroller"></div></div>
     </div>
-    <!-- gallery -->
+    <!-- Gallery -->
   </div>
-  <!-- // main -->
+  <!-- // Main -->
 
   <script>
     const column1Content = [
-      { type: "img", src: "https://res.cloudinary.com/dlsvukxi1/image/upload/v1748247752/1_rnyddf_11zon_n9pmxf.webp", alt: "img01" },
-      { type: "img", src: "https://res.cloudinary.com/dlsvukxi1/image/upload/v1748247749/2_jbtwqj_11zon_r31woc.webp", alt: "img02" },
-      { type: "img", src: "https://res.cloudinary.com/dlsvukxi1/image/upload/v1748247749/3_d6dorr_11zon_i0l7ul.webp", alt: "img03" },
+      { type: "img", src: "https://res.cloudinary.com/dlsvukxi1/image/upload/v1748247752/1_rnyddf_11zon_n9pmxf.webp", alt: "Image 1" },
+      { type: "img", src: "https://res.cloudinary.com/dlsvukxi1/image/upload/v1748247749/2_jbtwqj_11zon_r31woc.webp", alt: "Image 2" },
+      { type: "img", src: "https://res.cloudinary.com/dlsvukxi1/image/upload/v1748247749/3_d6dorr_11zon_i0l7ul.webp", alt: "Image 3" },
       { type: "video", src: "https://res.cloudinary.com/dlsvukxi1/video/upload/v1748248686/video01_hefzqq_y7am8r.webm" },
-      { type: "img", src: "https://res.cloudinary.com/dlsvukxi1/image/upload/v1748247752/4_udjvcp_11zon_c6ngiw.webp", alt: "img04" }
+      { type: "img", src: "https://res.cloudinary.com/dlsvukxi1/image/upload/v1748247752/4_udjvcp_11zon_c6ngiw.webp", alt: "Image 4" }
     ];
 
     const column2Content = [
-      { type: "img", src: "https://res.cloudinary.com/dlsvukxi1/image/upload/v1748247751/5_jd9xpt_11zon_pe22z8.webp", alt: "img05" },
+      { type: "img", src: "https://res.cloudinary.com/dlsvukxi1/image/upload/v1748247751/5_jd9xpt_11zon_pe22z8.webp", alt: "Image 5" },
       { type: "video", src: "https://res.cloudinary.com/dlsvukxi1/video/upload/v1748248689/video02_ly7siz_xpd542.webm" },
-      { type: "img", src: "https://res.cloudinary.com/dlsvukxi1/image/upload/v1748259189/kendall-jenner-stella-mccartnery-fall-2023-campaign-photos-b.jpg_copy-Enhanced-SR_copy3_beyxnf.webp", alt: "img06" }
+      { type: "img", src: "https://res.cloudinary.com/dlsvukxi1/image/upload/v1748259189/kendall-jenner-stella-mccartnery-fall-2023-campaign-photos-b.jpg_copy-Enhanced-SR_copy3_beyxnf.webp", alt: "Image 6" }
     ];
 
     const column3Content = [
-      { type: "img", src: "https://res.cloudinary.com/dlsvukxi1/image/upload/v1748247750/7_tthwjf_11zon_hrlk3n.webp", alt: "img07" },
-      { type: "img", src: "https://res.cloudinary.com/dlsvukxi1/image/upload/v1748248518/9_ne0lil_11zon_aljwo5.webp", alt: "img08" },
+      { type: "img", src: "https://res.cloudinary.com/dlsvukxi1/image/upload/v1748247750/7_tthwjf_11zon_hrlk3n.webp", alt: "Image 7" },
+      { type: "img", src: "https://res.cloudinary.com/dlsvukxi1/image/upload/v1748248518/9_ne0lil_11zon_aljwo5.webp", alt: "Image 8" },
       { type: "video", src: "https://res.cloudinary.com/dlsvukxi1/video/upload/v1748248689/video03_mtdcge_cjzxfv.webm" },
-      { type: "img", src: "https://res.cloudinary.com/dlsvukxi1/image/upload/v1748248610/10_lei7eo_11zon_onypfk.webp", alt: "img09" },
+      { type: "img", src: "https://res.cloudinary.com/dlsvukxi1/image/upload/v1748248610/10_lei7eo_11zon_onypfk.webp", alt: "Image 9" },
     ];
 
     function renderScroller(columnClass, items) {
