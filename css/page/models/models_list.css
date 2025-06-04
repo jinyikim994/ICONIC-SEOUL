@@ -67,7 +67,7 @@
   text-transform: uppercase;
   font-size: clamp(20px, 4vw, 26px);
   color: #fff;
-  letter-spacing: 1px;
+  letter-spacing: 5px;
   text-align: center;
   display: none;
 }
