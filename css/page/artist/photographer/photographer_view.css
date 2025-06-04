@@ -104,7 +104,7 @@
     }
 
     #photographer-view .gallery-container {
-        gap: 30px 61px;
+        gap: 25px 61px;
         grid-template-columns: repeat(2, 1fr);
         padding: 15px 30px;
     }
