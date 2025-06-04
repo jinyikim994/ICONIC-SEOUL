@@ -1,20 +1,26 @@
-/* PHOTOGRAPHER - PERSONAL DETAIL */
-#photographer-personal-detail .container{margin:100px;}
+#photographer-personal-detail .container{
+    max-width: 100%;
+    padding: 55px 226px;
+    box-sizing: border-box;
+}
 
 #photographer-personal-detail .grid {
     display: grid;
-    grid-template-columns: repeat(11, 1fr);
-    gap: 8px;
-    margin-top: 20px;
-    margin-bottom:77px;
-    width: 8.568%;
+    grid-template-columns: repeat(8, 1fr);
+    gap: 75px 10px;
+    font-size: 0;
+}
+
+
+#photographer-personal-detail .grid img{
+    width: 100%;
+    height: 100%;
+    display: block;
 }
 
 #photographer-personal-detail .grid img:not(.cover) {
-    width: 134px;
-    max-height: 177px;
-    display: block;
-    aspect-ratio: 3 / 4; 
+    grid-column: span 1;
+    max-height: 231px;
     object-fit: cover;
 }
 
@@ -28,56 +34,26 @@
 
 #photographer-personal-detail .cover {
     grid-column: span 2;
-    aspect-ratio: 3 / 1;
     object-fit: cover;
-    width: 100%;
-    display: block;
-    height: 177px; 
-    width: 267px;;
-    
-}
-
-#photographer-personal-detail .cover img{
-    width:268px !important;
+    max-height: 231px;
+    height: 100%;
 }
 
 /* 노트북 16인치 */
-@media screen and (min-width: 1728px) {
-    #photographer-personal-detail .container{margin:20px 114px;}
+/* @media screen and (min-width: 1728px) {
+    #photographer-personal-detail .coverer{margin:20px 114px;}
     #photographer-personal-detail .grid{gap:40px 8px;}
 
-}
-
-/* 반응형 대응 */
-@media (max-width: 1440px) {
-    #photographer-personal-detail .grid {
-        grid-template-columns: repeat(6, 1fr);
-    }
-
-    #photographer-personal-detail .cover {
-        grid-column: span 2;
-        aspect-ratio: 3 / 1.2;
-        max-height: none;
-    }
-}
-
-@media (max-width: 1024px) {
-    #photographer-personal-detail .grid {
-        grid-template-columns: repeat(6, 1fr);
-    }
-
-    #photographer-personal-detail .cover {
-        grid-column: span 2;
-        aspect-ratio: 4 / 3;
-    }
-}
+} */
 
 /* 모바일 */
 @media (max-width: 768px) {
+    #photographer-personal-detail .container{
+        padding: 20px 10px;
+    }
     #photographer-personal-detail .grid {
         grid-template-columns: repeat(2, 1fr);
-        gap: 8px;
-        width: 100%;
+        gap: 20px;
     }
 
     #photographer-personal-detail .grid img:not(.cover){
@@ -85,7 +61,7 @@
         max-height: 295px;
     }
 
-    #photographer-personal-detail .container {
+    #photographer-personal-detail .coverer {
         margin: 20px 16px;
     }
 
