@@ -49,12 +49,13 @@
 @media (max-width: 768px) {
     #photographer-ad-detail .grid {
         grid-template-columns: repeat(2, 1fr);
-        gap: 12px;
-        padding: 0 16px;
+        gap: 15px;
+        margin-top: 20px;
+        padding: 0 15px;
     }
 
     #photographer-ad-detail .container {
-        margin: 20px 16px;
+        margin: 0;
     }
 
     #photographer-ad-detail .grid img {
