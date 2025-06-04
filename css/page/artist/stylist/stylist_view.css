@@ -1,171 +1,148 @@
-#stylist-view .main-content .bottom-info small{
-    margin-top: 6px;
-    font-weight: 700;
+#stylist-view {
+  --padding-x-desktop: 40px;
+  --padding-x-mobile: 20px;
+  --font-serif: 'Times New Roman', sans-serif;
+  --font-sans: 'Roboto', sans-serif;
+  --font-helvetica: 'Helvetica Neue', sans-serif;
 }
+
 #stylist-view .main-content {
-    display: flex;
-    justify-content: center;
-    margin-top: 130px;
-    margin-bottom: 118px;
+  display: flex;
+  justify-content: center;
+  margin: 34px 0 118px;
 }
 
-#stylist-view .main-content .magazine-cover {
-    width: 100%;
-    max-width: 530px;
-    height: auto;
-    max-height: 78vh; /* 뷰포트 높이 기준 제한 */
-    object-fit: contain;
-    flex-shrink: 1;
+#stylist-view .magazine-cover {
+  max-width: 622px;
+  width: 100%;
+  object-fit: contain;
 }
 
-#stylist-view .main-content .magazine-cover img {
-    width: 100%;
-    object-fit: contain;
-    display: block;
+#stylist-view .magazine-cover img {
+  display: block;
+  width: 100%;
 }
 
-/* info */
-#stylist-view .main-content .bottom-info {
-    margin: 27px 0 0 20px;
-    font-size: 43px;
-    font-weight: 500;
-    flex-shrink: 0;
-    text-align: center;
-    font-family:'Times New Roman', sans-serif;
+#stylist-view .info {
+  flex-shrink: 0;
+  font-family: var(--font-serif);
+  font-size: 43px;
+  font-weight: 500;
+  margin: 29px 0;
+  text-align: center;
 }
 
-#stylist-view .main-content .bottom-info small {
-    display: block;
-    font-size: 11px;
-    margin-top: 14px;
-    font-family: "Roboto", sans-serif;
+#stylist-view .info small {
+  display: block;
+  font-family: var(--font-sans);
+  font-size: 11px;
+  font-weight: 700;
+  margin-top: 0;
 }
 
 #stylist-view .gallery-container {
-    display: grid;
-    grid-template-columns: repeat(5, 1fr); 
-    gap: 60px;
-    padding: 30px 40px 40px;
-    margin: auto;
-}
-
-#stylist-view .title{
-    padding: 0 40px;
-    font-family: 'Helvetica Neue', sans-serif;
-    font-size: 16px;
-    text-transform: uppercase;
+  display: grid;
+  gap: 40px 49px;
+  grid-template-columns: repeat(5, 1fr);
+  padding: 31px var(--padding-x-desktop) 40px;
 }
 
 #stylist-view .gallery-item img {
-    width: 100%;
-    cursor: pointer;
-    aspect-ratio: 2 / 2;
-    width: 100%;
-    height: auto;
-    object-fit: contain;
+  width: 100%;
+  height: 370px;
+  max-height: 370px;
+  object-fit: contain;
 }
 
-#stylist-view .gallery-item span{
-    display: block;
-    padding: 5px 0;
-    font-size: 15px;
-    font-weight: 700;
-    text-align: center;
-    text-transform: uppercase;
+#stylist-view .gallery-item span {
+  display: block;
+  padding: 6px 0;
+  font-size: 15px;
+  font-weight: 700;
+  text-align: center;
+  text-transform: uppercase;
 }
 
-#stylist-view .view-more-btn{
-    padding: 30px 0;
-    margin-bottom: 100px;
-    text-align: center;
-    text-decoration: underline;
-    font-size:20px;
-    font-family: 'Times New Roman', sans-serif;
+#stylist-view .title {
+  font-family: var(--font-helvetica);
+  font-size: 17px;
+  letter-spacing: 1px;
+  padding: 0 var(--padding-x-desktop);
+  text-transform: uppercase;
 }
 
-#stylist-view .view-more-btn a{
-    color:#000;
+#stylist-view .view-more-btn {
+  font-family: var(--font-serif);
+  font-size: 20px;
+  margin-bottom: 100px;
+  padding: 30px 0;
+  text-align: center;
+  text-decoration: underline;
 }
 
 /* ───── 모바일 ───── */
-@media (max-width: 768px) {
-    #stylist-view .gallery-container {
-        grid-template-columns: repeat(2, 1fr); /* 모바일은 2열 */
-        gap: 20px;
-        padding: 15px;
-    }
+@media (max-width: 767px) {
+  #stylist-view .main-content {
+    margin: 20px 0 0;
+  }
 
-    #stylist-view .gallery-item span {
-        font-size: 13px;
-    }
+  #stylist-view .magazine-cover {
+    max-width: 440px;
+    padding: 0 15px;
+  }
 
-    #stylist-view .view-more-btn {
-        font-size: 16px;
-    }
+  #stylist-view .magazine-cover img {
+    max-height: 450px;
+    height: 450px;
+  }
 
-    #stylist-view .title {
-        font-size: 14px;
-        padding: 0 20px;
-    }
+  #stylist-view .info {
+    font-size: 35px;
+    margin: 35px 0;
+  }
+
+  #stylist-view .info small {
+    margin-top: 5px;
+  }
+
+  #stylist-view .title {
+    font-size: 14px;
+    padding: 0 var(--padding-x-mobile);
+  }
+
+  #stylist-view .gallery-container {
+    gap: 25px 61px;
+    grid-template-columns: repeat(2, 1fr);
+    padding: 15px 30px;
+  }
+
+  #stylist-view .gallery-item img {
+    height: 212px;
+    max-height: 212px;
+  }
+
+  #stylist-view .gallery-item span {
+    font-size: 13px;
+  }
+
+  #stylist-view .view-more-btn {
+    font-size: 16px;
+    margin-bottom: 30px;
+    padding: 15px 0;
+  }
+
+  #stylist-view .ad {
+    margin-top: 20px;
+  }
 }
 
-/* ───── 태블릿  ───── */
-@media (max-width: 1024px) {
-    #stylist-view .main-content {
-        flex-direction: column;
-        align-items: center;
-        margin: 20px 20px 90px 20px;
-    }
-
-    #stylist-view .main-content .magazine-cover {
-        width: 100%;
-        height: auto;
-        max-width: 500px;
-    }
-
-    #stylist-view .main-content .bottom-info {
-        margin: 20px 0 0 0;
-        font-size: 28px;
-        text-align: center;
-    }
-    
-    #stylist-view .main-content .bottom-info small {
-        font-size: 10px;
-    }
-
-    #stylist-view .gallery-container {
-        grid-template-columns: repeat(2, 1fr); /* 태블릿은 3열 */
-        gap: 30px;
-        padding: 20px;
-    }
-}
-
-/* ───── 16인치 노트북 ───── */
+/* ───── 노트북 13인치 ───── */
 @media (min-width: 1440px) and (max-width: 1919px) {
-    #stylist-view .main-content{
-        margin-top: 30px;
-        margin-bottom: 118px;
-    }
+  #stylist-view .magazine-cover {
+    max-width: 400px;
+  }
 
-    #stylist-view .main-content .magazine-cover img {
-        width: 100%;
-        height: 685px;
-        max-height: 685px;
-        object-fit: contain;
-        display: block;
-    }
-    
-    #stylist-view .main-content .bottom-info {
-        margin: 10px 0 0 0px;
-    }
-
-    #stylist-view .main-content .bottom-info small{
-        margin-top: 6px;
-    }
-
-    #stylist-view .main-content .bottom-info{
-        font-size:37px;
-    }
+  #stylist-view .gallery-container {
+    padding: 0 var(--padding-x-desktop) 40px;
+  }
 }
-
-

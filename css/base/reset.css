@@ -24,8 +24,8 @@ video {
     pointer-events: none;
     touch-action: none;
     outline: none;
-    max-height: 194px;
-    height: 194px;
+    max-height: 187px;
+    height: 187px;
 }
 
 video::-webkit-media-controls-play-button {

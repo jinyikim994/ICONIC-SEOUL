@@ -48,7 +48,8 @@
 
 #photographer-view .gallery-item span {
     display: block;
-    font-size: 12px;
+    padding: 5px 0;
+    font-size: 15px;
     font-weight: 700;
     text-align: center;
     text-transform: uppercase;

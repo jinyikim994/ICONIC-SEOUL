@@ -1,82 +1,107 @@
-#photographer-ad-detail header .logo a {
-    position: relative;
-    top: 5px;
+:root {
+  --container-margin-desktop: 34px 100px;
+  --container-margin-laptop: 20px 100px;
+  --container-margin-mobile: 0;
+
+  --font-primary: 'Helvetica Neue', sans-serif;
+
+  --grid-col-gap-desktop: 5vw;
+  --grid-row-gap-desktop: 2vw;
+  --grid-gap-mobile: 15px;
+
+  --font-size-desktop: 15px;
+  --font-size-mobile: 12px;
+
+  --grid-image-aspect: 3 / 4;
+  --grid-image-max-height-mobile: 260px;
+
+  --cover-max-height: 230px;
 }
 
-#photographer-ad-detail .container {
-    margin: 34px 100px;
+#photographer-ad-all {
+  overflow: unset;
+}
+
+#photographer-ad-all header .logo a {
+  position: relative;
+  top: 5px;
+}
+
+#photographer-ad-all .container {
+  margin: var(--container-margin-desktop);
 }
 
 /* ───── 그리드 스타일 ───── */
-#photographer-ad-detail .grid {
-    display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    grid-column-gap: 5vw;
-    grid-row-gap: 2vw;
-    margin-bottom: 77px;
+#photographer-ad-all .grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-column-gap: var(--grid-col-gap-desktop);
+  grid-row-gap: var(--grid-row-gap-desktop);
+  margin-bottom: 77px;
 }
 
-#photographer-ad-detail .grid img {
-    width: 100%;
-    aspect-ratio: 3 / 4;
-    object-fit: cover;
+#photographer-ad-all .grid img {
+  width: 100%;
+  aspect-ratio: var(--grid-image-aspect);
+  object-fit: cover;
 }
 
-#photographer-ad-detail .grid span {
-    display: block;
-    padding: 10px 0;
-    font-family: 'Helvetica Neue', sans-serif;
-    font-size: 14px;
-    text-align: center;
+#photographer-ad-all .grid span {
+  display: block;
+  padding: 10px 0;
+  font-family: var(--font-primary);
+  font-size: var(--font-size-desktop);
+  text-align: center;
+  text-transform: uppercase;
 }
 
 /* ───── 그리드 아이템 조정 ───── */
-#photographer-ad-detail .row-span-2 {
-    grid-row: span 2;
+#photographer-ad-all .row-span-2 {
+  grid-row: span 2;
 }
 
-#photographer-ad-detail .col-span-2 {
-    grid-column: span 1;
+#photographer-ad-all .col-span-2 {
+  grid-column: span 1;
 }
 
-#photographer-ad-detail .cover {
-    grid-column: span 2;
-    grid-row: span 1;
-    height: 100%;
-    max-height: 230px;
+#photographer-ad-all .cover {
+  grid-column: span 2;
+  grid-row: span 1;
+  height: 100%;
+  max-height: var(--cover-max-height);
 }
 
-/* ───── 모바일 2열 ───── */
+/* ───── 모바일 (2열) ───── */
 @media (max-width: 768px) {
-    #photographer-ad-detail .grid {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 15px;
-        margin-top: 20px;
-        padding: 0 15px;
-    }
+  #photographer-ad-all .grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--grid-gap-mobile);
+    margin-top: 20px;
+    padding: 0 15px;
+  }
 
-    #photographer-ad-detail .container {
-        margin: 0;
-    }
+  #photographer-ad-all .container {
+    margin: var(--container-margin-mobile);
+  }
 
-    #photographer-ad-detail .grid img {
-        height: auto;
-        max-height: 260px;
-    }
+  #photographer-ad-all .grid img {
+    height: auto;
+    max-height: var(--grid-image-max-height-mobile);
+  }
 
-    #photographer-ad-detail .grid span {
-        font-size: 12px;
-    }
+  #photographer-ad-all .grid span {
+    font-size: var(--font-size-mobile);
+  }
 }
 
 /* ───── 노트북 13인치 ───── */
 @media (min-width: 1440px) and (max-width: 1919px) {
-    #photographer-ad-detail .container {
-        margin: 20px 100px;
-    }
+  #photographer-ad-all .container {
+    margin: var(--container-margin-laptop);
+  }
 }
 
 /* ───── 노트북 16인치 ───── */
 @media screen and (min-width: 1728px) {
-    /* 현재 사용되는 스타일 없음 */
+  /* Reserved for future use */
 }

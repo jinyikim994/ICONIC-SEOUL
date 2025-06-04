@@ -72,8 +72,8 @@
     height: 14px;
 }
 
-/* ───── 모바일 ───── */
-@media (max-width: 767px) {
+/* ───── 모바일  ───── */
+@media (max-width: 768px) {
     .name {
         font-size: 36px;
         text-align: center;
@@ -88,9 +88,13 @@
     }
 }
 
-
-/* ───── 16인치 노트북 ───── */
+/* ───── 노트북 13인치 ───── */
 @media (min-width: 1440px) and (max-width: 1919px) {
+   
+}
+
+/* ───── 노트북 16인치 ───── */
+@media screen and (min-width: 1728px) {
     .name {
         font-size: 36px;
         text-align: center;
@@ -100,3 +104,5 @@
         font-size: 14px;
     }
 }
+
+
