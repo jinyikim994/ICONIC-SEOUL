@@ -155,6 +155,12 @@
     width: 90%;
     height: auto;
   }
+   
+ #models-list .container .image img {
+    height: 439px;
+    max-height: 439px;
+}
+
 
   #models-list .name {
     font-size: 36px;
