@@ -151,6 +151,10 @@
     gap: 40px;
   }
 
+  #models-list .container .wrap {
+    margin-top: 30px;
+  }
+
   #models-list .container .image {
     width: 90%;
     height: auto;
