@@ -91,11 +91,6 @@
     padding: 0 15px;
   }
 
-  #stylist-view .magazine-cover img {
-    max-height: 450px;
-    height: 450px;
-  }
-
   #stylist-view .info {
     font-size: 35px;
     margin: 35px 0;
