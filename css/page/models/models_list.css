@@ -67,7 +67,7 @@
   text-transform: uppercase;
   font-size: clamp(20px, 4vw, 26px);
   color: #fff;
-  letter-spacing: 5px;
+  letter-spacing: 1px;
   text-align: center;
   display: none;
 }
@@ -152,7 +152,7 @@
   }
 
   #models-list .container .wrap {
-    margin-top: 30px;
+    margin-top: 20px;
   }
 
   #models-list .container .image {
