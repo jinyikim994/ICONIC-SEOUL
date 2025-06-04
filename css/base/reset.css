@@ -31,3 +31,12 @@ video {
 video::-webkit-media-controls-play-button {
     display: none;
 }
+
+
+/* ───── 모바일 2열 ───── */
+@media (max-width: 768px) {
+    video {
+        max-height: 83px;
+        height: 83px;
+    }
+}

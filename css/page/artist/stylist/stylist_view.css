@@ -111,6 +111,10 @@
     padding: 15px 30px;
   }
 
+  #stylist-view .film .gallery-container{
+    gap: 25px 24px;
+  }
+
   #stylist-view .gallery-item img {
     height: 212px;
     max-height: 212px;
