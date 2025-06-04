@@ -1,3 +1,42 @@
+#models-list .image .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: opacity 0.1s ease, transform 0.1s ease;
+  will-change: opacity;
+  z-index: 99;
+}
+
+#models-list .image:hover .overlay {
+  opacity: 0.8;
+  background: #fff;
+  border: 2px solid #000;
+}
+
+#models-list .image .job {
+  position: absolute;
+  top: 50%; 
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 99;
+  font-family: "Roboto Condensed", sans-serif;
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: clamp(20px, 4vw, 26px);
+  color: #fff;
+  letter-spacing: 5px;
+  z-index: 99;
+  text-align: center;
+  display: none;
+}
+
+#models-list .image:hover .job {
+  color: #111;
+  display: block;
+}
 
 #models-list .container {
     width: 100%;
@@ -5,21 +44,41 @@
     margin: 20px auto;
     display: flex;
     justify-content: center;
-    gap: 50px;
+    gap: 200px;
 }
 
 #models-list .container .image{
-    height: 828px;
-    max-height: 828px;
+    width: 540px;
+    max-width: 540px;
+    height: 700px;
+    max-height: 700px;
+}
+
+#models-list .container .image a{
+    display: block;
+    flex: 1;
+    position: relative;
+    text-decoration: none;
+    color: inherit;
+    width: 100%;;
+    height: 100%;;
+    text-align: center;
 }
 
 #models-list .container .image img{
+    width: 100%;
     height: 100%;
+    object-fit: cover;
+    object-position: center; 
+}
+
+#models-list .container .wrap{
+    margin-top: 30px;
 }
 
 #models-list .name {
     font-family: "Libre Baskerville", serif;
-    font-size: 66px;
+    font-size: 50px;
     font-weight: 400;
     color: #000;
     text-transform: uppercase;

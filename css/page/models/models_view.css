@@ -1,108 +1,129 @@
-
-
-
-.name {
-    font-family: "Libre Baskerville", serif;
-    text-transform: uppercase;
-    font-weight: 400;
-    font-size: 66px;
-    color: #000;
+/* 공통 영역 */
+#models-view {
+  font-family: "Libre Baskerville", serif;
+  color: #000;
 }
 
-.name span {
-    font-family: 'Feature Display';
+#models-view .slider-container {
+  position: relative;
+  margin: 20px auto;
 }
 
-.bottom-text {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-top: 100px;
+#models-view .slider-images {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  width: 1070px;
+  height: 100vh;
+  max-height: 747px;
+  margin: 20px auto;
 }
 
-.bottom-text .info {
-    display: flex;
-    flex-direction: column;
-    text-align: center;
+#models-view .slider-images img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
 }
 
-.bottom-text  p{
-    font-size: 12px;
+#models-view .slide {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0;
+  transition: opacity 0.5s ease;
 }
 
-.bottom-text .info p {
-    padding-bottom: 10px;
+#models-view .slide.active {
+  opacity: 1;
 }
 
-.bottom-text .insta{
-    display: flex;
-    justify-content: center;
-    gap: 10px;
+/* 좌우 호버 감지 영역 */
+#models-view .hover-zone {
+  position: absolute;
+  top: 0;
+  width: 50%;
+  height: 100%;
+  z-index: 20;
+  cursor: none;
 }
 
-.bottom-text .insta a{
-    color: #000;
+#models-view .hover-zone.left-zone {
+  left: 0;
 }
 
-.download-btn {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 12px;
-    color: black;
-    text-decoration: none;
-    border: none;
-    background: none;
-    cursor: pointer;
-    font-family: Lay Grotesk;
-    margin-top: 4px;
+#models-view .hover-zone.right-zone {
+  right: 0;
 }
 
-.download-btn:hover {
-    text-decoration: underline;
+/* 플로팅 화살표 */
+#models-view .floating-arrow {
+  position: absolute;
+  pointer-events: none;
+  width: 40px;
+  height: 40px;
+  display: none;
+  z-index: 999;
 }
 
-.download-icon {
-    margin-left: 6px;
-    font-size: 16px;
+/* 정보 영역 */
+#models-view .name {
+  text-transform: uppercase;
+  font-weight: 400;
+  font-size: 60px;
+  text-align: center;
 }
 
-.pdf-down-btn {
-    width: 14px;
-    height: 14px;
+#models-view .name span {
+  font-family: "Feature Display";
 }
 
-/* ───── 모바일  ───── */
-@media (max-width: 768px) {
-    .name {
-        font-size: 36px;
-        text-align: center;
-    }
-
-    .bottom-text .info p {
-        font-size: 14px;
-    }
-
-    .download-btn {
-        font-size: 12px;
-    }
+#models-view .info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: "Lay Grotesk";
 }
 
-/* ───── 노트북 13인치 ───── */
-@media (min-width: 1440px) and (max-width: 1919px) {
-   
+#models-view .info .insta {
+  display: flex;
+  align-items: center;
 }
 
-/* ───── 노트북 16인치 ───── */
-@media screen and (min-width: 1728px) {
-    .name {
-        font-size: 36px;
-        text-align: center;
-    }
-
-    .bottom-text .info p {
-        font-size: 14px;
-    }
+#models-view .info .insta a {
+  position: relative;
+  top: 2px;
+  color: inherit;
 }
 
+#models-view .info .insta p {
+  padding-left: 10px;
+}
 
+#models-view .info .download-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  font-family: "Lay Grotesk";
+  color: inherit;
+  background: none;
+  border: none;
+  cursor: pointer;
+  margin-top: 4px;
+  text-decoration: none;
+}
+
+#models-view .info .download-btn:hover {
+  text-decoration: underline;
+}
+
+#models-view .info .download-icon {
+  margin-left: 6px;
+  font-size: 16px;
+}
+
+#models-view .info .pdf-down-btn {
+  width: 14px;
+  height: 14px;
+}
