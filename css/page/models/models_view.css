@@ -1,4 +1,4 @@
-/* 공통 영역 */
+/* ───────── 공통 영역 ───────── */
 #models-view {
   font-family: "Libre Baskerville", serif;
   color: #000;
@@ -15,7 +15,7 @@
   justify-content: center;
   width: 1070px;
   height: 100vh;
-  max-height: 747px;
+  max-height: 770px;
   margin: 20px auto;
 }
 
@@ -38,7 +38,7 @@
   opacity: 1;
 }
 
-/* 좌우 호버 감지 영역 */
+/* ───────── 좌우 호버 감지 영역 ───────── */
 #models-view .hover-zone {
   position: absolute;
   top: 0;
@@ -56,7 +56,7 @@
   right: 0;
 }
 
-/* 플로팅 화살표 */
+/* ───────── 플로팅 화살표 ───────── */
 #models-view .floating-arrow {
   position: absolute;
   pointer-events: none;
@@ -66,7 +66,7 @@
   z-index: 999;
 }
 
-/* 정보 영역 */
+/* ───────── 정보 영역 ───────── */
 #models-view .name {
   text-transform: uppercase;
   font-weight: 400;
@@ -126,4 +126,41 @@
 #models-view .info .pdf-down-btn {
   width: 14px;
   height: 14px;
+}
+
+/* ───────── 노트북 13인치 ───────── */
+@media (min-width: 1440px) and (max-width: 1919px) {
+  #models-view .slider-images {
+    max-height: 447px;
+  }
+
+  #models-view .name {
+    font-size: 40px;
+  }
+}
+
+/* ───────── 모바일 대응 (768px 이하) ───────── */
+@media (max-width: 768px) {
+  #models-view .slider-images {
+    width: 100%;
+    height: 300px;
+    max-height: 300px;
+    /* padding: 0 20px; */
+    flex-direction: column;
+    justify-content: unset;
+  }
+
+
+  #models-view .name {
+    font-size: 36px;
+    padding: 0 10px;
+  }
+
+  #models-view .info .insta p {
+    font-size: 14px;
+  }
+
+  #models-view .info .download-btn {
+    font-size: 12px;
+  }
 }

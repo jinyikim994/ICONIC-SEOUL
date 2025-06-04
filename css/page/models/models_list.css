@@ -15,8 +15,8 @@
 }
 
 #models-list .container .image {
-  width: 540px;
-  height: 700px;
+  width: 640px;
+  height: 800px;
   max-width: 100%;
   max-height: 100%;
 }
@@ -163,7 +163,7 @@
 
 
   #models-list .name {
-    font-size: 36px;
+    font-size: 25px;
     text-align: center;
   }
 
@@ -180,7 +180,12 @@
 /* ───────── 노트북 13인치 ───────── */
 @media (min-width: 1440px) and (max-width: 1919px) {
   #models-list .name {
-    font-size: 46px;
+    font-size: 30px;
+  }
+
+  #models-list .container .image{
+    width: 400px;
+    max-height: 500px;
   }
 }
 
