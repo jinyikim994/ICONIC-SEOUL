@@ -150,6 +150,7 @@
     flex-direction: column;
     align-items: center;
     gap: 40px;
+    margin: 20px auto 0;
   }
 
   #models-list .container .wrap {
