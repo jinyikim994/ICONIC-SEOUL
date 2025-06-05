@@ -4,8 +4,10 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>ABOUT</title>
+  <!-- css -->
   <link rel="stylesheet" href="../css/common.css">
   <link rel="stylesheet" href="../css/page/about/about.css">
+  <!-- js -->
   <script defer src="../js/common.js"></script>
 </head>
 <body >
@@ -15,7 +17,6 @@
     <button class="mobile-btn" onclick="toggleMenu()">
       <span></span>
       <span></span>
-      <!-- <span></span> -->
     </button>
     <nav id="nav-menu" class="accordion-menu">
       <a href="../artist/artist_list.html">ARTISTS</a>
@@ -80,38 +81,36 @@
     </div>
   </div>
   <!-- //About -->
-  
 
   <script>
-  document.addEventListener('DOMContentLoaded', function () {
-    const slides = document.querySelectorAll('#about .slide > div');
-    let current = 0;
-    const total = slides.length;
+    document.addEventListener('DOMContentLoaded', function () {
+      const slides = document.querySelectorAll('#about .slide > div');
+      let current = 0;
+      const total = slides.length;
 
-    // 모든 슬라이드 초기 숨김
-    slides.forEach(slide => {
-      slide.style.opacity = '0';
-      slide.style.transition = 'opacity 0.1s ease-out';
-      slide.style.position = 'absolute';
-      slide.style.top = '0';
-      slide.style.left = '0';
-    });
+      // 모든 슬라이드 초기 숨김
+      slides.forEach(slide => {
+        slide.style.opacity = '0';
+        slide.style.transition = 'opacity 0.1s ease-out';
+        slide.style.position = 'absolute';
+        slide.style.top = '0';
+        slide.style.left = '0';
+      });
 
-    // 첫 슬라이드 보이기
-    slides[current].style.opacity = '1';
-
-    setInterval(() => {
-      // 현재 슬라이드 숨김
-      slides[current].style.opacity = '0';
-
-      // 다음 슬라이드 계산
-      current = (current + 1) % total;
-
-      // 다음 슬라이드 보이기
+      // 첫 슬라이드 보이기
       slides[current].style.opacity = '1';
-    }, 700); // 1초 간격
-  });
-</script>
 
+      setInterval(() => {
+        // 현재 슬라이드 숨김
+        slides[current].style.opacity = '0';
+
+        // 다음 슬라이드 계산
+        current = (current + 1) % total;
+
+        // 다음 슬라이드 보이기
+        slides[current].style.opacity = '1';
+      }, 700); // 1초 간격
+    });
+  </script>
 </body>
 </html>

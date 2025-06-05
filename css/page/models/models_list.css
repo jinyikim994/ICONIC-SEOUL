@@ -1,4 +1,3 @@
-/* ───────── 기본 스타일 ───────── */
 #models-list {
   font-family: "Libre Baskerville", serif;
   color: #000;
@@ -143,7 +142,7 @@
   height: 14px;
 }
 
-/* ───────── 모바일 대응 ───────── */
+/* ───────── 모바일 ───────── */
 @media (max-width: 768px) {
   #models-list .container {
     flex-direction: column;
@@ -197,7 +196,7 @@
 }
 
 
-/* ───────── 노트북 16인치 이상 ───────── */
+/* ───────── 노트북 16인치 ───────── */
 @media (min-width: 1728px) {
   #models-list .name {
     font-size: 50px;
