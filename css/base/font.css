@@ -38,4 +38,22 @@
     font-style: normal;
 }
 
+@font-face {
+    font-family: 'Akzidenz-grotesk';
+    src: url('../font/Akzidenz-grotesk-black.ttf') format('opentype');
+    font-weight: 600;
+    font-style: normal;
+}
+
+
+@font-face {
+    font-family: 'Acumin-RPro';
+    src: url('../font/Acumin-RPro.otf') format('opentype');
+    font-weight: 600;
+    font-style: normal;
+}
+
+
+
+
 

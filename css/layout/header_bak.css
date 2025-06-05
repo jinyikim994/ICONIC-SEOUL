@@ -1,0 +1,119 @@
+/* ───── 데스크탑 ───── */
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 10;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    width: 100%;
+    height: 75px;
+    padding: 0 55px 0 29px;
+
+    background-color: white;
+}
+
+header .logo {
+    display: flex;
+    align-items: center;
+
+    height: 100%;
+}
+
+header .logo a{
+    position: relative;
+
+    font-family: 'Helvetica Neue', sans-serif;
+    font-size: clamp(24px, 4vw, 18px);
+    font-weight: bold;
+    color: #000;
+}
+
+header nav a {
+    margin-left: 19px;
+
+    font-family: 'AkzidenzGrotesk';
+    font-size: 11px;
+    font-weight: 700;
+    color: #000;
+}
+
+header nav .active{
+    color: #9999;
+}
+
+header .mobile-btn {
+    display: none;
+    flex-direction: column;
+    gap: 7px;
+
+    padding: 10px;
+
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+header .mobile-btn span {
+    display: block;
+
+    width: 40px;
+    height: 1px;
+
+    background-color: #000;
+}
+
+#sub-header{
+    position: unset;
+
+    height: 43px;
+
+    border-bottom: 1px solid #e7e7e7;
+}
+
+/* ───── 모바일 ───── */
+@media (max-width: 767px) {
+    #main-header {
+        padding: 15px;
+    }
+
+    header .logo a{
+        top: 5px;
+    }
+
+    header .mobile-btn {
+        display: flex;
+    }
+
+    header nav.accordion-menu {
+        display: none;
+        flex-direction: column;
+        align-items: flex-start;
+
+        position: absolute;
+        top: 55px;
+        right: 0;
+        left: 0;
+        z-index: 99;
+
+        padding: 0 24px;
+
+        background: #fff;
+    }
+
+    header nav.accordion-menu a {
+        width: 100%;
+        margin: 20px 0;
+    }
+
+    header nav.accordion-menu.show {
+        display: flex;
+    }
+
+    #sub-header{
+        padding: 10px;
+    }
+}
