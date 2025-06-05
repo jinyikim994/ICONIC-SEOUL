@@ -1,5 +1,5 @@
 :root {
-  --container-padding-desktop: 80px 226px;
+  --container-padding-desktop: 80px 131px;
   --container-padding-mobile: 20px 15px;
 
   --grid-gap-desktop: 75px 10px;
@@ -21,7 +21,7 @@
 
 #photographer-personal-all .grid {
   display: grid;
-  grid-template-columns: repeat(8, 1fr);
+  grid-template-columns: repeat(9, 1fr);
   gap: var(--grid-gap-desktop);
   font-size: 0; /* inline 요소 간 공백 제거 */
 }
