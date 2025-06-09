@@ -1,15 +1,9 @@
 :root {
-  --container-padding-desktop: 80px 137px;
-  --container-padding-mobile: 20px 15px;
+  --container-padding-desktop: 80px 115px;
 
   --grid-gap-desktop: 75px 10px;
   --grid-gap-mobile: 15px;
 
-  --image-max-height-default: 231px;
-  --image-max-height-laptop: 156px;
-  --image-max-height-mobile: 295px;
-
-  --cover-height-mobile: 250px;
   --cover-aspect-ratio-mobile: 4 / 3;
 }
 
@@ -21,7 +15,7 @@
 
 #photographer-personal-all .grid {
   display: grid;
-  grid-template-columns: repeat(9, 1fr);
+  grid-template-columns: repeat(8, 1fr);
   gap: var(--grid-gap-desktop);
   font-size: 0; /* inline 요소 간 공백 제거 */
 }
