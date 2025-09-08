@@ -38,7 +38,7 @@
 #production .item video {
   width: 100%;
   display: block;
-  object-fit: cover;
+  /* object-fit: cover; */
 }
 
 #production .full {
@@ -47,16 +47,13 @@
 
 #production .bottom-view {
   display: flex;
-  gap: 160px;
+  gap: 112px;
   margin-top: 220px;
   margin-bottom: 100px;
   flex-wrap: wrap;
 }
 
-#production .bottom-view video {
-  max-height: 137px;
-  height: 137px;
-}
+
 
 #production .bottom-view .title {
   font-family: 'Times New Roman', serif;
@@ -73,7 +70,7 @@
 .sidebar h1 {
   font-family: 'Times New Roman', serif;
   font-weight: bold;
-  font-size: 40px;
+  font-size: 50px;
   margin-bottom: 14px;
 }
 
@@ -226,7 +223,7 @@
 
 
 /* size */
-#production .video-small{
+/* #production .video-small{
   height: 490px;
   max-height: 490px;
 }
@@ -236,10 +233,6 @@
   max-height: 903px;
 }
 
-#production .video-large{
-  height: 872px;
-  max-height: 872px;
-}
 
 #production .image-large{
   height: 1033px;
@@ -251,14 +244,30 @@
   max-height: 903px;
 }
 
-#production .item.top{
-  display: flex;
-  justify-content: flex-start;
-}
 
 #production video{
   height: auto;
   max-height: none;
 }
+ */
 
+#production .video-large{
+  height: 872px;
+  max-height: 872px;
+}
 
+#production .item.top{
+  display: flex;
+  justify-content: flex-start;
+}
+
+#production .bottom-view .item{
+  justify-content: flex-start;
+}
+
+/* 
+#production .bottom-view video {
+  max-height: 137px;
+  height: 137px;
+}
+ */
