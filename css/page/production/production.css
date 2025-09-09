@@ -1,7 +1,7 @@
 :root {
   --grid-gap-desktop: 178px;
   --grid-gap-tablet: 60px;
-  --grid-gap-mobile: 30px;
+  --grid-gap-mobile: 20px;
 }
 
 #production {
@@ -188,7 +188,8 @@
   }
 
   #production .sidebar h1 {
-    font-size: 28px;
+    font-size: 26px;
+    margin-bottom: 0;
   }
 
   #production .sidebar .menu a {
@@ -196,7 +197,7 @@
   }
 
   #production .container {
-    padding: 0 20px;
+    padding: 0 10px;
     position: absolute;
     top: 130px;
   }
@@ -216,4 +217,23 @@
     padding: 0 0 10px 0;
     font-size: 16px;
   }
+
+  .menu-toggle span {
+      display: block;
+
+      width: 50px;
+      height: 1px;
+
+      background-color: #000;
+  }
+
+  .menu-toggle span:nth-of-type(1){
+    margin-bottom: 7px;
+  }
+
+  #production .item p{
+    font-size: 12px;
+  }
+
+
 }
